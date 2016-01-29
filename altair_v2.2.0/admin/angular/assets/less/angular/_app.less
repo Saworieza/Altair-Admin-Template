@@ -1,0 +1,50 @@
+.page_loading {
+    overflow: hidden !important;
+}
+
+#page_preloader {
+    background: @site_background;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 2000;
+    opacity: 0;
+    transition: all 280ms @md_easing;
+    > img {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -24px 0 0 -24px;
+        width: 48px;
+        height: 48px;
+    }
+    .page_loading & {
+        opacity: 1;
+    }
+    .page_loaded & {
+        display: none;
+    }
+}
+
+.app_initialized {
+    #page_preloader {
+        left: 0;
+        top: @header_main_height;
+        z-index: @header_main_zIndex - 10;
+    }
+    @media @screen_xlarge_max {
+        #page_preloader {
+            left: 0;
+        }
+    }
+    .sidebar_main_active,
+    .sidebar_main_open {
+        #page_preloader {
+            left: @sidebar_main_width;
+        }
+    }
+}
+

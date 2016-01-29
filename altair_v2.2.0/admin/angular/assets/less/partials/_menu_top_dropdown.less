@@ -1,0 +1,22 @@
+/* top menu */
+#menu_top_dropdown {
+    .top_menu_toggle {
+        height: @header_main_height;
+        line-height: @header_main_height + 3;
+        color: @white;
+        display: block;
+        padding: 0 8px;
+        .material-icons {
+            color: @white;
+        }
+    }
+    .uk-dropdown {
+        margin-top: 0;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        max-height: 340px;
+        @media screen and (max-height: 320px) {
+            max-height: 300 - @header_main_height;
+        }
+    }
+}

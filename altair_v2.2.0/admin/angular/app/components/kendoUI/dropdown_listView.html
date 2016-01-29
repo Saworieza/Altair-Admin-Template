@@ -1,0 +1,95 @@
+    <div id="page_content">
+        <div id="page_content_inner">
+
+            <div class="md-card">
+                <div class="md-card-content">
+                    <div class="uk-grid" data-uk-grid-margin>
+                        <div class="uk-width-large-1-2">
+                            <form class="uk-form-stacked">
+                                <label class="uk-form-label" for="kUI_dropdown_static">Static data</label>
+                                <select kendo-drop-down-list id="kUI_dropdown_static" style="width: 100%;">
+                                    <option>Albania</option>
+                                    <option>Andorra</option>
+                                    <option>Armenia</option>
+                                    <option>Austria</option>
+                                    <option>Azerbaijan</option>
+                                    <option>Belarus</option>
+                                    <option>Belgium</option>
+                                    <option>Bosnia & Herzegovina</option>
+                                    <option>Bulgaria</option>
+                                    <option>Croatia</option>
+                                    <option>Cyprus</option>
+                                    <option>Czech Republic</option>
+                                    <option>Denmark</option>
+                                    <option>Estonia</option>
+                                    <option>Finland</option>
+                                    <option>France</option>
+                                    <option>Georgia</option>
+                                    <option>Germany</option>
+                                    <option>Greece</option>
+                                    <option>Hungary</option>
+                                    <option>Iceland</option>
+                                    <option>Ireland</option>
+                                    <option>Italy</option>
+                                    <option>Kosovo</option>
+                                    <option>Latvia</option>
+                                    <option>Liechtenstein</option>
+                                    <option>Lithuania</option>
+                                    <option>Luxembourg</option>
+                                    <option>Macedonia</option>
+                                    <option>Malta</option>
+                                    <option>Moldova</option>
+                                    <option>Monaco</option>
+                                    <option>Montenegro</option>
+                                    <option>Netherlands</option>
+                                    <option>Norway</option>
+                                    <option>Poland</option>
+                                    <option>Portugal</option>
+                                    <option>Romania</option>
+                                    <option>Russia</option>
+                                    <option>San Marino</option>
+                                    <option>Serbia</option>
+                                    <option>Slovakia</option>
+                                    <option>Slovenia</option>
+                                    <option>Spain</option>
+                                    <option>Sweden</option>
+                                    <option>Switzerland</option>
+                                    <option>Turkey</option>
+                                    <option>Ukraine</option>
+                                    <option>United Kingdom</option>
+                                    <option>Vatican City</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="uk-width-large-1-2">
+<pre class="line-numbers"><code class="language-markup" prism-highlight>// static data
+&lt;select kendo-drop-down-list id=&quot;kUI_dropdown_static&quot; style=&quot;width: 100%;&quot;&gt;
+  ...
+&lt;/select&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md-card">
+                <div class="md-card-content">
+                    <div class="uk-grid uk-margin-bottom">
+                        <div class="uk-width-large-1-2">
+                            <form class="uk-form-stacked">
+                                <label class="uk-form-label" for="kUI_dropdown_basic_select">Remote data</label>
+                                <select kendo-drop-down-list
+                                        k-data-text-field="'ContactName'"
+                                        k-data-value-field="'CustomerID'"
+                                        k-data-source="usersDataSource"
+                                        style="width: 100%"
+                                        id="kUI_dropdown_basic_select"
+                                >
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+<pre class="line-numbers"><code class="language-markup" prism-highlight>&lt;select kendo-drop-down-list k-data-text-field=&quot;'ProductName'&quot; k-data-value-field=&quot;'ProductID'&quot; k-data-source=&quot;productsDataSource&quot; style=&quot;width: 100%&quot; id=&quot;kUI_dropdown_basic_select&quot;&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>

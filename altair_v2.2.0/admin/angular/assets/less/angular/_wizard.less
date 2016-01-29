@@ -1,0 +1,155 @@
+/* wizard */
+.wizard {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    a {
+        outline: 0;
+    }
+    ul {
+        list-style: none !important;
+        padding: 0;
+        margin: 0;
+        > li {
+            display: block;
+            padding: 0;
+        }
+    }
+}
+
+.wizard {
+    > .steps {
+        position: relative;
+        display: block;
+        width: 100%;
+        background: @theme_primary_color;
+        .number{
+            font-size: 14px;
+            border: 2px solid @white;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            border-radius: 50%;
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            margin-top: -14px;
+            @media @screen_large {
+                font-size: 16px;
+                width: 32px;
+                height: 32px;
+                line-height: 32px;
+                margin-top: -18px;
+            }
+        }
+        .title {
+            .truncate_line;
+            padding-left: 46px;
+            box-sizing: border-box;
+        }
+        > ul {
+            > li {
+                display: block;
+                @media @screen_large {
+                    float: left;
+                    width: 25%;
+                }
+                + li {
+                    a {
+                        border-top: 1px solid rgba(0,0,0,0.15);
+                        @media @screen_large {
+                            border-top: none;
+                            border-right: 1px solid rgba(0,0,0,0.15);
+                        }
+                    }
+                }
+                a {
+                    position: relative;
+                    &,
+                    &:hover,
+                    &:active {
+                        display: block;
+                        width: auto;
+                        padding: 12px 8px;
+                        text-decoration: none;
+                        color: @white;
+                        @media @screen_large {
+                            padding: 16px;
+                        }
+                    }
+                }
+                &.disabled {
+                    a {
+                        &,
+                        &:hover,
+                        &:active {
+                            color: @white;
+                            cursor: default;
+                        }
+                    }
+                }
+                &.current {
+                    a {
+                        &,
+                        &:hover,
+                        &:active {
+                            background: lighten(@theme_primary_color,10%);
+                            color: @white;
+                            cursor: default;
+                        }
+                    }
+                }
+                &.done {
+                    a {
+                        &,
+                        &:hover,
+                        &:active {
+                            background: @theme_dark_color;
+                            color: @white;
+                        }
+                    }
+                }
+                &.error {
+                    a {
+                        &,
+                        &:hover,
+                        &:active {
+                            background: @md-color-red-800;
+                            color: @white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & > .content {
+        display: block;
+        box-sizing: border-box;
+        & > .body {
+            padding: 32px 24px;
+            box-sizing: border-box;
+            ul {
+                .reset_list;
+            }
+            .uk-form-label {
+                display: block;
+                font-weight: 500;
+                font-size: 13px;
+                margin: -4px 0 ;
+            }
+            .icheck-inline {
+                margin: 4px 16px 0 0;
+            }
+            & > iframe {
+                border: 0 none;
+                width: 100%;
+                height: 100%;
+            }
+            pre[class*="language-"] {
+                max-height: inherit;
+            }
+
+        }
+    }
+}

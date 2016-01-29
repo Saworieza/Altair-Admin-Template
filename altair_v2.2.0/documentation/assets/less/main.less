@@ -1,0 +1,266 @@
+@import (reference) "variables";
+
+body {
+    background: @body_bg;
+    .md_font(400, 14px, 1.6);
+    color: @text_primary_color;
+    padding-bottom: 200px;
+}
+
+a,
+button {
+    outline: none !important;
+}
+a {
+    color: #4285f4;
+    &:hover,
+    &:active {
+        color: #4285f4;
+        text-decoration: underline;
+    }
+}
+
+strong {
+    font-weight: 500;
+}
+
+ul.large-spacing,
+ol.large-spacing {
+    li + li {
+        margin-top: 16px;
+    }
+}
+
+pre,
+code,
+code[class*="language-"],
+pre[class*="language-"] {
+    font-family: 'Source Code Pro',Consolas, Monaco, 'Andale Mono', monospace !important;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.uk-table {
+    th {
+        font-weight: 500;
+    }
+}
+
+.uk-text-primary {
+    color: @primary_color !important;
+}
+.uk-text-danger {
+    color: @danger_color !important;
+}
+.uk-text-success {
+    color: @success_color !important;
+}
+.uk-text-warning {
+    color: @warning_color !important;
+}
+
+.uk-alert {
+    border: none;
+    background: #2196f3;
+    color: @white;
+    text-shadow: none;
+    padding-right: 32px;
+    position: relative;
+    &-success {
+        background: #8bc34a;
+    }
+    &-danger {
+        background: #e53935;
+    }
+}
+
+.md-card {
+    background: @white;
+    .boxShadowHelper(1);
+    border-radius: 2px;
+    padding: 24px  48px;
+    margin-top: -64px;
+    &-header {
+        margin-bottom: 24px;
+        overflow: hidden;
+        .uk-badge {
+            float: right;
+            margin-top: 10px;
+        }
+        h1 {
+            .md_font(400, 20px, 50px);
+            margin: 0;
+        }
+        p {
+            margin: 4px 0 0;
+            font-size: 13px;
+            color: @text_secondary_color;
+        }
+    }
+    h2 {
+        padding: 48px 48px 0;
+        margin: 0 -48px 24px;
+        font-size: 32px;
+    }
+    h3 {
+        font-size: 24px;
+        font-weight: 400;
+        padding: 16px;
+        position: relative;
+        margin: 0 -16px 24px;
+        border-bottom: 1px solid @border_color;
+    }
+    h4 {
+        font-size: 20px;
+        font-weight: 400;
+        padding: 16px 0 0;
+    }
+    h5 {
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+.uk-badge {
+    padding: 2px 6px;
+    border: none;
+    border-radius: 4px;
+    text-shadow: none;
+    font-size: 11px;
+    line-height: 15px;
+    font-weight: 400;
+}
+
+// documentation styles ----------------
+.documentation_header {
+    background: #1976d2;
+    height: 112px;
+}
+
+#documentation_content {
+    margin-left: @sidebar_width;
+}
+
+.doc_icon_wrapper {
+    overflow: hidden;
+    text-align: center;
+    > div {
+        display: inline-block;
+        margin: 0 16px 16px 0;
+        width: 72px;
+        height: 72px;
+        line-height: 72px;
+        background: @white;
+        .boxShadowHelper(1);
+        border-radius: 6px;
+        img {
+            border-radius: 6px;
+        }
+    }
+}
+
+// toc ---------------------------------
+#documentation_toc {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: @sidebar_width;
+    background: @white;
+    background-image: url('../img/logo_main.png');
+    background-repeat: no-repeat;
+    background-position: 24px 24px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.20);
+    box-sizing: border-box;
+    padding-top: 64px;
+}
+.tocify {
+    ul,
+    li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: none;
+        line-height: 30px;
+    }
+    li {
+        a {
+            color: @text_primary_color;
+            .md_font(500,14px,31px);
+            padding: 0 16px;
+            display: block;
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                background: @background_color_default;
+            }
+        }
+    }
+    &-header {
+        text-indent: 10px;
+    }
+    &-subheader {
+        text-indent: 24px;
+        display: none;
+        li {
+            a {
+                .md_font(400,13px,24px);
+            }
+        }
+        .tocify-subheader {
+            text-indent: 30px;
+            .tocify-subheader {
+                text-indent: 40px;
+            }
+        }
+        .tocify-subheader {
+            text-indent: 48px;
+            display: none;
+        }
+    }
+    > ul {
+        > li.tocify-focus {
+            a {
+                background: @background_color_default;
+            }
+        }
+    }
+    ul ul li {
+        li.tocify-focus {
+            a {
+                color: #0277bd;
+            }
+        }
+    }
+}
+
+.external_link {
+    padding-right: 16px;
+    margin-right: 4px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAgElEQVQYV5XQMQpCQQxF0fNX4G60stFGdyBYuSE3InwQBG20URDclPKKkSAfxXST3FxepvO9nm3c/QDHOGAU8IxZWXhggkB7bHAMGP0clwI3aN36DawRAvVY4VYzxljBHba444pp4CFjve8t+Rtc4vTxVYtc22LFmEeaQ5XlSLwAJVAaAqoDe/cAAAAASUVORK5CYII=');
+    background-position: right 3px;
+    background-repeat: no-repeat;
+}
+
+// prism higlight
+@import (less) "../../bower_components/prism/themes/prism.css";
+:not(pre)>code[class*=language-],
+pre[class*=language-] {
+    background: #f5f5f5;
+}
+pre[class*=language-] {
+    background-color: #f5f5f5;
+    overflow: visible;
+    max-height: 366px;
+    padding: 12px 0 12px 16px;
+}
+code[class*="language"] {
+    max-height: 324px;
+    height: 100%;
+    display: block;
+    overflow: auto;
+    box-sizing: border-box;
+    line-height: 20px;
+}

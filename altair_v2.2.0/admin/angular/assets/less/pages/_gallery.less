@@ -1,0 +1,31 @@
+/* gallery */
+.gallery_grid {
+    &_item {
+        padding: 0 !important;
+        &,
+        &:hover,
+        &:focus {
+            color: @text_primary_color;
+        }
+        > a,
+        img {
+            display: block;
+        }
+    }
+    &_image_caption {
+        padding: 8px 8px;
+        display: block;
+        position: relative;
+        z-index: 10;
+        background-color: @white;
+        .gallery_image_title {
+            .md_font(500, 14px, 20px);
+            margin: 0;
+        }
+    }
+    &_image_menu {
+        position: relative;
+        float: right;
+        margin: 4px 0 0 8px;
+    }
+}

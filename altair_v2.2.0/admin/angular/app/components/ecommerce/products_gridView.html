@@ -1,0 +1,31 @@
+<div id="page_content">
+    <div id="page_content_inner">
+
+        <h3 class="heading_a uk-margin-bottom">Sort products by name:</h3>
+
+        <ul id="products_sort" class="uk-subnav uk-subnav-pill">
+            <li data-uk-sort="product-name:asc"><a href="#">Ascending</a></li>
+            <li data-uk-sort="product-name:desc"><a href="#">Descending</a></li>
+        </ul>
+
+        <div class="uk-grid-width-small-1-2 uk-grid-width-medium-1-3 uk-grid-width-large-1-4 hierarchical_show" data-uk-grid="{gutter: 20, controls: '#products_sort'}" hierarchical-show>
+            <div ng-repeat="product in products_data" data-product-name="{{ product.name }}">
+                <div class="md-card md-card-hover-img">
+                    <div class="md-card-head uk-text-center uk-position-relative">
+                        <div class="uk-badge uk-badge-danger uk-position-absolute uk-position-top-left uk-margin-left uk-margin-top">{{ product.price | currency : "$" : 2}}</div>
+                        <img class="md-card-head-img" ng-src="{{ product.image }}" alt=""/>
+                    </div>
+                    <div class="md-card-content">
+                        <h4 class="heading_c uk-margin-bottom">
+                            {{ product.name }}
+                            <span class="sub-heading">SKU: {{ product.sku }}</span>
+                        </h4>
+                        <p>{{ product.description }}</p>
+                        <a class="md-btn md-btn-small" ui-sref="restricted.ecommerce.product_details">More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

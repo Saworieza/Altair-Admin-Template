@@ -1,0 +1,26 @@
+/* error page */
+
+// import styles
+@import (reference) "../_variables_mixins";
+@import "../_uikit_custom";
+@import '../md/_md_variables_mixins';
+@import '../md/_md_buttons';
+@import '../md/_md_colors';
+@import '../md/_md_forms';
+@import '../md/_md_utils';
+@import "../_altair_admin";
+
+body {
+    padding: 0;
+}
+
+.error_page {
+    &_header {
+        background: @md-color-blue-800;
+        padding: 80px 0 20px;
+        color: @white;
+        font-size: 48px;
+        font-weight: 300;
+        margin-bottom: 40px;
+    }
+}

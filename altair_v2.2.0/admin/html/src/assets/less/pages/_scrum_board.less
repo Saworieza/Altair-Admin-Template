@@ -1,0 +1,91 @@
+/* scrum board */
+.scrum_board_overflow {
+    height: 100%;
+    min-height: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    background: @white;
+    box-sizing: border-box;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+#scrum_board {
+    height: 100%;
+    min-width: 240*4 + 4*4px;
+    padding: 0 4px;
+    box-sizing: border-box;
+    overflow: hidden;
+    > div {
+        height: 100%;
+        float: left;
+        width: 25%;
+        min-width: 240px;
+        box-sizing: border-box;
+        position: relative;
+        padding: 46px 0 8px;
+    }
+    .scrum_column {
+        background: @background_color_default;
+        padding: 8px;
+        height: 100%;
+        margin: 0 4px;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        &_heading {
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 100%;
+            font-weight: 500;
+            font-size: 13px;
+            text-transform: uppercase;
+            background: @white;
+            line-height: 32px;
+            .truncate_line;
+            padding: 0 12px;
+        }
+        .uk-sortable {
+            min-height: 100%;
+            div {
+                cursor: move;
+                + div {
+                    margin-top: 4px;
+                }
+            }
+            &-placeholder {
+                opacity: 0.4;
+            }
+        }
+    }
+}
+
+.scrum_task {
+    background: @white;
+    padding: 8px 8px 8px 12px;
+    border-left-width: 4px;
+    border-left-style: solid;
+    &.blocker {
+        border-left-color: @danger_color;
+    }
+    &.critical {
+        border-left-color: @warning_color;
+    }
+    &.minor {
+        border-left-color: @success_color;
+    }
+    &_title {
+        font-size: 13px;
+        font-weight: 500;
+        margin: 0;
+        text-transform: uppercase;
+    }
+    &_description {
+        margin: 0 0 4px;
+        font-size: 12px;
+    }
+    &_info {
+        margin: 0;
+        font-size: 12px;
+    }
+}

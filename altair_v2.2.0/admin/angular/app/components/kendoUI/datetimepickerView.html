@@ -1,0 +1,28 @@
+    <div id="page_content">
+        <div id="page_content_inner">
+
+            <div class="md-card">
+                <div class="md-card-content">
+                    <div class="uk-grid uk-margin-bottom">
+                        <div class="uk-width-large-1-2">
+                            <form class="uk-form-stacked">
+                                <label for="kUI_datetimepicker_basic" class="uk-form-label">Datetimepicker (basic)</label>
+                                <input kendo-date-time-picker
+                                       ng-model="str"
+                                       k-ng-model="obj"
+                                       style="width: 100%;"
+                                       id="kUI_datetimepicker_basic"
+                                />
+                            </form>
+<pre><code>str: {{ str }}
+obj: {{ obj }}
+typeof obj: {{ getType(obj) }}
+obj instanceof Date: {{ isDate(obj) }}</code></pre>
+                        </div>
+                    </div>
+<pre class="line-numbers"><code class="language-markup" prism-highlight>&lt;input kendo-date-time-picker ng-model=&quot;str&quot; k-ng-model=&quot;obj&quot; style=&quot;width: 100%;&quot; id=&quot;kUI_datetimepicker_basic&quot;/&gt;</code></pre>
+                </div>
+            </div>
+
+        </div>
+    </div>

@@ -1,0 +1,58 @@
+// variables
+@color_variants: 50,100,200,300,400,500,600,700,800,900,A100,A200,A400,A700;
+@color_array: red,pink,purple,deep-purple,indigo,blue,light-blue,cyan,teal,green,light-green,lime,yellow,amber,orange,deep-orange;
+@color_array_no_accent: brown,grey,blue-grey;
+
+// colors with accents
+.makeMdVariants(@i, @actColor) when (@i < 15) {
+
+    @colorVariant: extract(@color_variants, @i);
+
+    .md-color-@{actColor}-@{colorVariant} {
+        color: ~"@{md-color-@{actColor}-@{colorVariant}}" !important;
+    }
+
+    .md-bg-@{actColor}-@{colorVariant} {
+        background-color: ~"@{md-color-@{actColor}-@{colorVariant}}" !important;
+    }
+
+    .makeMdVariants(@i + 1,@actColor);
+}
+.makeMdColors(@i) when (@i < 17) {
+
+    @actColor: extract(@color_array, @i);
+
+    .makeMdVariants(1,@actColor);
+
+    .makeMdColors(@i + 1);
+}
+.makeMdColors(1);
+
+
+// colors without accent
+.makeMdVariantsNoAccent(@i, @actColor) when (@i < 11) {
+
+    @colorVariant: extract(@color_variants, @i);
+
+    .md-color-@{actColor}-@{colorVariant} {
+        color: ~"@{md-color-@{actColor}-@{colorVariant}}" !important;
+    }
+
+    .md-bg-@{actColor}-@{colorVariant} {
+        background-color: ~"@{md-color-@{actColor}-@{colorVariant}}" !important;
+    }
+
+    .makeMdVariantsNoAccent(@i + 1,@actColor);
+}
+.makeMdColorsNoAccent(@i) when (@i < 4) {
+
+    @actColorNoAccent: extract(@color_array_no_accent, @i);
+
+    .makeMdVariantsNoAccent(1,@actColorNoAccent);
+
+    .makeMdColorsNoAccent(@i + 1);
+}
+.makeMdColorsNoAccent(1);
+.md-color-white {
+    color: #fff !important;
+}

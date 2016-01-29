@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "name": "Maximillia Little",
+        "avatar": "assets\/img\/avatars\/avatar_11.png",
+        "company": "Schamberger PLC",
+        "featured": false,
+        "info": "Velit commodi excepturi vitae non omnis reprehenderit.",
+        "email": "gusikowski.curtis@bernierweimann.com",
+        "phone": "1-999-421-1704"
+    },
+    {
+        "id": 2,
+        "name": "Oswaldo Conn",
+        "avatar": "assets\/img\/avatars\/avatar_02.png",
+        "company": "Goodwin-Nienow",
+        "featured": false,
+        "info": "Placeat enim nemo repudiandae repudiandae magni tempora eum tempore eaque sed.",
+        "email": "oceane.rath@king.org",
+        "phone": "1-120-647-2157"
+    },
+    {
+        "id": 3,
+        "name": "Mr. Thad Huel Jr.",
+        "avatar": "assets\/img\/avatars\/avatar_10.png",
+        "company": "Schamberger PLC",
+        "featured": true,
+        "info": "Impedit est unde est quasi quia nobis enim totam nihil dolorem impedit.",
+        "email": "florian.bogisich@nitzsche.com",
+        "phone": "(277)453-1944x978"
+    },
+    {
+        "id": 4,
+        "name": "Alexandro Langosh",
+        "avatar": "assets\/img\/avatars\/avatar_02.png",
+        "company": "Schamberger PLC",
+        "featured": false,
+        "info": "Assumenda voluptate est eaque quis ullam omnis.",
+        "email": "vernon.wilderman@lindgrenpfannerstill.com",
+        "phone": "00186602373"
+    },
+    {
+        "id": 5,
+        "name": "Mrs. Jacquelyn Rohan",
+        "avatar": "assets\/img\/avatars\/avatar_04.png",
+        "company": "Goodwin-Nienow",
+        "featured": false,
+        "info": "Voluptatem error harum inventore architecto quod expedita blanditiis iusto alias animi dignissimos ut ipsum.",
+        "email": "holden91@kuvalisschoen.com",
+        "phone": "338-802-4840"
+    },
+    {
+        "id": 6,
+        "name": "Guido Borer Jr.",
+        "avatar": "assets\/img\/avatars\/avatar_03.png",
+        "company": "Strosin Groupa",
+        "featured": true,
+        "info": "Molestiae molestiae sed aut voluptate dolore molestiae et unde.",
+        "email": "nicklaus25@gmail.com",
+        "phone": "1-757-935-0636x59330"
+    },
+    {
+        "id": 7,
+        "name": "Ruben Shanahan",
+        "avatar": "assets\/img\/avatars\/avatar_04.png",
+        "company": "Goodwin-Nienow",
+        "featured": false,
+        "info": "Eius consequatur corporis quisquam dolor in deleniti tempore dignissimos amet sit dicta nihil corporis.",
+        "email": "edurgan@lueilwitzhuels.com",
+        "phone": "917.005.9994x6083"
+    },
+    {
+        "id": 8,
+        "name": "Dustin Larson",
+        "avatar": "assets\/img\/avatars\/avatar_11.png",
+        "company": "Strosin Groupa",
+        "featured": false,
+        "info": "Libero consectetur hic id et numquam quo deleniti ullam soluta asperiores voluptas dignissimos quasi.",
+        "email": "montana82@yahoo.com",
+        "phone": "510-224-2704"
+    },
+    {
+        "id": 9,
+        "name": "Daija Hansen",
+        "avatar": "assets\/img\/avatars\/avatar_01.png",
+        "company": "Schamberger PLC",
+        "featured": false,
+        "info": "Officiis cumque aliquam eligendi accusantium et distinctio esse.",
+        "email": "wkoch@hotmail.com",
+        "phone": "849.652.0538"
+    },
+    {
+        "id": 10,
+        "name": "Dr. Candida Rodriguez PhD",
+        "avatar": "assets\/img\/avatars\/avatar_06.png",
+        "company": "Goodwin-Nienow",
+        "featured": false,
+        "info": "Quo dignissimos eum voluptate aut harum error voluptas sit aut quasi magnam.",
+        "email": "raynor.bernard@mckenziehilll.org",
+        "phone": "022-375-8464x2110"
+    },
+    {
+        "id": 11,
+        "name": "Fanny Gottlieb DVM",
+        "avatar": "assets\/img\/avatars\/avatar_03.png",
+        "company": "Strosin Groupa",
+        "featured": false,
+        "info": "Non dolor ab ut amet illo exercitationem voluptatem et.",
+        "email": "kristoffer.bahringer@hotmail.com",
+        "phone": "1-420-094-1371x2468"
+    },
+    {
+        "id": 12,
+        "name": "Katelyn Stracke",
+        "avatar": "assets\/img\/avatars\/avatar_02.png",
+        "company": "Schamberger PLC",
+        "featured": false,
+        "info": "Officia provident itaque ut et ipsam veritatis non sint autem possimus.",
+        "email": "ansley45@yahoo.com",
+        "phone": "(621)016-3410"
+    },
+    {
+        "id": 13,
+        "name": "Trever Hudson",
+        "avatar": "assets\/img\/avatars\/avatar_06.png",
+        "company": "Goodwin-Nienow",
+        "featured": false,
+        "info": "Molestias dolor voluptatem quaerat laudantium nam eius eos.",
+        "email": "ymueller@powlowski.com",
+        "phone": "(075)559-5305x241"
+    },
+    {
+        "id": 14,
+        "name": "Mr. Osvaldo Brown DVM",
+        "avatar": "assets\/img\/avatars\/avatar_11.png",
+        "company": "Strosin Groupa",
+        "featured": false,
+        "info": "Velit in quia et qui quis officiis dignissimos vero aspernatur ad et.",
+        "email": "harvey.prudence@yahoo.com",
+        "phone": "08882473403"
+    },
+    {
+        "id": 15,
+        "name": "Dee Mohr",
+        "avatar": "assets\/img\/avatars\/avatar_12.png",
+        "company": "Schamberger PLC",
+        "featured": false,
+        "info": "Sed velit voluptatem repellat ut dolorum itaque odit in est eius.",
+        "email": "evalyn65@hotmail.com",
+        "phone": "189.882.5122x1771"
+    },
+    {
+        "id": 16,
+        "name": "Prof. Turner Bahringer DVM",
+        "avatar": "assets\/img\/avatars\/avatar_06.png",
+        "company": "Schamberger PLC",
+        "featured": false,
+        "info": "Explicabo ut nihil voluptatum quia saepe nisi eos consequuntur nihil quidem unde.",
+        "email": "rowe.tevin@klingweber.com",
+        "phone": "+00(5)0109816891"
+    },
+    {
+        "id": 17,
+        "name": "Alanis Berge",
+        "avatar": "assets\/img\/avatars\/avatar_01.png",
+        "company": "Schamberger PLC",
+        "featured": false,
+        "info": "Quidem quam eos quia ratione esse aut qui eligendi ipsa.",
+        "email": "ybruen@greenholt.com",
+        "phone": "1-021-479-0876"
+    },
+    {
+        "id": 18,
+        "name": "Rylan Moen",
+        "avatar": "assets\/img\/avatars\/avatar_11.png",
+        "company": "Schamberger PLC",
+        "featured": false,
+        "info": "Deserunt ut corrupti quis ex est non quidem qui autem cupiditate magni atque.",
+        "email": "beau.prohaska@hotmail.com",
+        "phone": "1-351-108-6591x28337"
+    },
+    {
+        "id": 19,
+        "name": "Jalon Kozey",
+        "avatar": "assets\/img\/avatars\/avatar_06.png",
+        "company": "Schamberger PLC",
+        "featured": true,
+        "info": "Voluptatem et exercitationem earum et eius nulla.",
+        "email": "fshields@gmail.com",
+        "phone": "(362)572-7948x569"
+    },
+    {
+        "id": 20,
+        "name": "Cordie Powlowski",
+        "avatar": "assets\/img\/avatars\/avatar_11.png",
+        "company": "Strosin Groupa",
+        "featured": false,
+        "info": "Omnis quaerat ad enim iste inventore et.",
+        "email": "rglover@jerde.org",
+        "phone": "1-205-535-7141x035"
+    },
+    {
+        "id": 21,
+        "name": "Dr. Layla Ebert DDS",
+        "avatar": "assets\/img\/avatars\/avatar_04.png",
+        "company": "Strosin Groupa",
+        "featured": false,
+        "info": "Voluptate saepe quia sequi minus non occaecati quia autem.",
+        "email": "nichole71@steuber.info",
+        "phone": "505-755-1936x698"
+    },
+    {
+        "id": 22,
+        "name": "Miss Hilda Homenick",
+        "avatar": "assets\/img\/avatars\/avatar_11.png",
+        "company": "Goodwin-Nienow",
+        "featured": false,
+        "info": "Dolor iusto consequatur sit id nam voluptatem autem similique omnis.",
+        "email": "dkerluke@turner.info",
+        "phone": "1-176-767-2995"
+    },
+    {
+        "id": 23,
+        "name": "Amie Leannon Sr.",
+        "avatar": "assets\/img\/avatars\/avatar_03.png",
+        "company": "Goodwin-Nienow",
+        "featured": false,
+        "info": "Quaerat temporibus quidem aut qui cum repellendus non ex.",
+        "email": "garett00@breitenberg.org",
+        "phone": "(603)659-9737"
+    },
+    {
+        "id": 24,
+        "name": "Luigi Breitenberg MD",
+        "avatar": "assets\/img\/avatars\/avatar_05.png",
+        "company": "Goodwin-Nienow",
+        "featured": false,
+        "info": "Qui ipsa aut quaerat in magnam nihil eligendi nemo repellat.",
+        "email": "guy89@yahoo.com",
+        "phone": "(341)501-3725"
+    }
+]

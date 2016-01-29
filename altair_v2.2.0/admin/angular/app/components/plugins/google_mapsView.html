@@ -1,0 +1,89 @@
+<div id="page_content">
+    <div id="page_content_inner">
+
+        <h3 class="heading_b uk-margin-bottom">Google Maps</h3>
+
+        <div class="md-card" ng-controller="map_directionsCtrl">
+            <div class="md-card-toolbar">
+                <div class="md-card-toolbar-actions">
+                    <i class="md-icon material-icons" data-uk-modal="{target:'#gmap_route_modal'}">&#xE52E;</i>
+                </div>
+                <h3 class="md-card-toolbar-heading-text">
+                    Virtual Road Trip
+                </h3>
+            </div>
+            <div class="md-card-content">
+                <div class="uk-grid">
+                    <div class="uk-width-4-10">
+                        <label for="">Origin</label>
+                        <input places-auto-complete ng-model="origin" size=40 ng-disabled="drivingMode" class="md-input" md-input />
+                    </div>
+                    <div class="uk-width-4-10">
+                        <label for="">Destination</label>
+                        <input places-auto-complete ng-model="destination" ng-disabled="drivingMode" class="md-input" md-input />
+                    </div>
+                    <div class="uk-width-2-10">
+                        <button ng-click="drive()" class="md-btn md-btn-primary"> {{drivingMode ? 'Stop' : 'Start Driving' }}</button>
+                    </div>
+                </div>
+                <div class="uk-grid">
+                    <div class="uk-width-medium-1-2">
+                        <map class="gmap gmap_large" zoom="8" center="1135 Karamea-Kohaihai Rd, Kahurangi National Park, Tasman" tilt="45">
+                            <directions
+                                    draggable="true"
+                                    panel="directions-panel"
+                                    origin="{{origin}}"
+                                    on-directions_changed="directionsChanged(evt)"
+                                    destination="{{destination}}">
+                            </directions>
+                            <street-view-panorama container="streetview"></street-view-panorama>
+                            <marker ng-repeat="pos in markers" position="{{[pos.lat(), pos.lng()]}}"></marker>
+                        </map>
+                    </div>
+                    <div class="uk-width-medium-1-2">
+                        <div class="gmap gmap_large" id="streetview"></div>
+                    </div>
+                </div>
+                <div class="uk-modal" id="gmap_route_modal">
+                    <div class="uk-modal-dialog">
+                        <button type="button" class="uk-modal-close uk-close"></button>
+                        <div class="uk-modal-header">
+                            <h3 class="uk-modal-title">Detailed Directions </h3>
+                        </div>
+                        <div class="uk-overflow-container">
+                            <div id="directions-panel"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="uk-grid" data-uk-grid-margin>
+            <div class="uk-width-medium-3-5">
+                <div class="md-card">
+                    <div class="md-card-toolbar">
+                        <h3 class="md-card-toolbar-heading-text">
+                            Styled map (neutral blue)
+                        </h3>
+                    </div>
+                    <div class="md-card-content" ng-controller="gmap_neutralBlueCtrl">
+                        <map class="gmap gmap_large" center="37.390267, -122.076417" zoom="12" styles="{{gmap_styles}}"></map>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-width-medium-2-5">
+                <div class="md-card">
+                    <div class="md-card-toolbar">
+                        <h3 class="md-card-toolbar-heading-text">
+                            Styled map (subtle greyscale)
+                        </h3>
+                    </div>
+                    <div class="md-card-content" ng-controller="gmap_subtleGreyCtrl">
+                        <map class="gmap gmap_large" center="37.390267, -122.076417" zoom="12" styles="{{gmap_styles}}"></map>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

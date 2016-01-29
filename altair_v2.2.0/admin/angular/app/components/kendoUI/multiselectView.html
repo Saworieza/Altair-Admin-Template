@@ -1,0 +1,20 @@
+    <div id="page_content">
+        <div id="page_content_inner">
+
+            <div class="md-card">
+                <div class="md-card-content">
+                    <div class="uk-grid uk-margin-large-bottom">
+                        <div class="uk-width-large-1-2">
+                            <form class="uk-form-stacked">
+                                <label for="kUI_multiselect" class="uk-form-label">Select users</label>
+                                <select id="kUI_multiselect" kendo-multi-select k-options="selectOptions" k-ng-model="selectedIds"></select>
+                                <span ng-show="selectedIds.length" class="uk-form-help-block">Selected Id: {{ selectedIds }}</span>
+                            </form>
+                        </div>
+                    </div>
+<pre class="line-numbers"><code class="language-markup" prism-highlight>&lt;select id=&quot;kUI_multiselect&quot; kendo-multi-select k-options=&quot;selectOptions&quot; k-ng-model=&quot;selectedIds&quot;&gt;&lt;/select&gt;</code></pre>
+                </div>
+            </div>
+
+        </div>
+    </div>

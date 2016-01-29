@@ -1,0 +1,13 @@
+<div class="wizard">
+    <div class="steps uk-clearfix">
+        <ul ng-if="!hideIndicators" class="uk-clearfix">
+            <li ng-class="{ default: !step.completed && !step.selected, current: step.selected && !step.completed, done: step.completed && !step.selected, editing: step.selected && step.completed, last: $last}" ng-repeat="step in getEnabledSteps()">
+                <a ng-click="goTo(step)">
+                    <span class="number">{{$index+1}}</span>
+                    <span class="title">{{step.title || step.wzTitle}}</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="content" ng-transclude></div>
+</div>

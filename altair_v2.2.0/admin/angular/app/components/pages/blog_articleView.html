@@ -1,0 +1,168 @@
+<div id="page_content">
+    <div id="page_content_inner">
+
+        <div class="uk-grid blog_article" data-uk-grid-margin>
+            <div class="uk-width-medium-3-4">
+                <div class="md-card">
+                    <div class="md-card-content large-padding">
+                        <div class="uk-article">
+                            {{article_content}}
+                            <h1 class="uk-article-title">{{article.title}}</h1>
+                            <p class="uk-article-meta">
+                                Written by {{article.author}} on {{article.date}}
+                                <br>Posted in <a href="#">{{article.category}}</a>
+                            </p>
+                            <p class="uk-article-lead">{{article.subtitle}}</p>
+                            <hr class="uk-article-divider">
+                            <p>
+                                <figure class="uk-thumbnail uk-thumbnail-large thumbnail_left">
+                                    <img ng-src="assets/img/gallery/Image08.jpg" alt="">
+                                    <figcaption class="uk-thumbnail-caption">Some caption</figcaption>
+                                </figure>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam consequatur cumque, eos in iusto labore maxime nostrum nulla numquam odit officiis pariatur quibusdam quidem sunt! Accusantium aliquam esse eveniet incidunt. Adipisci animi architecto consequatur delectus enim exercitationem hic ipsam possimus quibusdam suscipit? Dolor minus neque sed similique tempore. Ad alias consectetur cumque cupiditate ipsam quibusdam rem tenetur! A aliquid, architecto cumque distinctio dolor doloremque facere fugit incidunt ipsum iusto magnam modi, molestiae nihil perferendis perspiciatis quam repudiandae soluta tempora temporibus unde voluptatem voluptates voluptatibus voluptatum! Aut blanditiis commodi debitis dolorem error et eum harum id magni minus nemo, neque odit perferendis perspiciatis porro quaerat quidem reiciendis saepe, tempora tenetur ullam voluptas, voluptatum! Doloremque iste iure nam natus nulla perferendis soluta veritatis voluptatibus! Beatae consequuntur dolor dolorem doloribus, earum nesciunt placeat ut. Accusamus ad atque blanditiis cumque debitis delectus dignissimos distinctio dolores eligendi error est et facilis fugit, in incidunt magni molestias necessitatibus nobis nostrum, odio praesentium quasi quia quibusdam reprehenderit repudiandae sapiente, vero. Aspernatur cum eaque magni minima nisi numquam, porro quaerat quod quos suscipit ut velit veniam! Ad amet architecto, dignissimos ex expedita harum itaque maiores numquam odio pariatur porro praesentium quisquam totam! Adipisci aperiam architecto commodi cum dolore dolores earum eum fuga magnam nulla odit provident quam, quasi quo recusandae rerum tempore vel veritatis vitae voluptates! Consequatur cupiditate et minus mollitia, nostrum nulla obcaecati officia quaerat rerum soluta? Accusamus excepturi, magni provident quidem sequi veniam! Asperiores eligendi illo tenetur. Ad adipisci asperiores aut autem beatae commodi corporis culpa delectus deleniti distinctio eius eos et, facere facilis iusto maiores nihil, officia praesentium quaerat qui quis, repellendus sint tempore ullam vero voluptate voluptates? At culpa eaque est ipsum nemo nihil nisi, perspiciatis quaerat quam rem repudiandae sunt tempore tenetur veritatis voluptatibus! Beatae dolorem dolores dolorum est itaque quod temporibus!
+                            </p>
+                            <blockquote>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda dolores ea facilis id laboriosam maiores minus nulla numquam quasi! Ab aliquam atque aut corporis cupiditate dolorum ducimus eaque earum ex excepturi expedita harum, hic modi natus nemo nisi nostrum officia quasi saepe soluta sunt tempore temporibus vero voluptate voluptatum!
+                            </blockquote>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad alias amet aperiam atque aut eos esse eveniet facere, laborum praesentium sed tempora tempore unde ut. Ex facere itaque perspiciatis, provident qui quod sed sit tempora temporibus! Fuga fugit id maiores maxime mollitia natus optio quo rem vero. Beatae, earum eos inventore iste iusto labore nemo, nobis odio placeat quo ratione recusandae totam voluptas. Ad architecto, consectetur cum, dicta eveniet omnis perferendis placeat porro quam sed sequi suscipit. Earum eius expedita explicabo fuga illum inventore itaque laudantium molestias mollitia nesciunt, nulla officia quo, sapiente sequi similique suscipit ullam velit. Harum.</p>
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, maiores!</li>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dignissimos possimus voluptates.</li>
+                                <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, consectetur cupiditate ducimus eligendi error ex explicabo fugiat, id impedit laboriosam nihil, nostrum quo recusandae saepe sint totam vitae voluptates! Aliquam asperiores beatae blanditiis consectetur culpa cupiditate dolore doloribus eos error eum facilis fugit, id illo perferendis, perspiciatis praesentium quasi repellat repellendus similique sint sunt tempora ullam velit voluptatem voluptatibus? Ab alias aspernatur aut blanditiis consequatur consequuntur dolore eius ex exercitationem facilis hic inventore ipsum iure laborum magnam minus molestiae natus neque nisi omnis optio quaerat quia, quod reiciendis rem soluta temporibus. Ab earum facere facilis impedit, magni nihil nobis non odio officiis quo velit vero voluptate! Accusantium alias autem ea facilis laboriosam nostrum numquam odit optio quisquam reprehenderit, repudiandae sed. Debitis eos labore molestias nesciunt, perspiciatis quaerat quod ut! Amet aperiam beatae deserunt, error inventore laudantium perferendis quibusdam repellat similique temporibus voluptas voluptates. Accusamus, architecto consequatur earum, eius eligendi esse et eum id placeat quis quo, recusandae! Ex minus natus pariatur repellendus sint. Eum, fugiat labore obcaecati quam quasi similique. Architecto beatae dicta et expedita nostrum odit quam vel voluptates!</p>
+<pre class="line-numbers"><code class="language-javascript" prism-highlight>// Generate parameters to create a standard animation
+function genFx( type, includeWidth ) {
+    var which,
+        i = 0,
+        attrs = { height: type };
+
+    // If we include width, step value is 1 to do all cssExpand values,
+    // otherwise step value is 2 to skip over Left and Right
+    includeWidth = includeWidth ? 1 : 0;
+    for ( ; i < 4 ; i += 2 - includeWidth ) {
+        which = cssExpand[ i ];
+        attrs[ "margin" + which ] = attrs[ "padding" + which ] = type;
+    }
+    if ( includeWidth ) {
+        attrs.opacity = attrs.width = type;
+    }
+    return attrs;
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-width-medium-1-4">
+                <h5 class="uk-margin-small-bottom uk-text-upper">Recent Posts</h5>
+                <ul class="md-list uk-margin-remove">
+                    <li>
+                        <div class="md-list-content">
+                            <span class="md-list-heading uk-text-truncate"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing</a></span>
+                            <span class="uk-text-small uk-text-muted">April 16, 2016</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="md-list-content">
+                            <span class="md-list-heading uk-text-truncate"><a href="#">Lorem ipsum dolor sit.</a></span>
+                            <span class="uk-text-small uk-text-muted">April 16, 2016</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="md-list-content">
+                            <span class="md-list-heading uk-text-truncate"><a href="#">Lorem ipsum dolor sit amet.</a></span>
+                            <span class="uk-text-small uk-text-muted">April 16, 2016</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="md-list-content">
+                            <span class="md-list-heading uk-text-truncate"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></span>
+                            <span class="uk-text-small uk-text-muted">April 16, 2016</span>
+                        </div>
+                    </li>
+                </ul>
+                <h5 class="uk-margin-small-bottom uk-text-upper  uk-margin-large">Tags</h5>
+                <div class="blog_tags">
+                    <a href="#" class="uk-badge">admin panel</a>
+                    <a href="#" class="uk-badge">backend</a>
+                    <a href="#" class="uk-badge">bower</a>
+                    <a href="#" class="uk-badge">dashboard</a>
+                    <a href="#" class="uk-badge">gulp</a>
+                    <a href="#" class="uk-badge">html admin</a>
+                    <a href="#" class="uk-badge uk-badge-success">material design</a>
+                    <a href="#" class="uk-badge">invoices</a>
+                    <a href="#" class="uk-badge">kendo ui</a>
+                    <a href="#" class="uk-badge">less</a>
+                    <a href="#" class="uk-badge">uikit</a>
+                </div>
+                <h5 class="uk-margin-small-bottom uk-text-upper uk-margin-large">Top Authors</h5>
+                <ul class="md-list md-list-addon uk-margin-remove">
+                    <li>
+                        <div class="md-list-addon-element">
+                            <img class="md-user-image md-list-addon-avatar" src="assets/img/avatars/avatar_02_tn.png" alt=""/>
+                        </div>
+                        <div class="md-list-content">
+                            <span class="md-list-heading">Catalina Weber</span>
+                            <span class="uk-text-small uk-text-muted">
+                                <span class="uk-margin-small-right"><i class="material-icons md-color-red-600">&#xE87D;</i> <small>64</small></span>
+                                <span><i class="material-icons">&#xE0B9;</i> <small>210</small></span>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="md-list-addon-element">
+                            <img class="md-user-image md-list-addon-avatar" src="assets/img/avatars/avatar_07_tn.png" alt=""/>
+                        </div>
+                        <div class="md-list-content">
+                            <span class="md-list-heading">Jayme Hermiston</span>
+                            <span class="uk-text-small uk-text-muted">
+                                <span class="uk-margin-small-right"><i class="material-icons">&#xE87D;</i> <small>22</small></span>
+                                <span><i class="material-icons">&#xE0B9;</i> <small>62</small></span>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="md-list-addon-element">
+                            <img class="md-user-image md-list-addon-avatar" src="assets/img/avatars/avatar_06_tn.png" alt=""/>
+                        </div>
+                        <div class="md-list-content">
+                            <span class="md-list-heading">Enid Roob</span>
+                            <span class="uk-text-small uk-text-muted">
+                                <span class="uk-margin-small-right"><i class="material-icons">&#xE87D;</i> <small>11</small></span>
+                                <span><i class="material-icons">&#xE0B9;</i> <small>42</small></span>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+                <h5 class="uk-margin-small-bottom uk-text-upper uk-margin-large">Categories</h5>
+                <ul class="md-list uk-margin-remove">
+                    <li>
+                        <div class="md-list-content">
+                            <span class="md-list-heading"><a href="#">Material Design</a></span>
+                            <span class="uk-text-small uk-text-muted">23 posts</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="md-list-content">
+                            <span class="md-list-heading"><a href="#">Gulp</a></span>
+                            <span class="uk-text-small uk-text-muted">8 posts</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="md-list-content">
+                            <span class="md-list-heading"><a href="#">Admin</a></span>
+                            <span class="uk-text-small uk-text-muted">17 posts</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="md-list-content">
+                            <span class="md-list-heading"><a href="#">Ux Design</a></span>
+                            <span class="uk-text-small uk-text-muted">4 posts</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,346 @@
+// theme g
+@app_theme_g_color:         @md-color-purple-600;
+@app_theme_g_colorLight:    @md-color-purple-50;
+@app_theme_g_colorDark:     @md-color-purple-700;
+@app_theme_g_colorAccent:   @md-color-green-500;
+
+.app_theme_g {
+    // --------- COMPONENTS ---------
+    // alerts
+    .uk-alert {
+        background: @app_theme_g_color;
+    }
+    // buttons
+    .md-btn{
+        &-primary {
+            &,
+            &:hover,
+            &:focus,
+            &:active {
+                background: @app_theme_g_color;
+                color: @white;
+            }
+        }
+        &-flat-primary {
+            &,
+            &:hover,
+            &:focus,
+            &:active {
+                color: @app_theme_g_colorDark;
+            }
+            &:hover,
+            &:focus,
+            &:active {
+                background: lighten(@app_theme_g_color,50%);
+            }
+        }
+    }
+    // badges
+    .uk-badge {
+        &-primary {
+            background: @app_theme_g_color;
+        }
+    }
+    // cards
+    .md-card-list-wrapper {
+        .md-card-list {
+            > ul > li.item-shown {
+                &.md-card-list-item-selected {
+                    &:before {
+                        background: @app_theme_g_colorLight;
+                    }
+                }
+            }
+            .md-card-list-item-selected {
+                background: @app_theme_g_colorLight;
+                &.item-shown {
+                    background: @white;
+                    &:before {
+                        background: @app_theme_g_colorLight;
+                    }
+                }
+            }
+        }
+    }
+    // fab
+    .md-fab {
+        &.md-fab-accent {
+            background: @app_theme_g_colorAccent;
+        }
+    }
+    // list
+    .md-list {
+        .uk-nestable-list > li,
+        > li {
+            &.md-list-item-active {
+                color: @app_theme_g_colorAccent;
+            }
+        }
+        &-addon {
+            > li {
+                &.md-list-item-active {
+                    .md-list-addon-element {
+                        &,
+                        .material-icons {
+                            color: @app_theme_g_colorAccent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // pagination
+    .uk-pagination {
+        > li {
+            > a {
+                &:hover {
+                    background: lighten(@app_theme_g_colorAccent,40%);
+                }
+            }
+            &.uk-active {
+                > a,
+                > span {
+                    background: @app_theme_g_colorAccent;
+                    color: @white;
+                }
+            }
+        }
+    }
+    // sub navigation
+    .uk-subnav {
+        &-pill {
+            > .uk-active {
+                > * {
+                    background: @app_theme_g_colorAccent;
+                }
+            }
+        }
+    }
+    // tabs
+    .uk-tab {
+        > li {
+            > a {
+                &:hover,
+                &:focus {
+                    border-bottom-color: lighten(@app_theme_g_color, 30%);
+                }
+            }
+            &.uk-active {
+                > a {
+                    border-bottom-color: @app_theme_g_color;
+                }
+            }
+        }
+        &-bottom {
+            li {
+                > a {
+                    &:hover,
+                    &:focus {
+                        border-top-color: lighten(@app_theme_g_color,30%);
+                    }
+                }
+                &.uk-active {
+                    > a {
+                        border-top-color: @app_theme_g_color;
+                    }
+                }
+            }
+        }
+        &-left {
+            li {
+                > a {
+                    &:hover,
+                    &:focus {
+                        border-right-color: lighten(@app_theme_g_color,30%);
+                    }
+                }
+                &.uk-active {
+                    > a {
+                        border-right-color: @app_theme_g_color;
+                    }
+                }
+            }
+        }
+        &-right {
+            li {
+                > a {
+                    &:hover,
+                    &:focus {
+                        border-left-color: lighten(@app_theme_g_color,30%);
+                    }
+                }
+                &.uk-active {
+                    > a {
+                        border-left-color: @app_theme_g_color;
+                    }
+                }
+            }
+        }
+    }
+
+    // --------- PARTIALS ---------
+    // main header
+    #header_main {
+        background: @app_theme_g_color;
+    }
+    &.header_double_height {
+        #page_content:after {
+            background: @app_theme_g_color;
+        }
+    }
+    // top bar
+    #top_bar .top_bar_nav > li {
+        > a:hover {
+            box-shadow: inset 0 -3px 0 @app_theme_g_color;
+        }
+        &.uk-active a {
+            box-shadow: inset 0 -3px 0 @app_theme_g_color;
+        }
+    }
+    // user heading
+    .user_heading {
+        background: @app_theme_g_colorDark;
+    }
+    // main sidebar
+    #sidebar_main .menu_section > ul > li {
+        ul li.act_item a {
+            color: @app_theme_g_colorAccent;
+        }
+        &.current_section {
+            > a {
+                > .menu_icon {
+                    .material-icons {
+                        color: @app_theme_g_colorAccent;
+                    }
+                }
+                .menu_title {
+                    color: @app_theme_g_colorAccent;
+                }
+            }
+        }
+    }
+    &.sidebar_mini {
+        #sidebar_main {
+            .menu_section {
+                > ul {
+                    > li {
+                        > a {
+                            > .menu_title {
+                                background: @app_theme_g_colorAccent;
+                                color: @white;
+                            }
+                        }
+                        &:hover {
+                            &.sidebar_submenu {
+                                background: @app_theme_g_colorAccent;
+                                > a {
+                                    .menu_icon {
+                                        .material-icons {
+                                            color: @white;
+                                        }
+                                    }
+                                }
+                                ul {
+                                    border-left-color: @app_theme_g_colorAccent;
+                                }
+                            }
+                        }
+                        &.current_section {
+                            > a {
+                                > .menu_icon {
+                                    .material-icons {
+                                        color: @app_theme_g_colorAccent;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    // --------- PLUGINS ---------
+    // calendar
+    .clndr {
+        .clndr_days {
+            .clndr_days_grid {
+                .day {
+                    &.today {
+                        > span {
+                            background: @app_theme_g_colorAccent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // datatables
+    .DTTT_print_info {
+        h6 {
+            color: @app_theme_g_colorAccent;
+        }
+    }
+    .fc-unthemed .fc-button {
+        &.fc-state-active {
+            &:after {
+                color: @app_theme_g_colorAccent;
+            }
+        }
+    }
+    // fullcalendar
+    .fc-unthemed .fc-highlight {
+        box-shadow: inset 0 0 0 2px @app_theme_g_color,inset 0 -1px 0 2px @app_theme_g_color;
+    }
+    // tablesorter
+    .tablesorter-altair {
+        tbody {
+            > tr {
+                &.row_highlighted > td {
+                    background: @app_theme_g_colorLight;
+                }
+            }
+        }
+        .headerSortUp,
+        .tablesorter-headerSortUp,
+        .tablesorter-headerAsc,
+        .headerSortDown,
+        .tablesorter-headerSortDown,
+        .tablesorter-headerDesc {
+            color: @app_theme_g_colorAccent;
+        }
+    }
+    // wizard
+    .wizard {
+        > .steps {
+            background: @app_theme_g_color;
+            > ul {
+                > li {
+                    &.current {
+                        a {
+                            &,
+                            &:hover,
+                            &:active {
+                                background: lighten(@app_theme_g_color,10%);
+                            }
+                        }
+                    }
+                    &.done {
+                        a {
+                            &,
+                            &:hover,
+                            &:active {
+                                background: @app_theme_g_colorDark;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // card left border
+    .md-card-primary {
+        border-left-color: @app_theme_g_color;
+    }
+}

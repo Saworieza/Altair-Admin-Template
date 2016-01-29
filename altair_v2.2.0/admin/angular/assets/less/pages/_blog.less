@@ -1,0 +1,60 @@
+/* blog */
+.blog_list {
+    &_teaser {
+        &_image {
+            margin-bottom: 16px;
+        }
+        &_video {
+            margin-bottom: 16px;
+            height: 200px;
+        }
+        &_title {
+            .md_font(400, 18px, 24px);
+            margin: 0 0 8px;
+        }
+        p {
+            margin: 0 0 8px;
+        }
+    }
+    &_footer {
+        border-top: 1px solid @md-color-grey-300;
+        padding: 8px 0 0 8px;
+        margin-top: 8px;
+        overflow: hidden;
+        &_info {
+            float: left;
+            padding-top: 6px;
+            .material-icons {
+                color: @md-color-grey-500;
+            }
+            small {
+                vertical-align: 1px;
+            }
+        }
+    }
+}
+
+.blog_article {
+    .uk-thumbnail {
+        &.thumbnail_left {
+            float: left;
+            margin: 0 24px 24px 0;
+        }
+        &.thumbnail_right {
+            float: right;
+            margin: 0 0 24px 24px;
+        }
+    }
+    * + p, * + ul, * + ol, * + dl, * + blockquote, * + pre, * + address, * + fieldset, * + figure {
+        margin-top: 24px;
+    }
+    .material-icons + small {
+        vertical-align: 2px;
+    }
+}
+
+.blog_tags {
+    .uk-badge {
+        margin: 0 4px 4px 0;
+    }
+}

@@ -1,0 +1,157 @@
+/* clndr */
+
+.clndr {
+    .border-box();
+    position: relative;
+    overflow: hidden;
+    .clndr_days_names,
+    .clndr_days_grid {
+        .clearfix();
+    }
+    .md-card-toolbar-heading-text {
+        text-transform: capitalize;
+    }
+    .clndr_days {
+        transition: all 280ms @md_easing;
+        padding: 16px;
+        transform: translateY(0);
+        opacity: 1;
+        .clndr_days_names {
+            .day-header {
+                width: 100% / 7;
+                float: left;
+                text-align: center;
+                padding: 8px 0;
+                text-transform: uppercase;
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+        .clndr_days_grid {
+            .day {
+                width: 100% / 7;
+                float: left;
+                padding: 6px;
+                text-align: center;
+                position: relative;
+                &.next-month,
+                &.last-month {
+                    color: #bbb;
+                }
+                > span {
+                    display: inline-block;
+                    font-size: 15px;
+                    line-height: 36px;
+                    height: 38px;
+                    width: 38px;
+                    border-radius: 50%;
+                    border: 1px solid transparent;
+                    @media @screen_small_max {
+                        font-size: 14px;
+                        line-height: 32px;
+                        width: 32px;
+                        border-radius: 16px;
+                    }
+                }
+                &.today {
+                    > span {
+                        background: @accent_color;
+                        color: @white;
+                    }
+                }
+                &.event {
+                    cursor: pointer;
+                    > span {
+                        border-color: @border_color;
+                    }
+                    &.today {
+                        > span {
+                            border-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .clndr_events {
+        position: absolute;
+        top: @header_main_height;
+        bottom: 0;
+        right: 0;
+        width: 240px;
+        background: #fff;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 16px;
+        margin-right: -240px;
+        transition: margin 280ms @md_easing;
+        border-left: 1px solid @border_color;
+        .clndr_event {
+            padding: 8px 0;
+            display: none;
+            > a {
+                display: inline-block;
+                color: @text_primary_color;
+            }
+            .clndr_event_more_info,
+            .clndr_event_title {
+                display: block;
+            }
+            .clndr_event_more_info {
+                margin: 0;
+                font-size: 12px;
+                color: #999;
+            }
+            .clndr_event_title {
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+        .clndr_events_close_button {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            cursor: pointer;
+        }
+    }
+}
+
+.clndr-wrapper {
+    &.animated_change {
+        .clndr_days {
+            transform: translateY(80%);
+            opacity: 0;
+        }
+    }
+}
+
+.events_visible {
+    .clndr {
+        .clndr_days {
+            margin-right: 240px;
+            .day-active {
+                > span {
+                    border-color: @primary_color !important;
+                    box-shadow: 0 0 0 1px @primary_color;
+                }
+            }
+        }
+        .clndr_events {
+            margin-right: 0;
+        }
+    }
+}
+.events_over {
+    &.events_visible  {
+        .clndr {
+            .clndr_days {
+                margin-right: 0;
+            }
+        }
+        .clndr_events {
+            .md-box-shadow-left();
+            z-index: 5;
+            border-left-color: transparent;
+        }
+    }
+}

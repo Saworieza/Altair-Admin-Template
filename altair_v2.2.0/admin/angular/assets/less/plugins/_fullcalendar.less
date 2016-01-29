@@ -1,0 +1,176 @@
+/* fullcalendar */
+.fc {
+    &-state-default {
+        border: none;
+        background: none;
+        box-shadow: none;
+        border-radius: 0 !important;
+    }
+    &-toolbar {
+        border-bottom: 1px solid @border_color;
+        margin: -16px -16px 16px;
+        height: @header_main_height;
+        padding: 0 16px;
+        h2 {
+            line-height: 48px;
+        }
+        .fc-button {
+            margin-top: 8px;
+            border-radius: 50% !important;
+            &:hover {
+                background: rgba(0,0,0,.08);
+            }
+        }
+    }
+    &-event {
+        background: @md-color-light-blue-800;
+        border-radius: 3px;
+        font-size: 12px;
+    }
+    &-day-grid-event {
+        padding: 2px 2px;
+    }
+    &-day-number.fc-other-month {
+        opacity: 0.4;
+    }
+    .fc-button-group {
+        + .fc-button-group {
+            margin-left: 24px;
+        }
+    }
+    .fc-day-grid-event {
+        margin-top: 2px
+    }
+    &-unthemed {
+        .fc-divider,
+        .fc-popover,
+        .fc-row,
+        tbody,
+        td,
+        th,
+        thead {
+            border-color: lighten(@border_color,40%);
+        }
+        .fc-widget-header {
+            border: none;
+            text-align: left;
+            font-size: 15px;
+            color: @text_secondary_color;
+            font-weight: 400;
+            padding: 2px 1px;
+        }
+        .fc-today {
+            background: @md-color-yellow-50;
+        }
+        .fc-button {
+            position: relative;
+            min-width: 32px;
+            height: 32px;
+            box-sizing: border-box;
+            padding: 0;
+            transition: all 280ms @md_easing;
+            + .fc-button {
+                margin-left: 8px;
+            }
+            &:after {
+                font-family: "Material Icons";
+                font-size: 24px;
+                position: absolute;
+                color: @text_secondary_color;
+                left: 0;
+                top: 4px;
+                width: 100%;
+                height: 100%;
+                display: block;
+                transition: all 280ms @md_easing;
+            }
+            &:hover {
+                &:after {
+                    color: @text_primary_color;
+                }
+            }
+            &.fc-state-active {
+                background: none !important;
+                cursor: default;
+                &:after {
+                    color: @accent_color;
+                }
+            }
+            &.fc-state-disabled {
+                background: none !important;
+                cursor: default;
+                &:hover {
+                    &:after {
+                        color: @text_secondary_color;
+                    }
+                }
+            }
+        }
+        .fc-today-button {
+            margin-left: 16px;
+            &:after {
+                content: '\e8df';
+            }
+        }
+        .fc-month-button {
+            &:after {
+                content: '\e42a';
+            }
+        }
+        .fc-agendaWeek-button {
+            &:after {
+                content: '\e8f3';
+            }
+        }
+        .fc-agendaDay-button {
+            &:after {
+                content: '\e8ed';
+            }
+        }
+        .fc-prev-button {
+            &:after {
+                content: '\e408';
+            }
+        }
+        .fc-next-button {
+            margin-left: 0 !important;
+            &:after {
+                content: '\e409';
+            }
+        }
+        .fc-popover {
+            border: none !important;
+            .boxShadowHelper(5);
+            margin: -10px 0 0 -4px;
+            .fc-header {
+                padding: 4px;
+                background: #999;
+                color: #fff;
+                .fc-close {
+                    margin-top: 3px;
+                    color: #fff;
+                }
+            }
+            .fc-event-container {
+                padding: 8px;
+            }
+        }
+        .fc-highlight {
+            background: none;
+            box-shadow: inset 0 0 0 2px @theme_primary_color,inset 0 -1px 0 2px @theme_primary_color;
+            opacity: 1;
+        }
+    }
+    &-ltr {
+        .fc-basic-view .fc-day-number {
+            text-align: left;
+            color: @text_primary_color;
+        }
+    }
+    &-basic-view {
+        td.fc-day-number,
+        td.fc-week-number span {
+            padding: 2px 4px;
+        }
+    }
+}

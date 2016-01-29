@@ -1,0 +1,30 @@
+    <div id="page_content">
+        <div id="page_content_inner">
+
+            <div class="gallery_grid uk-grid-width-medium-1-4 uk-grid-width-large-1-5" data-uk-grid="{gutter: 16}">
+                <div ng-repeat="image in images" on-last-repeat>
+                    <div class="md-card md-card-hover">
+                        <div class="gallery_grid_item md-card-content">
+                            <a href="{{image.url}}" data-uk-lightbox="{group:'gallery'}">
+                                <img ng-src="{{image.url}}" alt="">
+                            </a>
+                            <div class="gallery_grid_image_caption">
+                                <div class="gallery_grid_image_menu" data-uk-dropdown="{pos:'top-right'}">
+                                    <i class="md-icon material-icons">&#xE5D4;</i>
+                                    <div class="uk-dropdown uk-dropdown-small">
+                                        <ul class="uk-nav">
+                                            <li><a href="#"><i class="material-icons uk-margin-small-right">&#xE150;</i> Edit</a></li>
+                                            <li><a href="#"><i class="material-icons uk-margin-small-right">&#xE872;</i> Remove</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <span class="gallery_image_title uk-text-truncate">{{image.title}}</span>
+                                <span class="uk-text-muted uk-text-small">{{image.date}}, {{image.size}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>

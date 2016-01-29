@@ -1,0 +1,96 @@
+<div class="md-card md-card-single main-print" id="invoice" single-card>
+    <div class="md-card-toolbar">
+        <div class="md-card-toolbar-actions hidden-print">
+            <i class="md-icon material-icons" print-page print-message="Do you want to print this invoice?">&#xE8ad;</i>
+            <div class="md-card-dropdown" data-uk-dropdown="{pos:'bottom-right'}">
+                <i class="md-icon material-icons">&#xE5D4;</i>
+                <div class="uk-dropdown uk-dropdown-small">
+                    <ul class="uk-nav">
+                        <li><a href="#">Archive</a></li>
+                        <li><a href="#" class="uk-text-danger">Remove</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <h3 class="md-card-toolbar-heading-text large" id="invoice_name">
+            Invoice {{invoice.item_id}}/2015
+        </h3>
+    </div>
+    <div class="md-card-content">
+        <div class="uk-margin-medium-bottom">
+            <span class="uk-text-muted uk-text-small uk-text-italic">Date:</span> {{invoice.date}}
+            <br/>
+            <span class="uk-text-muted uk-text-small uk-text-italic">Due Date:</span> {{ invoice_dueDate }}
+        </div>
+        <div class="uk-grid" data-uk-grid-margin>
+            <div class="uk-width-small-3-5">
+                <div class="uk-margin-bottom">
+                    <span class="uk-text-muted uk-text-small uk-text-italic">From:</span>
+                    <address>
+                        <p><strong>Bailey-Lynch</strong></p>
+                        <p>2808 Robson St</p>
+                        <p>Vancouver, BC V6B 3K9</p>
+                    </address>
+                </div>
+                <div class="uk-margin-medium-bottom">
+                    <span class="uk-text-muted uk-text-small uk-text-italic">To:</span>
+                    <address>
+                        <p><strong>{{invoice.company}}</strong></p>
+                        <p>{{invoice.address}}</p>
+                        <p>{{invoice.city}}, {{invoice.postcode}}</p>
+                    </address>
+                </div>
+            </div>
+            <div class="uk-width-small-2-5">
+                <span class="uk-text-muted uk-text-small uk-text-italic">Total:</span>
+                <p class="heading_b uk-text-success">{{ invoice_total() | currency : "$" : 2 }}</p>
+                <p class="uk-text-small uk-text-muted uk-margin-top-remove">Incl. VAT - {{ invoice_total_tax() | currency : "$" : 2 }}</p>
+            </div>
+        </div>
+        <div class="uk-grid uk-margin-large-bottom">
+            <div class="uk-width-1-1">
+                <table class="uk-table">
+                    <thead>
+                        <tr class="uk-text-upper">
+                            <th>Description</th>
+                            <th>Rate</th>
+                            <th class="uk-text-center">Hours</th>
+                            <th class="uk-text-center">Vat</th>
+                            <th class="uk-text-center">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="uk-table-middle" ng-repeat="service in invoice.services" on-last-repeat>
+                            <td>
+                                <span class="uk-text-large">{{ service.name }}</span><br/>
+                                <span class="uk-text-muted uk-text-small">{{ service.description }}</span>
+                            </td>
+                            <td>
+                                {{ service.rate | currency : "$" : 2 }}
+                            </td>
+                            <td class="uk-text-center">
+                                {{ service.hours }}
+                            </td>
+                            <td class="uk-text-center">
+                                {{ service.tax }}%
+                            </td>
+                            <td class="uk-text-center">
+                                {{ service.rate * service.hours + ( (service.tax/100) * (service.rate * service.hours)) | currency : "$" : 2 }}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="uk-grid">
+            <div class="uk-width-1-1">
+                <span class="uk-text-muted uk-text-small uk-text-italic">Payment to:</span>
+                <p class="uk-margin-top-remove">
+                    {{invoice.bank_name}}<br>
+                    {{invoice.bank_id}}
+                </p>
+                <p class="uk-text-small">Please pay within {{invoice.due_date}} days</p>
+            </div>
+        </div>
+    </div>
+</div>

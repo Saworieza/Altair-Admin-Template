@@ -1,0 +1,104 @@
+<div id="page_content">
+    <div id="page_content_inner">
+
+        <div class="md-card">
+            <div class="md-card-content">
+                <div class="uk-overflow-container uk-margin-bottom">
+                    <table class="uk-table uk-table-align-vertical uk-table-nowrap tablesorter tablesorter-altair" id="ts_pager_filter">
+                        <thead>
+                        <tr>
+                            <th><input type="checkbox" class="ts_checkbox_all"></th>
+                            <th class="filter-false remove sorter-false">Image</th>
+                            <th>Name</th>
+                            <th>Major</th>
+                            <th>Sex</th>
+                            <th>English</th>
+                            <th>Japanese</th>
+                            <th>Calculus</th>
+                            <th>Geometry</th>
+                            <th class="filter-false remove sorter-false uk-text-center">Actions</th>
+                        </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th></th>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Major</th>
+                                <th>Sex</th>
+                                <th>English</th>
+                                <th>Japanese</th>
+                                <th>Calculus</th>
+                                <th>Geometry</th>
+                                <th class="uk-text-center">Actions</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr ng-repeat="item in table_data" on-last-repeat>
+                                <td><input type="checkbox" class="ts_checkbox" data-md-icheck icheck ng-model="row_select"></td>
+                                <td><img class="md-user-image" ng-src="{{item.avatar}}" alt=""/></td>
+                                <td>{{item.name}}</td>
+                                <td>{{item.major}}</td>
+                                <td>{{item.sex}}</td>
+                                <td>{{item.english}}</td>
+                                <td>{{item.japanese}}</td>
+                                <td>{{item.calculus}}</td>
+                                <td>{{item.geometry}}</td>
+                                <td class="uk-text-center">
+                                    <a href="#" class="ts_remove_row" ng-click="ts_remove_item($event,item)"><i class="md-icon material-icons">&#xE872;</i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="ts_pager">
+                    <ul class="uk-pagination ts_pager">
+                        <li data-uk-tooltip title="Select Page">
+                            <select class="ts_gotoPage ts_selectize"></select>
+                        </li>
+                        <li class="first"><a href="javascript:void(0)"><i class="uk-icon-angle-double-left"></i></a></li>
+                        <li class="prev"><a href="javascript:void(0)"><i class="uk-icon-angle-left"></i></a></li>
+                        <li><span class="pagedisplay"></span></li>
+                        <li class="next"><a href="javascript:void(0)"><i class="uk-icon-angle-right"></i></a></li>
+                        <li class="last"><a href="javascript:void(0)"><i class="uk-icon-angle-double-right"></i></a></li>
+                        <li data-uk-tooltip title="Page Size">
+                            <select class="pagesize ts_selectize">
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h4 class="heading_c uk-margin-large-top uk-margin-bottom">Align Character Widget</h4>
+        <div class="md-card">
+            <div class="md-card-content">
+                <div class="uk-overflow-container">
+                    <table class="uk-table uk-table-hover uk-table-align-vertical uk-table-nowrap tablesorter tablesorter-altair" id="ts_align">
+                        <thead>
+                            <tr>
+                                <th data-align-char="&nbsp;">AlphaNumeric</th>
+                                <th data-align-char="." data-align-adjust="0">Numeric</th>
+                                <th data-align-char="=" data-align-index="1">Animals</th>
+                                <th data-align-char="." data-align-index="2">Sites</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in alignChar_table_data" on-last-repeat>
+                                <td>{{item[0]}}</td>
+                                <td>{{item[1]}}</td>
+                                <td>{{item[2]}}</td>
+                                <td>{{item[3]}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

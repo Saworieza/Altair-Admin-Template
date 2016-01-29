@@ -1,0 +1,34 @@
+    <div id="page_content">
+        <div id="page_content_inner">
+            <div class="md-card">
+                <div class="md-card-content">
+                    <div class="uk-grid uk-grid-width-medium-1-3 uk-margin-medium-bottom">
+                        <div>
+                            <h4 class="heading_c uk-margin-medium-bottom">Color value 1: {{color1}}</h4>
+                            <div class="uk-margin-bottom">
+                                <div kendo-color-palette ng-model="color1" k-opacity="true"></div>
+                            </div>
+                            <div kendo-flat-color-picker ng-model="color1" k-opacity="true"></div>
+                        </div>
+                        <div>
+                            <h4 class="heading_c uk-margin-bottom">Color value 2: {{color2}}</h4>
+                            <input kendo-color-picker k-palette="'websafe'" ng-model="color2" />
+                        </div>
+                        <div>
+                            <h4 class="heading_c uk-margin-bottom">Color value 3: {{color3}}</h4>
+                            <input kendo-color-picker ng-model="color3" k-buttons="false" k-preview="false" k-input="false" />
+                        </div>
+                    </div>
+<pre class="line-numbers"><code class="language-markup" prism-highlight>// color palette 1
+&lt;div kendo-color-palette ng-model=&quot;color1&quot; k-opacity=&quot;true&quot;&gt;&lt;/div&gt;
+&lt;div kendo-flat-color-picker ng-model=&quot;color1&quot; k-opacity=&quot;true&quot;&gt;&lt;/div&gt;
+
+// color palette 2
+&lt;input kendo-color-picker k-palette=&quot;'websafe'&quot; ng-model=&quot;color2&quot; /&gt;
+
+// color palette 3
+&lt;input kendo-color-picker ng-model=&quot;color3&quot; k-buttons=&quot;false&quot; k-preview=&quot;false&quot; k-input=&quot;false&quot; /&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>

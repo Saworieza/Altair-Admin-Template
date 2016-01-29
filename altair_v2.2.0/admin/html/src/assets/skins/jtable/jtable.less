@@ -1,0 +1,292 @@
+/* These file is a start point for who wants to create a fully custom
+ * theme for jTable. jtable_theme_base.less (or css) file is needed
+ * for functionality of jTable. This file does not add any color or shape
+ * modifications. It just shows how to set icons. You can change them too.
+ * Halil ibrahim Kalkan / http://www.jtable.org
+ */
+@import "jtable_theme_base.less";
+
+.jtable_theme_base;
+
+div.jtable-main-container {
+    overflow: auto;
+    div.jtable-title {
+        div.jtable-title-text {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 8px;
+        }
+        .jtable-close-button {
+            background: url('close.png') no-repeat;
+            width: 18px;
+            height: 18px;
+        }
+    }
+    table.jtable {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        thead th {
+            border-bottom: 2px solid #d0d0d0;
+            &.jtable-column-header-sortable div.jtable-column-header-container {
+                background: url('column-sortable.png') no-repeat right;
+            }
+            &.jtable-column-header-sorted-asc div.jtable-column-header-container {
+                background: url('column-asc.png') no-repeat right;
+            }
+            &.jtable-column-header-sorted-desc div.jtable-column-header-container {
+                background: url('column-desc.png') no-repeat right;
+            }
+            &.jtable-column-header-sortable div.jtable-column-header-container,
+            &.jtable-column-header-sorted-asc div.jtable-column-header-container,
+            &.jtable-column-header-sorted-desc div.jtable-column-header-container {
+                padding-right: 22px;
+            }
+        }
+        thead th,
+        tfoot td,
+        tfoot th {
+            font-style: normal;
+            font-weight: 400;
+            color: #727272;
+            font-size: 14px;
+            padding: 8px;
+            white-space: nowrap;
+            &.jtable-column-header {
+                border-right: 1px solid #e0e0e0;
+            }
+        }
+        tfoot td,
+        tfoot th {
+            border-top: 2px solid #d0d0d0;
+            border-bottom: none;
+        }
+        tbody {
+            > tr {
+                &.jtable-row-even {
+                    background-color: #ededed;
+                }
+                &:hover {
+                    background: #e0e0e0;
+                    td {
+
+                    }
+                }
+                &.jtable-row-selected {
+                    background-color: #f1f8e9;
+                }
+                &.jtable-row-created,
+                &.jtable-row-updated {
+                    background-color: #aed581;
+                }
+                &.jtable-row-deleting {
+                    background-color: #f44336;
+                    color: #fff;
+                }
+            }
+            td {
+                border-bottom-color: #e0e0e0;
+                border-left: 1px solid #e0e0e0;
+                vertical-align: middle;
+                padding: 8px;
+                white-space: nowrap;
+                &:first-child {
+                    border-left: none;
+                }
+                .jtable-command-button {
+                    background-position: 50% 50%;
+                    background-repeat: no-repeat;
+                    background-color: transparent;
+                    width: 24px;
+                    height: 24px;
+                    opacity: 0.6;
+                    transition: opacity 280ms ease-in;
+                    display: block !important;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+                .jtable-edit-command-button {
+                    background-image: url('edit.png');
+                }
+                .jtable-delete-command-button {
+                    background-image: url('delete.png');
+                }
+            }
+        }
+        .jtable-no-data-row {
+            td {
+                padding: 48px 0;
+                font-size: 18px;
+            }
+        }
+    }
+    > div.jtable-bottom-panel {
+        border-top: 1px solid #e0e0e0;
+        padding: 16px 0 0;
+        min-height: 28px;
+        span.jtable-goto-page,
+        span.jtable-page-size-change {
+            margin-left: 16px;
+        }
+        div.jtable-left-area {
+            float: left;
+        }
+        div.jtable-right-area {
+            position: static;
+            float: right;
+            font-size: 12px;
+            line-height: 28px;
+        }
+        @media only screen and (max-width: 767px) {
+            div.jtable-left-area,
+            div.jtable-right-area {
+                float: none;
+                text-align: center;
+                > span {
+                    display: block;
+                    margin: 16px 0 0;
+                }
+            }
+        }
+    }
+    .jtable-busy-message {
+        padding: 12px 12px 12px 56px;
+        font-size: 20px;
+        background: #fff url('spinner.gif') no-repeat 10px 50%;
+        color: #212121;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+div.jtable-busy-message {
+    color: #000;
+    background-color: #ddd;
+    font-size: 1.25em;
+}
+
+form.jtable-dialog-form  {
+    div.jtable-input-field-container {
+        padding: 4px 0;
+        border: none;
+        min-width: 320px;
+        + div.jtable-input-field-container {
+            margin-top: 16px;
+        }
+    }
+    div.jtable-input-label {
+        font-size: 13px;
+        color: #727272;
+        padding: 0 0 4px;
+    }
+    div.jtable-input {
+        padding: 0;
+    }
+    .jtable-radio-input {
+        > span {
+            vertical-align: -3px;
+            margin-left: 8px;
+        }
+        + .jtable-radio-input {
+            margin-top: 8px;
+        }
+    }
+    .jtable-checkbox-input {
+        > span {
+            vertical-align: -3px;
+            margin-left: 8px;
+        }
+        + .jtable-checkbox-input {
+            margin-top: 8px;
+        }
+    }
+}
+
+
+.jtable-page-list {
+    > span {
+        border: none;
+        padding: 4px 4px;
+        min-width: 28px;
+        height: 28px;
+        line-height: 24px;
+        box-sizing: border-box;
+        text-shadow: none;
+        color: #1e88e5;
+        border-radius: 4px;
+        display: inline-block;
+        text-align: center;
+    }
+    .jtable-page-number-first,
+    .jtable-page-number-last {
+
+    }
+    .jtable-page-number-disabled {
+        color: #999;
+    }
+    .jtable-page-number-previous,
+    .jtable-page-number-next {
+
+    }
+    .jtable-page-number {
+
+    }
+    .jtable-page-number-active {
+        color: #fff;
+        background-color: #7cb342;
+    }
+    .jtable-page-number-disabled {
+
+    }
+    .jtable-page-number-space {
+
+    }
+}
+
+
+/* jqueryui customize */
+.ui-widget-overlay {
+    background: rgba(0,0,0,.5);
+    z-index: 1207;
+}
+.ui-dialog {
+    border-radius: 2px;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    padding: 24px 24px 16px;
+    z-index: 1208;
+    .ui-dialog-titlebar {
+        margin: -24px -24px 0;
+        padding: 24px 32px 16px 24px;
+        border: none;
+        .ui-dialog-title {
+            display: block;
+            margin: 0;
+            font: 500 18px / 28px "Roboto", sans-serif;
+        }
+    }
+    .ui-dialog-content {
+        padding: 16px 32px 0 0;
+        max-height: 400px !important;
+        .ui-icon {
+            display: none;
+        }
+        > p {
+            font-size: 15px;
+        }
+    }
+    .ui-dialog-buttonpane {
+        border: none;
+        padding: 16px 0 0;
+        button {
+            margin: 0 !important;
+        }
+    }
+    .ui-dialog-titlebar-close {
+        background: none;
+        border: none;
+        top: 16px;
+        right: 6px;
+    }
+}

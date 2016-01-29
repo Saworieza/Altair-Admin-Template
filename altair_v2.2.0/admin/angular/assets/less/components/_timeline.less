@@ -1,0 +1,134 @@
+/* timeline */
+.timeline {
+    position: relative;
+    min-height: 40px;
+    padding: 8px 0 8px 62px;
+    .border-box;
+    &:before {
+        position: absolute;
+        left: 29px;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: @background_color_default;
+        content: '';
+        display: block;
+    }
+    &_item {
+        position: relative;
+        min-height: 64px;
+        padding: 16px 0;
+    }
+    &_icon {
+        position: absolute;
+        left: -54px;
+        top: 16px;
+        height: 44px;
+        width: 44px;
+        border-radius: 50%;
+        background: @md-color-grey-500;
+        text-align: center;
+        border: 4px solid @white;
+        .material-icons {
+            color: @white;
+            font-size: 18px;
+            line-height: 36px;
+        }
+        &_danger {
+            background: @danger_color;
+        }
+        &_success {
+            background: @success_color;
+        }
+        &_warning {
+            background: @warning_color;
+        }
+        &_primary {
+            background: @primary_color;
+        }
+    }
+    &_date {
+        float: left;
+        min-width: 60px;
+        color: @text_muted;
+        text-align: center;
+        line-height: 18px;
+        font-size: 16px;
+        margin-right: 8px;
+        padding-top: 6px;
+        span {
+            font-size: 11px;
+            display: block;
+            text-transform: uppercase;
+        }
+    }
+    &_content {
+        padding: 5px 4px 8px;
+        overflow: hidden;
+        &_addon {
+            background: @white;
+            margin-top: 8px;
+            max-width: 340px;
+            padding: 8px;
+            .boxShadowHelper(2);
+            border-radius: 4px;
+            > img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+            }
+            blockquote {
+                margin: 8px 0 8px 8px;
+                font-size: 15px;
+            }
+        }
+    }
+    &.timeline_small {
+        padding: 4px 0 4px 48px;
+        &:before {
+            left: 16px;
+        }
+        .timeline_item {
+            min-height: 32px;
+        }
+        .timeline_icon {
+            left: -50px;
+            height: 40px;
+            width: 40px;
+            .material-icons {
+                color: @white;
+                font-size: 18px;
+                line-height: 32px;
+            }
+        }
+        .timeline_date {
+            float: none;
+            text-align: left;
+            font-size: 11px;
+            span {
+                display: inline;
+            }
+        }
+        .timeline_content {
+            font-size: 13px;
+            padding-left: 0;
+            .md-list {
+                li {
+                    margin-left: 0;
+                    text-align: center;
+                }
+                .md-list-addon-element {
+                    width: auto;
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    padding-top: 0;
+                }
+            }
+            blockquote {
+                font-size: 13px;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+    <div id="page_content">
+        <div id="page_content_inner">
+            <div class="uk-grid">
+                <div class="uk-width-1-1">
+                    <div class="md-card">
+                        <div class="md-card-content">
+                            <div class="uk-grid" data-uk-grid-margin>
+                                <div class="uk-width-large-1-2">
+                                    <h4 class="heading_c uk-margin-bottom">Start date: <span ng-show="startDate">{{startDate | date:"MMM d, yyyy"}}</span></h4>
+                                    <kendo-calendar ng-model="startDate" k-rebind="endDate" max="endDate"></kendo-calendar>
+                                </div>
+                                <div class="uk-width-large-1-2">
+                                    <div ng-show="startDate" style="padding-top: 1em;">
+                                        <h4 class="heading_c uk-margin-bottom">End date: <span ng-show="endDate">{{endDate | date:"MMM d, yyyy"}}</span></h4>
+                                        <kendo-calendar ng-model="endDate" k-rebind="startDate" min="startDate" max="maxEndDate"></kendo-calendar>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-grid" data-uk-grid-margin>
+                                <div class="uk-width-1-1">
+<pre class="line-numbers"><code class="language-javascript" prism-highlight>// start date
+&lt;kendo-calendar ng-model=&quot;startDate&quot; k-rebind=&quot;endDate&quot; max=&quot;endDate&quot;&gt;&lt;/kendo-calendar&gt;
+// end date
+&lt;kendo-calendar ng-model=&quot;endDate&quot; k-rebind=&quot;startDate&quot; min=&quot;startDate&quot; max=&quot;maxEndDate&quot;&gt;&lt;/kendo-calendar&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

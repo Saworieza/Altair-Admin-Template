@@ -1,0 +1,218 @@
+    <div id="page_content">
+        <div id="page_content_inner">
+            <div class="uk-grid" data-uk-grid-margin data-uk-grid-match id="user_profile">
+                <div class="uk-width-large-7-10">
+                    <div class="md-card">
+                        <div class="user_heading">
+                            <div class="user_heading_menu" data-uk-dropdown="{pos:'bottom-right'}">
+                                <i class="md-icon material-icons md-icon-light">&#xE5D4;</i>
+                                <div class="uk-dropdown uk-dropdown-small">
+                                    <ul class="uk-nav">
+                                        <li><a href="#">Action 1</a></li>
+                                        <li><a href="#">Action 2</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="user_heading_avatar">
+                                <img ng-src="{{user_data.avatar}}" alt="user avatar"/>
+                            </div>
+                            <div class="user_heading_content">
+                                <h2 class="heading_b uk-margin-bottom">
+                                    <span class="uk-text-truncate">{{user_data.name}}</span>
+                                    <span class="sub-heading">{{user_data.position}}</span>
+                                </h2>
+                                <ul class="user_stats">
+                                    <li>
+                                        <h4 class="heading_a">{{user_data.stat_posts}}<span class="sub-heading">Posts</span></h4>
+                                    </li>
+                                    <li>
+                                        <h4 class="heading_a">{{user_data.stat_photos}}<span class="sub-heading">Photos</span></h4>
+                                    </li>
+                                    <li>
+                                        <h4 class="heading_a">{{user_data.stat_following}}<span class="sub-heading">Following</span></h4>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a class="md-fab md-fab-small md-fab-accent" ui-sref="restricted.pages.user_edit">
+                                <i class="material-icons">&#xE150;</i>
+                            </a>
+                        </div>
+                        <div class="user_content">
+                            <ul id="user_profile_tabs" class="uk-tab" data-uk-tab="{connect:'#user_profile_tabs_content', animation:'slide-horizontal'}" data-uk-sticky="{ top: 48, media: 960 }">
+                                <li class="uk-active"><a href="#">About</a></li>
+                                <li><a href="#">Photos</a></li>
+                                <li><a href="#">Posts</a></li>
+                            </ul>
+                            <ul id="user_profile_tabs_content" class="uk-switcher uk-margin">
+                                <li>
+                                    {{user_data.about}}
+                                    <div class="uk-grid uk-margin-medium-top uk-margin-large-bottom" data-uk-grid-margin>
+                                        <div class="uk-width-large-1-2">
+                                            <h4 class="heading_c uk-margin-small-bottom">Contact Info</h4>
+                                            <ul class="md-list md-list-addon">
+                                                <li>
+                                                    <div class="md-list-addon-element">
+                                                        <i class="md-list-addon-icon material-icons">&#xE158;</i>
+                                                    </div>
+                                                    <div class="md-list-content">
+                                                        <span class="md-list-heading">{{user_data_contacts.email}}</span>
+                                                        <span class="uk-text-small uk-text-muted">Email</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="md-list-addon-element">
+                                                        <i class="md-list-addon-icon material-icons">&#xE0CD;</i>
+                                                    </div>
+                                                    <div class="md-list-content">
+                                                        <span class="md-list-heading">{{user_data_contacts.phone}}</span>
+                                                        <span class="uk-text-small uk-text-muted">Phone</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="md-list-addon-element">
+                                                        <i class="md-list-addon-icon uk-icon-facebook-official"></i>
+                                                    </div>
+                                                    <div class="md-list-content">
+                                                        <span class="md-list-heading">{{user_data_contacts.fb}}</span>
+                                                        <span class="uk-text-small uk-text-muted">Facebook</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="md-list-addon-element">
+                                                        <i class="md-list-addon-icon uk-icon-twitter"></i>
+                                                    </div>
+                                                    <div class="md-list-content">
+                                                        <span class="md-list-heading">{{user_data_contacts.twitter}}</span>
+                                                        <span class="uk-text-small uk-text-muted">Twitter</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="uk-width-large-1-2">
+                                            <h4 class="heading_c uk-margin-small-bottom">My groups</h4>
+                                            <ul class="md-list">
+                                                <li ng-repeat="group in user_data.groups">
+                                                    <div class="md-list-content">
+                                                        <span class="md-list-heading"><a href="#">{{group.name}}</a></span>
+                                                        <span class="uk-text-small uk-text-muted">{{group.members}} Members</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h4 class="heading_c uk-margin-bottom">Timeline</h4>
+                                    <div class="timeline">
+                                        <div class="timeline_item" ng-repeat="event in user_data.timeline">
+                                            <div class="timeline_icon timeline_icon_danger" ng-if="event.status == 'danger'"><i class="material-icons" ng-bind-html="event.icon"></i></div>
+                                            <div class="timeline_icon timeline_icon_success" ng-if="event.status == 'success'"><i class="material-icons" ng-bind-html="event.icon"></i></div>
+                                            <div class="timeline_icon timeline_icon_warning" ng-if="event.status == 'warning'"><i class="material-icons" ng-bind-html="event.icon"></i></div>
+                                            <div class="timeline_icon timeline_icon_primary" ng-if="event.status == 'primary'"><i class="material-icons" ng-bind-html="event.icon"></i></div>
+                                            <div class="timeline_icon" ng-if="!event.status"><i class="material-icons" ng-bind-html="event.icon"></i></div>
+                                            <div class="timeline_date">
+                                                {{ event.date | jsonDate | date: 'dd' }}
+                                                <span>{{ event.date | jsonDate |date: 'MMM' }}</span>
+                                            </div>
+                                            <div class="timeline_content">
+                                                {{event.description}} <a href="#" ng-if="event.link_text"><strong>{{event.link_text}}</strong></a>
+                                                <div class="timeline_content_addon" ng-if="event.image || event.post_excerpt || event.user_name">
+                                                    <img ng-src="{{event.image}}" alt="" ng-if="event.image"/>
+                                                    <blockquote ng-if="event.post_excerpt">
+                                                        {{event.post_excerpt}}&hellip;
+                                                    </blockquote>
+                                                    <ul class="md-list md-list-addon" ng-if="event.user_name">
+                                                        <li>
+                                                            <div class="md-list-addon-element" ng-if="event.user_avatar">
+                                                                <img class="md-user-image md-list-addon-avatar" ng-src="{{event.user_avatar}}" alt=""/>
+                                                            </div>
+                                                            <div class="md-list-content">
+                                                                <span class="md-list-heading" ng-if="event.user_name">{{event.user_name}}</span>
+                                                                <span class="uk-text-small uk-text-muted" ng-if="event.user_status">{{event.user_status}}</span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div id="user_profile_gallery" data-uk-check-display class="uk-grid-width-small-1-2 uk-grid-width-medium-1-3 uk-grid-width-large-1-4" data-uk-grid="{gutter: 4}">
+                                        <div ng-repeat="image in user_data.images">
+                                            <a href="{{image}}" data-uk-lightbox="{group:'user_images'}">
+                                                <img ng-src="{{image}}" alt=""/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <ul class="uk-pagination uk-margin-large-top">
+                                        <li class="uk-disabled"><span><i class="uk-icon-angle-double-left"></i></span></li>
+                                        <li class="uk-active"><span>1</span></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><span>&hellip;</span></li>
+                                        <li><a href="#">20</a></li>
+                                        <li><a href="#"><i class="uk-icon-angle-double-right"></i></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="md-list">
+                                        <li ng-repeat="post in user_data.posts">
+                                            <div class="md-list-content">
+                                                <span class="md-list-heading"><a href="#">{{post.title}}</a></span>
+                                                <div class="uk-margin-small-top">
+                                                    <span class="uk-margin-right">
+                                                        <i class="material-icons">&#xE192;</i> <span class="uk-text-muted uk-text-small">{{post.date}}</span>
+                                                    </span>
+                                                    <span class="uk-margin-right">
+                                                        <i class="material-icons">&#xE0B9;</i> <span class="uk-text-muted uk-text-small">{{post.comments}}</span>
+                                                    </span>
+                                                    <span class="uk-margin-right">
+                                                        <i class="material-icons">&#xE417;</i> <span class="uk-text-muted uk-text-small">{{post.views}}</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-large-3-10">
+                    <div class="md-card">
+                        <div class="md-card-content">
+                            <div class="uk-margin-medium-bottom">
+                                <h3 class="heading_c uk-margin-bottom">Alerts</h3>
+                                <ul class="md-list md-list-addon">
+                                    <li ng-repeat="alert in user_data.alerts">
+                                        <div class="md-list-addon-element">
+                                            <i class="md-list-addon-icon material-icons uk-text-warning" ng-if="alert.type == 'warning'">&#xE8B2;</i>
+                                            <i class="md-list-addon-icon material-icons uk-text-success" ng-if="alert.type == 'success'">&#xE88F;</i>
+                                            <i class="md-list-addon-icon material-icons uk-text-danger" ng-if="alert.type == 'danger'">&#xE001;</i>
+                                        </div>
+                                        <div class="md-list-content">
+                                            <span class="md-list-heading">{{alert.title}}</span>
+                                            <span class="uk-text-small uk-text-muted uk-text-truncate">{{alert.content}}</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h3 class="heading_c uk-margin-bottom">Friends</h3>
+                            <ul class="md-list md-list-addon uk-margin-bottom">
+                                <li ng-repeat="friend in user_data.friends">
+                                    <div class="md-list-addon-element">
+                                        <img class="md-user-image md-list-addon-avatar" ng-src="{{friend.avatar}}" alt=""/>
+                                    </div>
+                                    <div class="md-list-content">
+                                        <span class="md-list-heading">{{friend.name}}</span>
+                                        <span class="uk-text-small uk-text-muted">{{friend.status}}</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a class="md-btn md-btn-flat md-btn-flat-primary" href="#">Show all</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

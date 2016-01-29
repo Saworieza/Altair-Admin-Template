@@ -1,0 +1,172 @@
+.scroll-wrapper {
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: relative;
+    & > .scroll-content {
+        border: none !important;
+        box-sizing: content-box !important;
+        height: auto;
+        left: 0;
+        margin: 0;
+        max-height: none;
+        max-width: none !important;
+        overflow-y: scroll !important;
+        overflow-x: hidden !important;
+        padding: 0;
+        position: relative !important;
+        top: 0;
+        width: auto !important;
+        &::-webkit-scrollbar {
+            height: 0;
+            width: 0;
+        }
+    }
+}
+
+.scroll-element {
+    display: none;
+    &,
+    & div {
+        box-sizing: content-box;
+    }
+    &.scroll-x.scroll-scrollx_visible,
+    &.scroll-y.scroll-scrolly_visible {
+        display: block;
+    }
+    & .scroll-bar,
+    & .scroll-arrow {
+        cursor: default;
+    }
+}
+
+.scroll-textarea {
+    > .scroll-content {
+        overflow: hidden !important;
+        & > textarea {
+            border: none !important;
+            box-sizing: border-box;
+            height: 100% !important;
+            margin: 0;
+            max-height: none !important;
+            max-width: none !important;
+            overflow: scroll !important;
+            outline: none;
+            padding: 2px;
+            position: relative !important;
+            top: 0;
+            width: 100% !important;
+            &::-webkit-scrollbar {
+                height: 0;
+                width: 0;
+            }
+        }
+    }
+}
+
+.scrollbar-inner {
+    height: 100% !important;
+    max-height: 100%;
+    overflow-y: auto;
+    & > .scroll-element {
+        &,
+        & div {
+            background: none;
+            border: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            z-index: 10;
+        }
+        & div {
+            display: block;
+            height: 100%;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+        & .scroll-element_track {
+            display: none;
+        }
+        & .scroll-bar {
+            background-color: #6C6E71;
+            display: block;
+            opacity: 0;
+            border-radius: 6px;
+            transition: opacity 0.2s linear;
+        }
+        &.scroll-x {
+            bottom: 0;
+            height: 0;
+            left: 0;
+            min-width: 100%;
+            overflow: visible;
+            width: 100%;
+            & .scroll-bar {
+                height: 7px;
+                min-width: 10px;
+                top: -9px;
+            }
+            & .scroll-element_outer {
+                left: 2px;
+            }
+            & .scroll-element_size {
+                left: -4px;
+            }
+        }
+
+        &.scroll-y {
+            height: 100%;
+            min-height: 100%;
+            right: 0;
+            top: 0;
+            width: 0;
+            & .scroll-bar {
+                left: -8px;
+                min-height: 10px;
+                width: 6px;
+            }
+            & .scroll-element_outer {
+                top: 2px;
+            }
+            & .scroll-element_size {
+                top: -4px;
+            }
+        }
+        &.scroll-x.scroll-scrolly_visible .scroll-element_size {
+            left: -11px;
+        }
+        &.scroll-y.scroll-scrollx_visible .scroll-element_size {
+            top: -11px;
+        }
+    }
+    &:hover > .scroll-element .scroll-bar,
+    & > .scroll-element.scroll-draggable .scroll-bar {
+        opacity: 0.7;
+    }
+}
+
+.sidebar_mini {
+    .scrollbar-inner {
+        & > .scroll-element {
+            &.scroll-y {
+                right: auto;
+                left: 0;
+                & .scroll-bar {
+                    left: 2px;
+                }
+            }
+        }
+    }
+}
+
+// Another aproach to scrollbars (more tests needed)
+/*
+.scrollbar-outer {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.scrollbar-inner {
+    height: 100%;
+}
+*/

@@ -1,0 +1,43 @@
+    <div id="page_content">
+        <div id="page_content_inner">
+
+            <div class="md-card">
+                <div class="md-card-content">
+                    <div class="uk-grid uk-margin-bottom">
+                        <div class="uk-width-large-1-2">
+                            <form class="uk-form-stacked">
+                                <label for="kUI_datepicker_a" class="uk-form-label">Select Date</label>
+                                <input kendo-date-picker
+                                       ng-model="dateString"
+                                       k-ng-model="dateObject"
+                                       style="width: 100%;"
+                                       id="kUI_datepicker_a"
+                                />
+                            </form>
+                        </div>
+                    </div>
+<pre class="line-numbers"><code class="language-markup" prism-highlight>&lt;input kendo-date-picker ng-model=&quot;dateString&quot; k-ng-model=&quot;dateObject&quot; style=&quot;width: 100%;&quot; id=&quot;kUI_datepicker_a&quot;/&gt;</code></pre>
+                </div>
+            </div>
+
+            <div class="md-card">
+                <div class="md-card-content">
+                    <div class="uk-grid uk-margin-bottom">
+                        <div class="uk-width-large-1-2">
+                            <form class="uk-form-stacked">
+                                <label for="kUI_datepicker_b" class="uk-form-label">Datepicker (months)</label>
+                                <input kendo-date-picker
+                                       k-options="monthSelectorOptions"
+                                       k-format="'MMMM yyyy'"
+                                       style="width: 100%;"
+                                       id="kUI_datepicker_b"
+                                />
+                            </form>
+                        </div>
+                    </div>
+<pre class="line-numbers"><code class="language-markup" prism-highlight>&lt;input kendo-date-picker k-options=&quot;monthSelectorOptions&quot; k-format=&quot;'MMMM yyyy'&quot; style=&quot;width: 100%;&quot; id=&quot;kUI_datepicker_b&quot;/&gt;</code></pre>
+                </div>
+            </div>
+
+        </div>
+    </div>

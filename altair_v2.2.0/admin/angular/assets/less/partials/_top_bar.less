@@ -1,0 +1,38 @@
+/* top bar */
+#top_bar {
+    background: @white;
+    .boxShadowHelper(2);
+    height: @top_bar_height;
+    .border-box;
+    position: fixed;
+    top: @header_main_height;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 0 25px;
+    .top_bar_nav {
+        .reset_list;
+        > li {
+            float: left;
+            > a {
+                line-height: @top_bar_height;
+                padding: 0 16px;
+                font-weight: 500;
+                color: @text_primary_color;
+                display: block;
+                &:hover {
+                    box-shadow: inset 0 -3px 0 @theme_primary_color;
+                }
+            }
+            &.uk-active a {
+                box-shadow: inset 0 -3px 0 @theme_primary_color;
+            }
+        }
+    }
+}
+.top_bar_active {
+    padding-top: @header_main_height + @top_bar_height;
+    #header_main {
+        box-shadow: none;
+    }
+}

@@ -1,0 +1,181 @@
+    <div id="page_content">
+        <div id="page_content_inner">
+
+            <h4 class="heading_a uk-margin-bottom">Basic settings</h4>
+            <form action="" class="uk-form-stacked" id="page_settings">
+                <div class="uk-grid" data-uk-grid-margin>
+                    <div class="uk-width-large-1-3 uk-width-medium-1-1">
+                        <div class="md-card">
+                            <div class="md-card-content">
+                                <div class="uk-form-row">
+                                    <label for="settings_site_name">Site Name</label>
+                                    <input class="md-input" type="text" id="settings_site_name" name="settings_site_name" value="Altair Admin" ng-model="site_settings.name" md-input/>
+                                </div>
+                                <div class="uk-form-row">
+                                    <label for="settings_page_description">Page description</label>
+                                    <textarea class="md-input" name="settings_page_description" id="settings_page_description" cols="30" rows="4" ng-model="site_settings.description" md-input textarea-autosize></textarea>
+                                </div>
+                                <div class="uk-form-row">
+                                    <label for="settings_admin_email">Admin email</label>
+                                    <input class="md-input" type="text" id="settings_admin_email" name="settings_admin_email" value="altair_admin@example.com" ng-model="site_settings.email" md-input/>
+                                </div>
+                                <div class="uk-form-row">
+                                    <div class="uk-grid uk-grid-width-1-1 uk-grid-width-medium-1-2" data-uk-grid-margin>
+                                        <div>
+                                            <label for="settings_time_format" class="uk-form-label">Time Format</label>
+                                            <input id="settings_time_format" config="time_format_config" options="time_format_options" ng-model="site_settings.time_format" selectize/>
+                                        </div>
+                                        <div>
+                                            <label for="settings_date_format" class="uk-form-label">Date Format</label>
+                                            <input id="settings_date_format" config="date_format_config" options="date_format_options" ng-model="site_settings.date_format" selectize/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-width-large-1-3 uk-width-medium-1-2">
+                        <div class="md-card">
+                            <div class="md-card-content">
+                                <ul class="md-list">
+                                    <li>
+                                        <div class="md-list-content">
+                                            <div class="uk-float-right">
+                                                <input type="checkbox" ui-switch ng-model="site_settings.online" id="settings_site_online" name="settings_site_online" />
+                                            </div>
+                                            <span class="md-list-heading">Site Online</span>
+                                            <span class="uk-text-muted uk-text-small">Lorem ipsum dolor sit amet&hellip;</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="md-list-content">
+                                            <div class="uk-float-right">
+                                                <input type="checkbox" ui-switch ng-model="site_settings.seo_url" id="settings_seo" name="settings_seo" />
+                                            </div>
+                                            <span class="md-list-heading">Search Engine Friendly URLs</span>
+                                            <span class="uk-text-muted uk-text-small">Lorem ipsum dolor sit amet&hellip;</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="md-list-content">
+                                            <div class="uk-float-right">
+                                                <input type="checkbox" ui-switch ng-model="site_settings.url_rewrite" id="settings_url_rewrite" name="settings_url_rewrite" />
+                                            </div>
+                                            <span class="md-list-heading">Use URL rewriting</span>
+                                            <span class="uk-text-muted uk-text-small">Lorem ipsum dolor sit amet&hellip;</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-width-large-1-3 uk-width-medium-1-2">
+                        <div class="md-card">
+                            <div class="md-card-content">
+                                <ul class="md-list">
+                                    <li>
+                                        <div class="md-list-content">
+                                            <div class="uk-float-right">
+                                                <input type="checkbox" ui-switch ng-model="site_settings.top_bar_enabled" color="#7cb342" id="settings_top_bar" name="settings_top_bar" />
+                                            </div>
+                                            <span class="md-list-heading">Top Bar Enabled</span>
+                                            <span class="uk-text-muted uk-text-small">Lorem ipsum dolor sit amet&hellip;</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="md-list-content">
+                                            <div class="uk-float-right">
+                                                <input type="checkbox" ui-switch ng-model="site_settings.api_enabled" color="#7cb342" id="settings_api" name="settings_api" />
+                                            </div>
+                                            <span class="md-list-heading">Api Enabled</span>
+                                            <span class="uk-text-muted uk-text-small">Lorem ipsum dolor sit amet&hellip;</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="md-list-content">
+                                            <div class="uk-float-right">
+                                                <input type="checkbox" ui-switch ng-model="site_settings.minify_assets" color="#3F51B5" id="settings_minify_static" checked name="settings_minify_static" />
+                                            </div>
+                                            <span class="md-list-heading">Minify JS files automatically</span>
+                                            <span class="uk-text-muted uk-text-small">Lorem ipsum dolor sit amet&hellip;</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="heading_a">Other settings</h3>
+
+                <div class="uk-grid" data-uk-grid-margin>
+                    <div class="uk-width-medium-1-2">
+                        <div class="md-card">
+                            <div class="md-card-content">
+                                <div class="uk-form-row">
+                                    <label for="settings_visitors_languages">Select the languages that are accessible for visitors</label>
+                                    <selectize id="settings_visitors_languages" config="site_languages_config" options="site_languages_options" position="bottom" ng-model="site_settings.languages"></selectize>
+                                </div>
+                                <div class="uk-form-row">
+                                    <label for="settings_admin_email" class="uk-form-label">Cache type</label>
+                                    <div>
+                                        <span class="icheck-inline" ng-repeat="option in site_caching">
+                                            <input type="radio" name="settings_cache_type" id="cache_{{option.value}}" ng-model="site_settings.cache_type" value="{{option.value}}" icheck />
+                                            <label for="cache_{{option.value}}" class="inline-label">{{option.label}}</label>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-width-medium-1-2">
+                        <div class="md-card">
+                            <div class="md-card-content">
+                                <ul class="uk-tab" data-uk-tab="{connect:'#settings_users', animation: 'slide-horizontal' }">
+                                    <li ng-repeat="role in site_settings.user_role" ng-class="{'uk-active': $index == 0 }"><a href="#">{{role.name}}</a></li>
+                                </ul>
+                                <ul id="settings_users" class="uk-switcher uk-margin">
+                                    <li ng-repeat="role_option in site_settings.user_role">
+                                        <ul class="md-list">
+                                            <li>
+                                                <div class="md-list-content">
+                                                    <div class="uk-float-right">
+                                                        <input type="checkbox" name="settings_user_admin_editor"  id="settings_user_admin_editor" ng-model="role_option.visual_editor" icheck />
+                                                    </div>
+                                                    <span class="md-list-heading">Disable the visual editor when writing</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="md-list-content">
+                                                    <div class="uk-float-right">
+                                                        <input type="checkbox" name="settings_user_admin_toolbar" id="settings_user_admin_toolbar" ng-model="role_option.toolbar" icheck />
+                                                    </div>
+                                                    <span class="md-list-heading">Show Toolbar when viewing site</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="md-list-content">
+                                                    <div class="uk-float-right">
+                                                        <input type="checkbox" name="settings_user_admin_sitemap" checked id="settings_user_admin_sitemap" ng-model="role_option.sitemap_exclude" icheck />
+                                                    </div>
+                                                    <span class="md-list-heading">Exclude user from Author-sitemap</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md-fab-wrapper">
+                    <button type="submit" class="md-fab md-fab-primary" href="#" ng-click="showSettings($event)">
+                        <i class="material-icons">&#xE161;</i>
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>

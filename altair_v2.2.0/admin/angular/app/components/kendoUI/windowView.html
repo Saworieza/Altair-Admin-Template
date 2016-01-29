@@ -1,0 +1,37 @@
+    <div id="page_content">
+        <div id="page_content_inner">
+
+            <div class="md-card">
+                <div class="md-card-content">
+                    <div class="uk-grid uk-margin-large-bottom">
+                        <div class="uk-width-large-3-5">
+                            <button class="k-button" ng-show="!win1visible" ng-click="win1.open()">Open Calendar</button>
+                            <button class="k-button" ng-show="!win2visible" ng-click="win2.open()">Open AJAX content</button>
+
+                            <div kendo-window="win1" k-title="'Calendar'" k-on-open="win1visible = true" k-on-close="win1visible = false">
+                                <div kendo-calendar></div>
+                            </div>
+                            <div kendo-window="win2" k-title="'AJAX content'"
+                                 k-width="600" k-height="240" k-visible="false"
+                                 k-content="{ url: 'data/loremIpsum.html' }"
+                                 k-on-open="win2visible = true" k-on-close="win2visible = false"
+                            >
+                            </div>
+                        </div>
+                    </div>
+<pre class="line-numbers"><code class="language-markup" prism-highlight>// window 1
+&lt;div kendo-window=&quot;win1&quot; k-title=&quot;'Calendar'&quot; k-on-open=&quot;win1visible = true&quot; k-on-close=&quot;win1visible = false&quot;&gt;
+    &lt;div kendo-calendar&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+// window 2
+&lt;div kendo-window=&quot;win2&quot; k-title=&quot;'AJAX content'&quot;
+     k-width=&quot;600&quot; k-height=&quot;200&quot; k-visible=&quot;false&quot;
+     k-content=&quot;{ url: 'data/loremIpsum.html' }&quot;
+     k-on-open=&quot;win2visible = true&quot; k-on-close=&quot;win2visible = false&quot;
+&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>

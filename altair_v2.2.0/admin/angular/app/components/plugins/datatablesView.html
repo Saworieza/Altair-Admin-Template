@@ -1,0 +1,86 @@
+<div id="page_content">
+    <div id="page_content_inner">
+
+        <h3 class="heading_b uk-margin-bottom">Datatables</h3>
+        <div class="md-card uk-margin-medium-bottom">
+            <div class="md-card-content" ng-controller="dt_default as showCase">
+                <table datatable="ng" dt-options="showCase.dtOptions" dt-column-defs="showCase.dtColumnDefs" class="uk-table" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Name</th>
+                            <th colspan="5">HR Information</th>
+                        </tr>
+                        <tr>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Extn.</th>
+                            <th>Start date</th>
+                            <th>Salary</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Extn.</th>
+                            <th>Start date</th>
+                            <th>Salary</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr ng-repeat="row in showCase.dt_data">
+                            <td>{{row[0]}}</td>
+                            <td>{{row[1]}}</td>
+                            <td>{{row[2]}}</td>
+                            <td>{{row[3]}}</td>
+                            <td>{{row[4]}}</td>
+                            <td>{{row[5]}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <h4 class="heading_a uk-margin-bottom">Scroll - vertical</h4>
+        <div class="md-card uk-margin-medium-bottom">
+            <div class="md-card-content" ng-controller="dt_scroll_vertical as showCase">
+                <table datatable dt-options="showCase.dtOptions" dt-column-defs="showCase.dtColumnDefs" class="uk-table" cellspacing="0" width="100%"></table>
+            </div>
+        </div>
+
+        <h4 class="heading_a uk-margin-bottom">Individual column searching</h4>
+        <div class="md-card uk-margin-medium-bottom">
+            <div class="md-card-content" ng-controller="dt_individual_search as showCase">
+                <table datatable dt-options="showCase.dtOptions" dt-column-defs="showCase.dtColumnDefs" class="uk-table" cellspacing="0" width="100%">
+                    <tfoot>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Extn.</th>
+                            <th>Start date</th>
+                            <th>Salary</th>
+                        </tr>
+                    </tfoot>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+        <h4 class="heading_a uk-margin-bottom">Show/hide columns</h4>
+        <div class="md-card uk-margin-medium-bottom">
+            <div class="md-card-content" ng-controller="dt_col_vis as showCase">
+                <table datatable dt-options="showCase.dtOptions" dt-column-defs="showCase.dtColumnDefs" dt-instance="showCase.dtInstance" class="uk-table" cellspacing="0" width="100%"></table>
+            </div>
+        </div>
+
+        <h4 class="heading_a uk-margin-bottom">Tabletools</h4>
+        <div class="md-card uk-margin-medium-bottom">
+            <div class="md-card-content" ng-controller="dt_table_tools as showCase">
+                <table datatable dt-options="showCase.dtOptions" dt-column-defs="showCase.dtColumnDefs" dt-instance="showCase.dtInstance" class="uk-table" cellspacing="0" width="100%"></table>
+            </div>
+        </div>
+
+    </div>
+</div>

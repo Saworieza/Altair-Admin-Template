@@ -1,0 +1,83 @@
+<div id="page_content">
+    <div id="page_content_inner">
+
+        <div class="uk-width-medium-8-10 uk-container-center reset-print">
+
+            <div class="uk-grid uk-grid-collapse" data-uk-grid-margin>
+                <div class="uk-width-large-3-10 hidden-print uk-visible-large">
+                    <div class="md-list-outside-wrapper" custom-scrollbar list-outside>
+                        <ul class="md-list md-list-outside notes_list">
+                            <li class="heading_list" ng-repeat-start="list in notes_data" ng-class="{ 'uk-text-danger': $index == 0}">{{list.group_name}}</li>
+                            <li ng-repeat-end ng-repeat="note in list.notes">
+                                <a href="#" class="md-list-content note_link" ng-click="openNote($event,$parent.$index,$index,note)">
+                                    <span class="md-list-heading uk-text-truncate">{{note.title}}</span>
+                                    <span class="uk-text-small uk-text-muted">{{note.date}}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="uk-width-large-7-10">
+                    <div class="md-card md-card-single" single-card>
+                        <div ng-if="!noteActive">
+                            <div class="md-card-toolbar">
+                                <h3 class="md-card-toolbar-heading-text">Notes</h3>
+                            </div>
+                            <div class="md-card-content">
+                                <p class="uk-text-center uk-text-large uk-margin-large-top">
+                                    Click the <strong class="md-color-red-600">+</strong> button to create a new note<br>
+                                    <span class="uk-text-muted">or</span><br>
+                                    open note from the list.
+                                </p>
+                            </div>
+                        </div>
+                        <form action="" ng-if="noteActive">
+                            <div class="md-card-toolbar hidden-print">
+                                <div class="md-card-toolbar-actions">
+                                    <i class="md-icon material-icons" ng-click="saveNote($event,noteForm.id)">&#xE161;</i>
+                                    <div class="md-card-dropdown" data-uk-dropdown="{pos:'bottom-right'}">
+                                        <i class="md-icon material-icons">&#xE5D4;</i>
+                                        <div class="uk-dropdown uk-dropdown-small">
+                                            <ul class="uk-nav">
+                                                <li><a href="#"><i class="material-icons uk-margin-small-right">&#xE80D;</i> Share</a></li>
+                                                <li><a href="#"><i class="material-icons uk-margin-small-right">&#xE149;</i> Archive</a></li>
+                                                <li><a href="#"><i class="material-icons uk-margin-small-right">&#xE872;</i> Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input name="note_title" id="note_title" class="md-card-toolbar-input" type="text" ng-model="note_form.title" placeholder="Add title" />
+                            </div>
+                            <div class="md-card-content">
+                                <textarea name="note_content" id="note_content" class="textarea_autosize md-input" cols="30" rows="12" ng-model="note_form.content" placeholder="Add content" md-input></textarea>
+                                <input type="hidden" name="note_id" ng-model="noteForm.id">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="md-fab-wrapper">
+    <a class="md-fab md-fab-danger" href="#" ng-click="newNote($event)">
+        <i class="material-icons">&#xE145;</i>
+    </a>
+</div>
+
+<div id="sidebar_secondary" sidebar-secondary toggle-hidden="large" custom-scrollbar>
+    <div class="sidebar_secondary_wrapper uk-margin-remove">
+        <ul class="md-list md-list-outside notes_list">
+            <li class="heading_list" ng-repeat-start="list in notes_data" ng-class="{ 'uk-text-danger': $index == 0}">{{list.group_name}}</li>
+            <li ng-repeat-end ng-repeat="note in list.notes">
+                <a href="#" class="md-list-content note_link" ng-click="openNote($event,$parent.$index,$index,note)">
+                    <span class="md-list-heading uk-text-truncate">{{note.title}}</span>
+                    <span class="uk-text-small uk-text-muted">{{note.date}}</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

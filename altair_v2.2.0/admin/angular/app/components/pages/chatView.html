@@ -1,0 +1,115 @@
+<div id="page_content">
+    <div id="page_content_inner">
+
+        <div class="uk-width-medium-8-10 uk-container-center">
+            <div class="uk-grid uk-grid-collapse" data-uk-grid-margin>
+                <div class="uk-width-large-7-10">
+                    <div class="md-card md-card-single" single-card>
+                        <div class="md-card-toolbar">
+                            <div class="md-card-toolbar-actions hidden-print">
+                                <div class="md-card-dropdown" data-uk-dropdown="{pos:'bottom-right'}">
+                                    <i class="md-icon material-icons">&#xE3B7;</i>
+                                    <div class="uk-dropdown">
+                                        <ul class="uk-nav" id="chat_colors">
+                                            <li class="uk-nav-header">Message Colors</li>
+                                            <li class="uk-active"><a href="#" ng-click="changeColor($event,'chat_box_colors_a')">Grey/Green</a></li>
+                                            <li><a href="#" ng-click="changeColor($event,'chat_box_colors_b')">Blue/Dark Blue</a></li>
+                                            <li><a href="#" ng-click="changeColor($event,'chat_box_colors_c')">Orange/Light Gray</a></li>
+                                            <li><a href="#" ng-click="changeColor($event,'chat_box_colors_d')">Deep Purple/Light Grey</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <i class="md-icon  material-icons">&#xE5CD;</i>
+                            </div>
+                            <h3 class="md-card-toolbar-heading-text large">
+                                <span class="uk-text-muted">Chat with</span> <a href="#">{{chat_users[1].name}}</a>
+                            </h3>
+                        </div>
+                        <div class="md-card-content padding-reset">
+                            <div class="chat_box_wrapper">
+                                <div class="chat_box touchscroll {{chat_colors}}" id="chat">
+                                    <div class="chat_message_wrapper" ng-repeat="block in chat_messages" ng-class="{'chat_message_right': $odd }">
+                                        <div class="chat_user_avatar">
+                                            <img class="md-user-image" ng-src="{{ chat_users[block.user_id].avatar }}" alt=""/>
+                                        </div>
+                                        <ul class="chat_message">
+                                            <li ng-repeat="message in block.content">
+                                                <p>{{message}} <span class="chat_message_time" ng-show="$last">{{block.date}}</span></p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="chat_submit_box" id="chat_submit_box">
+                                    <div class="uk-input-group">
+                                        <input type="text" class="md-input" name="submit_message" id="submit_message" placeholder="Send message" md-input>
+                                        <span class="uk-input-group-addon">
+                                            <a href="#"><i class="material-icons md-24">&#xE163;</i></a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-large-3-10 uk-visible-large">
+                    <div class="md-list-outside-wrapper" custom-scrollbar list-outside>
+                        <ul class="md-list md-list-addon md-list-outside">
+                            <li ng-repeat="user in chat_users">
+                                <div class="md-card-dropdown md-list-action-dropdown" data-uk-dropdown="{pos:'bottom-right'}">
+                                    <i class="md-icon material-icons">&#xE5D4;</i>
+                                    <div class="uk-dropdown uk-dropdown-small">
+                                        <ul class="uk-nav">
+                                            <li><a href="#">Add to chat</a></li>
+                                            <li><a href="#" class="uk-text-danger">Remove</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="md-list-addon-element">
+                                    <span class="element-status element-status-danger" ng-if="user.status == 'offline'"></span>
+                                    <span class="element-status element-status-success" ng-if="user.status == 'online'"></span>
+                                    <span class="element-status element-status-warning" ng-if="user.status == 'afk'"></span>
+                                    <img class="md-user-image md-list-addon-avatar" ng-src="{{user.avatar}}" alt=""/>
+                                </div>
+                                <div class="md-list-content">
+                                    <div class="md-list-action-placeholder"></div>
+                                    <span class="md-list-heading">{{user.name}}</span>
+                                    <span class="uk-text-small uk-text-muted uk-text-truncate">{{user.description}}</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="sidebar_secondary" sidebar-secondary toggle-hidden="large" custom-scrollbar>
+    <div class="sidebar_secondary_wrapper uk-margin-remove">
+        <ul class="md-list md-list-addon md-list-outside">
+            <li ng-repeat="user in chat_users">
+                <div class="md-card-dropdown md-list-action-dropdown" data-uk-dropdown="{pos:'bottom-right'}">
+                    <i class="md-icon material-icons">&#xE5D4;</i>
+                    <div class="uk-dropdown uk-dropdown-small">
+                        <ul class="uk-nav">
+                            <li><a href="#">Add to chat</a></li>
+                            <li><a href="#" class="uk-text-danger">Remove</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md-list-addon-element">
+                    <span class="element-status element-status-danger" ng-if="user.status == 'offline'"></span>
+                    <span class="element-status element-status-success" ng-if="user.status == 'online'"></span>
+                    <span class="element-status element-status-warning" ng-if="user.status == 'afk'"></span>
+                    <img class="md-user-image md-list-addon-avatar" ng-src="{{user.avatar}}" alt=""/>
+                </div>
+                <div class="md-list-content">
+                    <div class="md-list-action-placeholder"></div>
+                    <span class="md-list-heading">{{user.name}}</span>
+                    <span class="uk-text-small uk-text-muted uk-text-truncate">{{user.description}}</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,121 @@
+    <div id="page_content">
+        <div id="page_content_inner">
+
+            <h3 class="heading_b uk-margin-bottom">Sortable</h3>
+
+            <h4 class="heading_c uk-margin-small-bottom">Dragula.js</h4>
+            <div class="uk-grid uk-grid-width-small-1-2 uk-grid-width-medium-1-3 uk-grid-width-large-1-5" data-uk-grid-margin dragula='"first-dragula"' dragula-model='dragulaItems'>
+                <div ng-repeat="item in dragulaItems">
+                    <div class="md-card">
+                        <div class="md-card-head head_background" style="background-image: url({{item.background_image}})"></div>
+                        <div class="md-card-content">{{item.description}}</div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="heading_c uk-margin-small-bottom">UIkit sortable</h4>
+            <div class="uk-grid uk-grid-width-large-1-5 uk-grid-width-medium-1-3 uk-sortable" data-uk-grid-margin data-uk-sortable>
+                <div class="sortable-handler">
+                    <div class="md-card">
+                        <div class="md-card-content">Reiciendis vel qui quas aut ut rerum reprehenderit quibusdam ipsa at voluptatem enim cum similique accusamus similique quas.</div>
+                    </div>
+                </div>
+                <div class="sortable-handler">
+                    <div class="md-card">
+                        <div class="md-card-content">Voluptatem saepe qui beatae earum dicta consectetur sapiente provident est eos iure nisi perferendis quidem consequuntur.</div>
+                    </div>
+                </div>
+                <div class="sortable-handler">
+                    <div class="md-card">
+                        <div class="md-card-content">Error sint id magni quisquam earum ad sunt occaecati officiis sed sint sequi similique voluptas vel nihil velit illum soluta ut perferendis facere ut corporis.</div>
+                    </div>
+                </div>
+                <div class="sortable-handler">
+                    <div class="md-card">
+                        <div class="md-card-content">Quia ut voluptatibus expedita sint deleniti unde perspiciatis quaerat eos maiores occaecati labore veniam hic necessitatibus quasi voluptate fugit dolor sit nihil placeat.</div>
+                    </div>
+                </div>
+                <div class="sortable-handler">
+                    <div class="md-card">
+                        <div class="md-card-content">Eos corrupti omnis quam voluptas ullam aut odio voluptas quod esse et tenetur natus assumenda excepturi non ut est nostrum numquam corrupti.</div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="heading_a uk-margin-bottom">Multiple lists</h4>
+            <div class="md-card">
+                <div class="md-card-content">
+                    <div class="uk-grid" data-uk-grid-margin>
+                        <div class="uk-width-medium-1-2">
+                            <h4 class="heading_c uk-margin-bottom">Available</h4>
+                            <ul class="md-list md-list-addon uk-sortable sortable-handler" data-uk-sortable="{group:'connected-group'}">
+                                <li>
+                                    <div class="md-list-addon-element">
+                                        <img class="md-user-image md-list-addon-avatar" ng-src="assets/img/avatars/avatar_02_tn.png" alt=""/>
+                                    </div>
+                                    <div class="md-list-content">
+                                        <span class="md-list-heading">Aileen Bernhard</span>
+                                        <span class="uk-text-small uk-text-muted">Quisquam iusto amet rerum dolores molestiae unde aut.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="md-list-addon-element">
+                                        <img class="md-user-image md-list-addon-avatar" ng-src="assets/img/avatars/avatar_07_tn.png" alt=""/>
+                                    </div>
+                                    <div class="md-list-content">
+                                        <span class="md-list-heading">Prof. Lorna Kub</span>
+                                        <span class="uk-text-small uk-text-muted">Eum laborum iure enim in ut aut voluptate.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="md-list-addon-element">
+                                        <img class="md-user-image md-list-addon-avatar" ng-src="assets/img/avatars/avatar_06_tn.png" alt=""/>
+                                    </div>
+                                    <div class="md-list-content">
+                                        <span class="md-list-heading">Michel Hackett</span>
+                                        <span class="uk-text-small uk-text-muted">Animi temporibus iusto eum reiciendis illo.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="md-list-addon-element">
+                                        <img class="md-user-image md-list-addon-avatar" ng-src="assets/img/avatars/avatar_05_tn.png" alt=""/>
+                                    </div>
+                                    <div class="md-list-content">
+                                        <span class="md-list-heading">Aron Buckridge DDS</span>
+                                        <span class="uk-text-small uk-text-muted">Expedita saepe sit enim dolorem excepturi distinctio.</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="uk-width-medium-1-2">
+                            <h4 class="heading_c uk-margin-bottom">Project 1 assignnments</h4>
+                            <ul class="md-list md-list-addon uk-sortable sortable-handler uk-margin-medium-bottom" data-uk-sortable="{group:'connected-group'}">
+                                <li>
+                                    <div class="md-list-addon-element">
+                                        <img class="md-user-image md-list-addon-avatar" ng-src="assets/img/avatars/avatar_03_tn.png" alt=""/>
+                                    </div>
+                                    <div class="md-list-content">
+                                        <span class="md-list-heading">Jonathon Hickle</span>
+                                        <span class="uk-text-small uk-text-muted">Et voluptatem velit deleniti et numquam molestiae illum eaque quidem mollitia.</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <h4 class="heading_c uk-margin-bottom">Project 2 assignnments</h4>
+                            <ul class="md-list md-list-addon uk-sortable sortable-handler" data-uk-sortable="{group:'connected-group'}">
+                                <li>
+                                    <div class="md-list-addon-element">
+                                        <img class="md-user-image md-list-addon-avatar" ng-src="assets/img/avatars/avatar_04_tn.png" alt=""/>
+                                    </div>
+                                    <div class="md-list-content">
+                                        <span class="md-list-heading">Juston Frami</span>
+                                        <span class="uk-text-small uk-text-muted">Reiciendis quisquam necessitatibus atque repudiandae atque expedita facere.</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>

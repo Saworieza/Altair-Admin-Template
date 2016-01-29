@@ -1,0 +1,33 @@
+    <!-- main sidebar -->
+    <aside id="sidebar_main" sidebar-primary custom-scrollbar>
+        <div class="sidebar_main_header" ng-if="!fullHeaderActive">
+            <div class="sidebar_logo">
+                <a ui-sref="restricted.dashboard" ng-show="!miniSidebarActive"><img ng-src="assets/img/logo_main.png" alt="" add-image-prop /></a>
+                <a ui-sref="restricted.dashboard" ng-show="miniSidebarActive"><img ng-src="assets/img/logo_main_small.png" alt="" add-image-prop /></a>
+            </div>
+            <div class="sidebar_actions">
+                <selectize id="lang_switcher" name="lang_switcher" config='langSwitcherConfig' options='langSwitcherOptions' ng-model="langSwitcherModel"></selectize>
+            </div>
+        </div>
+        <div class="menu_section">
+            <ul>
+                <li ui-sref-active="current_section act_section" ng-repeat="section in sections" ng-switch="section.link.length > 0" ng-class="{'submenu_trigger': (section.submenu.length > 0) && !miniSidebarActive, 'sidebar_submenu': (section.submenu.length > 0) && miniSidebarActive}" on-last-repeat>
+                    <a ng-switch-when="true" ui-sref="{{section.link}}" ng-class="{'menu_tooltip' : miniSidebarActive}">
+                        <span class="menu_icon"><i class="material-icons" ng-bind-html="section.icon"></i></span>
+                        <span class="menu_title">{{section.title}}</span>
+                    </a>
+                    <a ng-switch-when="false" href="#" ng-click="submenuToggle($event)">
+                        <span class="menu_icon"><i class="material-icons" ng-bind-html="section.icon"></i></span>
+                        <span class="menu_title">{{section.title}}</span>
+                    </a>
+                    <ul ng-if="section.submenu">
+                        <li ng-if="section.submenu_title" class="submenu-title">{{section.submenu_title}}</li>
+                        <li ng-repeat-start="item in section.submenu" ng-if="item.group" class="menu_subtitle">{{item.group}}</li>
+                        <li ng-repeat-end ng-class="{ act_item: $state.includes(item.link) }">
+                            <a ui-sref="{{item.link}}">{{item.title}}</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </aside>

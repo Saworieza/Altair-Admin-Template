@@ -1,0 +1,102 @@
+    <div id="page_content">
+        <div id="page_content_inner">
+
+            <h3 class="heading_b uk-margin-bottom">
+                Material Design Preloaders
+                <span class="sub-heading">SVG + CSS3 animations</span>
+            </h3>
+
+            <div class="md-card uk-margin-medium-bottom">
+                <div class="md-card-content">
+                    <h4 class="heading_a">Colors</h4>
+                    <div class="uk-grid" data-uk-grid-margin>
+                        <div class="uk-width-medium-1-4">
+                            <md-preloader></md-preloader>
+                        </div>
+                        <div class="uk-width-medium-1-4">
+                            <md-preloader warning></md-preloader>
+                        </div>
+                        <div class="uk-width-medium-1-4">
+                            <md-preloader success></md-preloader>
+                        </div>
+                        <div class="uk-width-medium-1-4">
+                            <md-preloader danger></md-preloader>
+                        </div>
+                    </div>
+                    <h4 class="heading_a">Sizes and stroke width</h4>
+                    <div class="uk-grid" data-uk-grid-margin>
+                        <div class="uk-width-medium-1-4">
+                            <md-preloader stroke-width="4" width="96" height="96"></md-preloader>
+                        </div>
+                        <div class="uk-width-medium-1-4">
+                            <md-preloader stroke-width="6" width="32" height="32"></md-preloader>
+                        </div>
+                        <div class="uk-width-medium-1-4">
+                            <md-preloader stroke-width="8"></md-preloader>
+                        </div>
+                        <div class="uk-width-medium-1-4">
+                            <md-preloader stroke-width="2"></md-preloader>
+                        </div>
+                    </div>
+                    <h4 class="heading_a">Content preloader</h4>
+                    <div class="uk-grid" data-uk-grid-margin>
+                        <div class="uk-width-large-1-3">
+                            <button class="md-btn preloader_example" ng-click="content_preloader_show()">Show</button>
+<pre class="line-numbers uk-margin-top"><code class="language-javascript" prism-highlight>// show preloader
+content_preloader_show()
+// hide preloader
+content_preloader_hide();</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="heading_b uk-margin-bottom">
+                Regular Preloaders
+                <span class="sub-heading">gif images</span>
+            </h3>
+
+            <div class="md-card">
+                <div class="md-card-content">
+                    <h4 class="heading_a">Colors</h4>
+                    <div class="uk-grid" data-uk-grid-margin>
+                        <div class="uk-width-medium-1-4">
+                            <preloader></preloader>
+                        </div>
+                        <div class="uk-width-medium-1-4">
+                            <preloader warning></preloader>
+                        </div>
+                        <div class="uk-width-medium-1-4">
+                            <preloader success></preloader>
+                        </div>
+                        <div class="uk-width-medium-1-4">
+                            <preloader danger></preloader>
+                        </div>
+                    </div>
+                    <h4 class="heading_a">Sizes</h4>
+                    <div class="uk-grid" data-uk-grid-margin>
+                        <div class="uk-width-medium-1-4">
+                            <preloader small width="24" height="24"></preloader>
+                        </div>
+                        <div class="uk-width-medium-1-4">
+                            <preloader medium width="48" height="48"></preloader>
+                        </div>
+                        <div class="uk-width-medium-1-4">
+                            <preloader large width="64" height="64"></preloader>
+                        </div>
+                    </div>
+                    <h4 class="heading_a">Content preloader</h4>
+                    <div class="uk-grid" data-uk-grid-margin>
+                        <div class="uk-width-large-1-3">
+                            <button class="md-btn preloader_example" ng-click="content_preloader_show('regular')">Show</button>
+<pre class="line-numbers uk-margin-top"><code class="language-javascript" prism-highlight>// show preloader
+content_preloader_show('regular');
+// hide preloader
+content_preloader_hide();</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>

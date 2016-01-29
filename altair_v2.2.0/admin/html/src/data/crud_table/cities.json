@@ -1,0 +1,285 @@
+{
+    "Result": "OK",
+    "Options": [
+        {
+            "DisplayText": "Adana",
+            "Value": 36
+        },
+        {
+            "DisplayText": "Amsterdam",
+            "Value": 55
+        },
+        {
+            "DisplayText": "Ankara",
+            "Value": 34
+        },
+        {
+            "DisplayText": "Athens",
+            "Value": 67
+        },
+        {
+            "DisplayText": "Bandung",
+            "Value": 23
+        },
+        {
+            "DisplayText": "Bangalore",
+            "Value": 7
+        },
+        {
+            "DisplayText": "Bangkok",
+            "Value": 51
+        },
+        {
+            "DisplayText": "Barcelona",
+            "Value": 44
+        },
+        {
+            "DisplayText": "Beijing",
+            "Value": 11
+        },
+        {
+            "DisplayText": "Berlin",
+            "Value": 17
+        },
+        {
+            "DisplayText": "Buenos Aires",
+            "Value": 61
+        },
+        {
+            "DisplayText": "Cairo",
+            "Value": 69
+        },
+        {
+            "DisplayText": "Cape Town",
+            "Value": 70
+        },
+        {
+            "DisplayText": "Chicago",
+            "Value": 3
+        },
+        {
+            "DisplayText": "Córdoba",
+            "Value": 62
+        },
+        {
+            "DisplayText": "Curitiba",
+            "Value": 16
+        },
+        {
+            "DisplayText": "Delhi",
+            "Value": 6
+        },
+        {
+            "DisplayText": "Donetsk",
+            "Value": 64
+        },
+        {
+            "DisplayText": "Eindhoven",
+            "Value": 56
+        },
+        {
+            "DisplayText": "Florence",
+            "Value": 32
+        },
+        {
+            "DisplayText": "Frankfurt",
+            "Value": 20
+        },
+        {
+            "DisplayText": "Glasgow",
+            "Value": 39
+        },
+        {
+            "DisplayText": "Gothenburg",
+            "Value": 66
+        },
+        {
+            "DisplayText": "Guangzhou",
+            "Value": 9
+        },
+        {
+            "DisplayText": "Hai Phong",
+            "Value": 41
+        },
+        {
+            "DisplayText": "Hamburg",
+            "Value": 18
+        },
+        {
+            "DisplayText": "Hanoi",
+            "Value": 42
+        },
+        {
+            "DisplayText": "Houston",
+            "Value": 4
+        },
+        {
+            "DisplayText": "Hyderabad",
+            "Value": 8
+        },
+        {
+            "DisplayText": "İstanbul",
+            "Value": 33
+        },
+        {
+            "DisplayText": "İzmir",
+            "Value": 35
+        },
+        {
+            "DisplayText": "Jakarta",
+            "Value": 21
+        },
+        {
+            "DisplayText": "Kraków",
+            "Value": 46
+        },
+        {
+            "DisplayText": "Kunming",
+            "Value": 12
+        },
+        {
+            "DisplayText": "Kyiv",
+            "Value": 63
+        },
+        {
+            "DisplayText": "Lisbon",
+            "Value": 59
+        },
+        {
+            "DisplayText": "Liverpool",
+            "Value": 40
+        },
+        {
+            "DisplayText": "London",
+            "Value": 37
+        },
+        {
+            "DisplayText": "Los Angeles",
+            "Value": 2
+        },
+        {
+            "DisplayText": "Lyon",
+            "Value": 27
+        },
+        {
+            "DisplayText": "Madrid",
+            "Value": 43
+        },
+        {
+            "DisplayText": "Manchester",
+            "Value": 38
+        },
+        {
+            "DisplayText": "Melbourne",
+            "Value": 58
+        },
+        {
+            "DisplayText": "Mexico City",
+            "Value": 49
+        },
+        {
+            "DisplayText": "Milano",
+            "Value": 30
+        },
+        {
+            "DisplayText": "Montreal",
+            "Value": 48
+        },
+        {
+            "DisplayText": "Moscow",
+            "Value": 53
+        },
+        {
+            "DisplayText": "Mumbai",
+            "Value": 5
+        },
+        {
+            "DisplayText": "Munich",
+            "Value": 19
+        },
+        {
+            "DisplayText": "New York",
+            "Value": 1
+        },
+        {
+            "DisplayText": "Nice",
+            "Value": 26
+        },
+        {
+            "DisplayText": "Nonthaburi",
+            "Value": 52
+        },
+        {
+            "DisplayText": "Paris",
+            "Value": 25
+        },
+        {
+            "DisplayText": "Petersburg",
+            "Value": 54
+        },
+        {
+            "DisplayText": "Porto",
+            "Value": 60
+        },
+        {
+            "DisplayText": "Rio de Janeiro",
+            "Value": 14
+        },
+        {
+            "DisplayText": "Rome",
+            "Value": 29
+        },
+        {
+            "DisplayText": "Salvador",
+            "Value": 15
+        },
+        {
+            "DisplayText": "São Paulo",
+            "Value": 13
+        },
+        {
+            "DisplayText": "Semarang",
+            "Value": 24
+        },
+        {
+            "DisplayText": "Shanghai",
+            "Value": 10
+        },
+        {
+            "DisplayText": "Stockholm",
+            "Value": 65
+        },
+        {
+            "DisplayText": "Surabaya",
+            "Value": 22
+        },
+        {
+            "DisplayText": "Sydney",
+            "Value": 57
+        },
+        {
+            "DisplayText": "Tijuana",
+            "Value": 50
+        },
+        {
+            "DisplayText": "Torino",
+            "Value": 31
+        },
+        {
+            "DisplayText": "Toronto",
+            "Value": 47
+        },
+        {
+            "DisplayText": "Toulouse",
+            "Value": 28
+        },
+        {
+            "DisplayText": "Volos",
+            "Value": 68
+        },
+        {
+            "DisplayText": "Warsaw",
+            "Value": 45
+        }
+    ]
+}

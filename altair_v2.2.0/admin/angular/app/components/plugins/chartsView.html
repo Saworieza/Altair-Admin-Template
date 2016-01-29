@@ -1,0 +1,159 @@
+    <div id="page_content">
+        <div id="page_content_inner">
+
+            <h3 class="heading_b uk-margin-bottom">Charts</h3>
+
+            <h4 class="heading_a uk-margin-bottom">MetricsGraphics.js</h4>
+            <div class="uk-grid" data-uk-grid-margin>
+                <div class="uk-width-1-1">
+                    <div class="md-card">
+                        <div class="md-card-toolbar">
+                            <h3 class="md-card-toolbar-heading-text">
+                                Linked graphics
+                            </h3>
+                        </div>
+                        <div class="md-card-content">
+                            <div class="uk-grid" data-uk-grid-margin>
+                                <div class="uk-width-medium-1-2">
+                                    <div class="mGraph" id="mg_chart_linked_1" data="mg_chart_linked_1_data" options="mg_chart_linked_1_options" metrics-graphics></div>
+                                </div>
+                                <div class="uk-width-medium-1-2">
+                                    <div class="mGraph" id="mg_chart_linked_2" data="mg_chart_linked_2_data" options="mg_chart_linked_2_options" metrics-graphics></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-grid" data-uk-grid-margin>
+                <div class="uk-width-medium-1-2">
+                    <div class="md-card">
+                        <div class="md-card-content">
+                            <div class="mGraph" id="mg_chart_confidence_band" data="mg_confidence_band_data" options="mg_confidence_band_options" metrics-graphics></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-medium-1-2">
+                    <div class="md-card">
+                        <div class="md-card-content">
+                            <div class="mGraph" id="mg_chart_currency" data="mg_currency_data" options="mg_currency_options" metrics-graphics></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <h4 class="heading_a uk-margin-bottom uk-margin-large-top">C3.js</h4>
+            <div class="uk-grid" data-uk-grid-margin>
+                <div class="uk-width-medium-1-3">
+                    <div class="md-card">
+                        <div class="md-card-content">
+                            <h4 class="heading_c uk-margin-bottom">Donut Chart</h4>
+                            <div id="c3_chart_donut" class="c3chart"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-medium-2-3">
+                    <div class="md-card">
+                        <div class="md-card-content">
+                            <h4 class="heading_c uk-margin-bottom">Stacked Bars Chart</h4>
+                            <div id="c3_chart_bar_stacked" class="c3chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-grid" data-uk-grid-margin>
+                <div class="uk-width-medium-1-2">
+                    <div class="md-card">
+                        <div class="md-card-content">
+                            <h4 class="heading_c uk-margin-bottom">Spline Chart</h4>
+                            <div id="c3_chart_spline" class="c3chart"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-medium-1-2">
+                    <div class="md-card">
+                        <div class="md-card-content">
+                            <h4 class="heading_c uk-margin-bottom">Stacked Area Chart</h4>
+                            <div id="c3_chart_area_stacked" class="c3chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-grid" data-uk-grid-margin>
+                <div class="uk-width-large-2-3">
+                    <div class="md-card">
+                        <div class="md-card-content">
+                            <h4 class="heading_c uk-margin-bottom">Scatter Plot</h4>
+                            <div id="c3_chart_scatter" class="c3chart"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-large-1-3">
+                    <div class="md-card">
+                        <div class="md-card-content">
+                            <h4 class="heading_c uk-margin-bottom">Gauge</h4>
+                            <div id="c3_server_load" class="c3chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="heading_a uk-margin-bottom uk-margin-large-top">Chartist</h4>
+            <div class="uk-grid" data-uk-grid-margin>
+                <div class="uk-width-large-1-3">
+                    <div class="md-card">
+                        <div class="md-card-content">
+                            <h4 class="heading_c uk-margin-bottom">Simple Line Chart</h4>
+                            <chartist data="chartist_sline_data" options="chartist_sline_options" ng-id="chartist_sline" type="line"></chartist>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-large-2-3">
+                    <div class="md-card">
+                        <div class="md-card-content">
+                            <h4 class="heading_c uk-margin-bottom">Line Chart with Area</h4>
+                            <chartist data="chartist_line_area_data" options="chartist_line_area_options" ng-id="chartist_line_area" type="line"></chartist>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-grid" data-uk-grid-margin>
+                <div class="uk-width-large-2-3">
+                    <div class="md-card">
+                        <div class="md-card-content">
+                            <h4 class="heading_c uk-margin-bottom">Bi-Polar Line Chart with Area Only</h4>
+                            <chartist data="chartist_bipolar_data" options="chartist_bipolar_options" ng-id="chartist_bipolar" type="line"></chartist>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-large-1-3">
+                    <div class="md-card">
+                        <div class="md-card-content">
+                            <h4 class="heading_c uk-margin-bottom">Distributed Series</h4>
+                            <chartist data="chartist_distributed_data" options="chartist_distributed_options" ng-id="chartist_distributed" type="bar"></chartist>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-grid uk-grid-width-medium-1-2 uk-grid-width-large-1-3" data-uk-grid-margin>
+                <div>
+                    <div class="md-card">
+                        <div class="md-card-content">
+                            <h4 class="heading_c uk-margin-bottom">Simple Pie Chart</h4>
+                            <chartist data="chartist_simple_pie_data" options="chartist_simple_pie_options" ng-id="chartist_simple_pie" type="pie" class="chartist-labels-inside"></chartist>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="md-card">
+                        <div class="md-card-content">
+                            <h4 class="heading_c uk-margin-bottom">Pie Chart with Custom Labels</h4>
+                            <chartist data="chartist_pie_labels_data" options="chartist_pie_labels_options" responsive-options="chartist_pie_labels_options_responsive" ng-id="chartist_pie_labels" type="pie"></chartist>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>

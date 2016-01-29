@@ -1,0 +1,63 @@
+    <div id="page_content">
+        <div id="page_content_inner">
+
+            <h3 class="heading_b uk-margin-bottom">Notify</h3>
+            <div class="md-card">
+                <div class="md-card-content">
+                    <div class="uk-grid" data-uk-grid-margin>
+                        <div class="uk-width-medium-1-4">
+                            <button class="md-btn" message="{{ message_in_controller }}" uk-notification>Click me</button>
+                        </div>
+                        <div class="uk-width-medium-1-4">
+                            <button class="md-btn" message="Callback onClose" callback="notificationCallback" uk-notification>Callback</button>
+                        </div>
+                    </div>
+                    <h4 class="heading_a">Positions</h4>
+                    <div class="uk-grid" data-uk-grid-margin>
+                        <div class="uk-width-medium-1-4">
+                            <button class="md-btn" message="Top Center" uk-notification>Top Center</button>
+                        </div>
+                        <div class="uk-width-medium-1-4">
+                            <button class="md-btn" message="Top Left" position="top-left" uk-notification>Top Left</button>
+                        </div>
+                        <div class="uk-width-medium-1-4">
+                            <button class="md-btn" message="Top Right" position="top-right" uk-notification>Top Right</button>
+                        </div>
+                    </div>
+                    <div class="uk-grid" data-uk-grid-margin>
+                        <div class="uk-width-medium-1-4">
+                            <button class="md-btn" message="Bottom Center" position="bottom-center" uk-notification>Bottom Center</button>
+                        </div>
+                        <div class="uk-width-medium-1-4">
+                            <button class="md-btn" message="Bottom Left" position="bottom-left" uk-notification>Bottom Left</button>
+                        </div>
+                        <div class="uk-width-medium-1-4">
+                            <button class="md-btn" message="Bottom Right" timeout="40000" position="bottom-right" uk-notification>Bottom Right</button>
+                        </div>
+                    </div>
+                    <h4 class="heading_a">Status</h4>
+                    <div class="uk-grid" data-uk-grid-margin>
+                        <div class="uk-width-medium-1-4">
+                            <button class="md-btn" message="<a href='#' class='notify-action'>Remove</a> Info" status="info" position="bottom-center" uk-notification>Info</button>
+                        </div>
+                        <div class="uk-width-medium-1-4">
+                            <button class="md-btn" message="<a href='#' class='notify-action'>Clear</a> Success Message" status="success" position="bottom-center" uk-notification>Success</button>
+                        </div>
+                        <div class="uk-width-medium-1-4">
+                            <button class="md-btn" message="<a href='#' class='notify-action'>Refresh</a> Warning Message" status="warning" position="bottom-center" uk-notification>Warning</button>
+                        </div>
+                        <div class="uk-width-medium-1-4">
+                            <button class="md-btn" message="<a href='#' class='notify-action'>Undo</a> Danger message" status="danger" position="bottom-center" uk-notification>Danger</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md-fab-wrapper">
+                <a class="md-fab md-fab-danger" href="#">
+                    <i class="material-icons">&#xE150;</i>
+                </a>
+            </div>
+
+        </div>
+    </div>

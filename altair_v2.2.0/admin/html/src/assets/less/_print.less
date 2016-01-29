@@ -1,0 +1,211 @@
+/* print stylesheet */
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; // Black prints faster: h5bp.com/s
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; // h5bp.com/t
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+
+    .uk-table {
+        border-collapse: collapse !important;
+        td,
+        th {
+            background-color: #fff !important;
+        }
+    }
+    .uk-table-bordered {
+        th,
+        td {
+            border: 1px solid #ddd !important;
+        }
+    }
+
+    #sidebar_main,
+    #sidebar_secondary,
+    #header_main,
+    #style_switcher,
+    .header_double_height:before,
+    .hidden-print,
+    .md-fab-wrapper {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        margin: 0 !important;
+    }
+
+    .sidebar_main_active #header_main,
+    .sidebar_main_active #top_bar {
+        display: none !important;
+        left: 0 !important;
+    }
+
+    body {
+        overflow-y: visible !important;
+        background: #fff;
+        padding: 20px !important;
+        &:after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #fff;
+            display: block;
+            z-index: 9999;
+        }
+    }
+
+    #sidebar_main {
+        left: -@sidebar_main_width !important;
+    }
+
+    .main-print {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+        left: 0 !important;
+        top: 0 !important;
+    }
+
+    .md-card-single {
+        margin: 0 !important;
+    }
+
+    #page_content {
+        margin: 0 !important;
+        overflow-y: visible !important;
+        height: auto !important;
+        transition: none !important;
+        &:before {
+            display: none !important;
+        }
+    }
+
+    .reset-print {
+        left: 0 !important;
+        right: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    .md-card-content {
+        height: auto !important;
+    }
+
+}
+
+
+
+/*
+body {
+    overflow-y: visible !important;
+    background: #fff;
+    padding: 20px !important;
+    &:after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+        display: block;
+        z-index: 9999;
+    }
+}
+#sidebar_main,
+#sidebar_secondary,
+#header_main,
+.header_double_height:before,
+.print_hide {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+.print_reset {
+    left: 0 !important;
+    right: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+#page_content {
+    margin: 0 !important;
+    overflow-y: visible !important;
+    height: auto !important;
+}
+.md-card-content {
+    height: auto !important;
+    overflow: visible !important;
+}
+
+.print_main {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: auto !important;
+    z-index: 10000;
+    left: 0 !important;
+    top: 0 !important;
+}
+
+.md-card-single {
+    margin: 0 !important;
+}*/

@@ -1,0 +1,138 @@
+/* iCheck material design theme
+----------------------------------- */
+.icheckbox_md,
+.iradio_md {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    &:after {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    > input {
+        margin: 0;
+    }
+    > .iCheck-helper {
+        z-index: 10;
+    }
+}
+
+.icheckbox_md {
+    border: 2px solid @input_off_color;
+    border-radius: 2px;
+    width: 18px;
+    height: 18px;
+    background: @white;
+    transition: all 200ms ease-out;
+    &.checked,
+    &.disabled {
+        &:after {
+            content: '\e5ca';
+            font-family: "Material Icons";
+            font-size: 18px;
+            color: @white;
+            position: absolute;
+            left: -2px;
+            top: -6px;
+            line-height: 1.42857143;
+        }
+    }
+    &.hover.checked,
+    &.checked {
+        background: @input_on_color;
+        border-color: @input_on_color;
+    }
+    &.disabled {
+        &:after {
+            display: none;
+        }
+        &,
+        &.checked {
+            background: transparent;
+            background-clip: padding-box;
+            border-color: @input_disabled_color;
+            cursor: default;
+        }
+        &.checked {
+            background: @input_on_color !important;
+            border-color: @input_on_color !important;
+            &:after {
+                display: block;
+            }
+        }
+    }
+    .md-input-danger & {
+        border-color: @danger_color;
+    }
+    &.indeterminate {
+        background: @input_on_color;
+        border-color: @input_on_color;
+        &:after {
+            content: '';
+            background: @white;
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            width: 10px;
+            height: 10px;
+        }
+    }
+}
+
+.iradio_md {
+    border: 2px solid @input_off_color;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    &:after {
+        content: '';
+        background: transparent;
+        position: absolute;
+        left: 3px;
+        top: 3px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        transform: scale(0.1);
+        transition: all 200ms ease-out;
+    }
+    &.checked {
+        border-color: @input_on_color;
+        &:after {
+            background: @input_on_color;
+            transform: scale(1);
+        }
+    }
+    &.disabled {
+        border-color: @input_disabled_color;
+        cursor: default;
+        &:after {
+            background: @input_disabled_color;
+            transform: scale(1);
+        }
+    }
+    .md-input-danger & {
+        border-color: @danger_color;
+    }
+}
+
+.disabled + .inline-label {
+    color: @input_disabled_color;
+    cursor: default;
+}
+
+.icheck-inline {
+    display: inline-block;
+    margin: 0 16px 16px 0;
+    + .parsley-errors-list {
+        margin-top: -8px;
+    }
+}

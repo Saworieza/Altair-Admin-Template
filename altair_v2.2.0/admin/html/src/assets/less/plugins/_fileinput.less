@@ -1,0 +1,56 @@
+/* fileinput */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    vertical-align: middle;
+    cursor: pointer;
+    & input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        font-size: 14px;
+        cursor: pointer;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        direction: ltr;
+    }
+}
+.fileinput {
+    display: inline-block;
+    & .form-control {
+        display: inline-block;
+        padding-top: 7px;
+        padding-bottom: 5px;
+        margin-bottom: 0;
+        vertical-align: middle;
+        cursor: text;
+    }
+    & .thumbnail {
+        display: inline-block;
+        overflow: hidden;
+        text-align: center;
+        vertical-align: top;
+        & > img {
+            max-height: 100%;
+        }
+    }
+    & .btn {
+        vertical-align: middle;
+    }
+}
+.fileinput-exists .fileinput-new,
+.fileinput-new .fileinput-exists {
+    display: none;
+}
+.fileinput-inline .fileinput-controls {
+    display: inline;
+}
+.fileinput-filename {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+}

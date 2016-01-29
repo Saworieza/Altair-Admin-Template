@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule login.html login.php [L]
+RewriteRule error_404.html error_404.php [L]
+RewriteRule error_500.html error_500.php [L]
+RewriteRule ^(.*).html$ index.php?page=$1 [L]

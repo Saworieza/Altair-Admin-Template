@@ -1,0 +1,52 @@
+/* gmaps (google maps) */
+.gmap {
+    width: 100%;
+    height: 240px;
+    img {
+        max-width: none;
+    }
+    .on_gmap  {
+        .wrap_controls {
+            width: 180px;
+            border: none !important;
+            .boxShadowHelper(2) !important;
+        }
+        .controls_title {
+            font-weight: normal !important;
+            font-size: 14px !important;
+        }
+        &.dropdown {
+            .wrap_controls {
+                overflow: visible !important;
+            }
+        }
+    }
+    &_large {
+        height: 300px;
+    }
+    &_xlarge {
+        height: 400px;
+    }
+}
+.gmap_list {
+    > li {
+        cursor: pointer;
+        transition: background 0.4s @md_easing;
+        &:active {
+            background: #eee;
+        }
+    }
+}
+.gmap-info-window {
+    min-width: 120px;
+    font-weight: 400;
+    h3 {
+        margin: 0;
+        font-size: 14px;
+    }
+    p {
+        color: @text_muted;
+        font-size: 13px;
+        margin: 0;
+    }
+}

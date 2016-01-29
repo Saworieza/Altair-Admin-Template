@@ -1,0 +1,26 @@
+<div id="style_switcher" ng-class="{'switcher_active':styleSwitcherActive}">
+    <div id="style_switcher_toggle" ng-click="toggleStyleSwitcher($event)"><i class="material-icons">&#xE8B8;</i></div>
+    <div class="uk-margin-medium-bottom">
+        <h4 class="heading_c uk-margin-bottom">Colors</h4>
+        <ul class="switcher_app_themes" id="theme_switcher">
+            <li class="{{theme.name}}" ng-repeat="theme in themes" ng-click="changeTheme($event,theme)" ng-class="{'app_style_default': theme.class == '', 'active_theme': theme.class == main_theme }">
+                <span class="app_color_main"></span>
+                <span class="app_color_accent"></span>
+            </li>
+        </ul>
+    </div>
+    <div class="uk-visible-large">
+        <h4 class="heading_c">Sidebar</h4>
+        <p>
+            <input type="checkbox" name="style_sidebar_mini" id="style_sidebar_mini" icheck ng-model="mini_sidebar_toggle" />
+            <label for="style_sidebar_mini" class="inline-label">Mini Sidebar</label>
+        </p>
+    </div>
+    <div class="uk-visible-large">
+        <h4 class="heading_c">Layout</h4>
+        <p>
+            <input type="checkbox" name="style_layout_boxed" id="style_layout_boxed" icheck ng-model="boxed_layout_toggle"/>
+            <label for="style_layout_boxed" class="inline-label">Boxed layout</label>
+        </p>
+    </div>
+</div>

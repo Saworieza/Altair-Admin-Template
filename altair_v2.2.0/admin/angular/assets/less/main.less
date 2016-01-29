@@ -1,0 +1,136 @@
+/*
+*  Altair Admin AngularJS
+*  author: tzd
+*
+*  Content:
+*    1. variables/mixins
+*    2. UIkit custom styles
+*    3. Kendo UI custom styles
+*    4. custom components
+*    5. material design styles
+*    6. plugins
+*    7. partials (header,sidebars,top bar)
+*    8. pages
+*    9. altair admin styles
+*    10. print styles
+*    12. themes
+*    11. style switcher
+*/
+
+/* 1. altair variables/mixins ======================== */
+@import (reference) "_variables_mixins";
+
+/* 2. UIkit custom styles ============================ */
+@import "_uikit_custom";
+
+/* 3. Kendo UI custom styles ========================= */
+@import "_kendo_ui_custom";
+
+/* 4. custom components ============================== */
+@import "components/_preloaders";
+@import "components/_timeline";
+
+/* 5. material design styles ========================= */
+@import "md/md_main";
+
+/* 6. plugins ======================================== */
+// altair plugins
+@import "plugins/_altair_plugins";
+// metrics graphics
+@import "plugins/_metrics_graphics";
+// c3 charts
+@import "plugins/_c3_charts";
+// clndr
+@import "plugins/_clndr";
+// peity charts
+@import "plugins/_peity";
+// gmaps
+@import "plugins/_gmaps";
+// easy-pie-chart
+@import "plugins/_easy_pie_chart";
+// icheck
+@import "plugins/_icheck";
+// prism syntax highlighter
+@import "plugins/_prism";
+// custom scrollbar
+@import "plugins/_custom_scrollbar";
+// selectize
+@import "plugins/_selectize";
+// codemirror
+@import "plugins/_codemirror";
+// switchery
+@import "plugins/_switchery";
+// ionrangeSlider
+@import "plugins/_ionrangeSlider";
+// parsley (validation)
+@import "plugins/_parsley";
+// datatables
+@import "plugins/_datatables";
+// fullcalendar
+@import "plugins/_fullcalendar";
+// vector maps
+@import "plugins/_vector_maps";
+// file input
+@import "plugins/_fileinput";
+// gantt chart
+@import "plugins/_gantt_chart";
+// chartist
+@import "plugins/_chartist";
+// dragula.js (sortable)
+@import "plugins/_dragula";
+// tablesorter
+@import "plugins/_tablesorter";
+
+/* 7. partials (header,sidebars,top bar) ============= */
+// main header
+@import "partials/_header_main";
+// sidebars
+@import "partials/_sidebars";
+// top bar
+@import "partials/_top_bar";
+// page heading
+@import "partials/_page_heading";
+// top dropdown menu
+@import "partials/_menu_top_dropdown";
+// top menu
+@import "partials/_menu_top";
+
+/* 8. custom pages =================================== */
+// user profile
+@import "pages/_user_profile";
+// scrum board
+@import "pages/_scrum_board";
+// chat
+@import "pages/_chat";
+// error
+@import "pages/_error_page";
+// login
+@import "pages/_login_page";
+// blog
+@import "pages/_blog";
+// gallery
+@import "pages/_gallery";
+// pricing tables
+@import "pages/_pricing_table";
+
+/* 9. altair main styles ============================= */
+@import "_altair_admin";
+
+/* 10. print styles ================================== */
+@import "_print";
+
+/* 11. themes ======================================== */
+@import "themes/_theme_a";
+@import "themes/_theme_b";
+@import "themes/_theme_c";
+@import "themes/_theme_d";
+@import "themes/_theme_e";
+@import "themes/_theme_f";
+@import "themes/_theme_g";
+
+/* 12. style switcher ================================ */
+@import "partials/_style_switcher";
+
+/* 12. angularjs ===================================== */
+@import "angular/_app";
+@import "angular/_wizard";

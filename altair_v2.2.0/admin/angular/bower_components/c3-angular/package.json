@@ -1,0 +1,40 @@
+{
+  "name": "c3-angular",
+  "version": "0.7.1",
+  "description": "An angularjs directive to integrate c3.js within your angularjs project.",
+  "main": "c3-angular.min.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jettro/c3-angular-sample.git"
+  },
+  "keywords": [
+    "c3js",
+    "angularjs",
+    "graph"
+  ],
+  "author": "Jettro Coenradie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jettro/c3-angular-sample/issues"
+  },
+  "homepage": "https://github.com/jettro/c3-angular-sample",
+  "devDependencies": {
+    "angular-jsdoc": "^0.3.8",
+    "canonical-path": "0.0.2",
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-uglify": "^0.7.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-devserver": "^0.6.0",
+    "grunt-jsdoc": "^0.6.7",
+    "jsdoc": "^3.3.2"
+  }
+}

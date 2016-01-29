@@ -1,0 +1,144 @@
+<div id="page_content">
+
+    <div id="page_heading" data-uk-sticky="{ top: 48, media: 960 }">
+        <div class="heading_actions">
+            <a href="#" data-uk-tooltip="{pos:'bottom'}" title="Archive"><i class="md-icon material-icons">&#xE149;</i></a>
+            <a href="#" data-uk-tooltip="{pos:'bottom'}" title="Print"><i class="md-icon material-icons">&#xE8AD;</i></a>
+            <div data-uk-dropdown>
+                <i class="md-icon material-icons">&#xE5D4;</i>
+                <div class="uk-dropdown uk-dropdown-small">
+                    <ul class="uk-nav">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Other Action</a></li>
+                        <li><a href="#">Other Action</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <h1>Issue Tracker</h1>
+        <span class="uk-text-upper uk-text-small"><a href="#">{{project_name}}</a></span>
+    </div>
+
+    <div id="page_content_inner">
+        <div class="md-card">
+            <div class="md-card-content">
+                <div class="uk-overflow-container uk-margin-bottom">
+                    <table class="uk-table uk-table-align-vertical uk-table-nowrap tablesorter tablesorter-altair" id="ts_issues">
+                        <thead>
+                        <tr>
+                            <th class="uk-text-center">Key</th>
+                            <th>Title</th>
+                            <th>Assignee</th>
+                            <th>Priority</th>
+                            <th>Created</th>
+                            <th>Updated</th>
+                            <th>Status</th>
+                        </tr>
+                        </thead>
+                        <tfoot>
+                        <tr>
+                            <th class="uk-text-center">Key</th>
+                            <th>Title</th>
+                            <th>Assignee</th>
+                            <th>Priority</th>
+                            <th>Created</th>
+                            <th>Updated</th>
+                            <th>Status</th>
+                        </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr ng-repeat="issue in issues" on-last-repeat>
+                                <td class="uk-text-center"><span class="uk-text-small uk-text-muted uk-text-nowrap">{{issue.short_name}}-{{issue.item_id}}</span></td>
+                                <td>
+                                    <a ui-sref="restricted.pages.issues.details({ issueId: issue.item_id })">{{issue.title}}</a>
+                                </td>
+                                <td>{{issue.assignee}}</td>
+                                <td>
+                                    <span class="uk-badge" ng-class="{
+                                        'uk-badge-success':issue.priority == 'minor',
+                                        'uk-badge-info':issue.priority == 'major',
+                                        'uk-badge-warning':issue.priority == 'critical',
+                                        'uk-badge-danger':issue.priority == 'blocker'
+                                        }">
+                                        {{issue.priority}}
+                                    </span>
+                                </td>
+                                <td class="uk-text-small">{{issue.date_created}}</td>
+                                <td class="uk-text-small">{{issue.date_updated}}</td>
+                                <td><span class="uk-badge uk-badge-outline uk-text-upper">{{issue.status}}</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul class="uk-pagination ts_pager">
+                    <li data-uk-tooltip title="Select Page">
+                        <select class="ts_gotoPage ts_selectize"></select>
+                    </li>
+                    <li class="first"><a href="javascript:void(0)"><i class="uk-icon-angle-double-left"></i></a></li>
+                    <li class="prev"><a href="javascript:void(0)"><i class="uk-icon-angle-left"></i></a></li>
+                    <li><span class="pagedisplay"></span></li>
+                    <li class="next"><a href="javascript:void(0)"><i class="uk-icon-angle-right"></i></a></li>
+                    <li class="last"><a href="javascript:void(0)"><i class="uk-icon-angle-double-right"></i></a></li>
+                    <li data-uk-tooltip title="Page Size">
+                        <select class="pagesize ts_selectize">
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="md-fab-wrapper">
+    <a class="md-fab md-fab-accent" href="#new_issue" data-uk-modal="{ center:true }">
+        <i class="material-icons">&#xE145;</i>
+    </a>
+</div>
+
+<div class="uk-modal" id="new_issue">
+    <div class="uk-modal-dialog">
+        <form class="uk-form-stacked">
+            <div class="uk-margin-medium-bottom">
+                <label for="task_title">Title</label>
+                <input type="text" class="md-input" id="Task_title" name="snippet_title" md-input/>
+            </div>
+            <div class="uk-margin-medium-bottom">
+                <label for="task_description">Description</label>
+                <textarea class="md-input" id="task_description" name="task_description" md-input></textarea>
+            </div>
+            <div class="uk-margin-medium-bottom">
+                <label for="issue_assignee" class="uk-form-label">Assignee</label>
+                <input config="newIssue.assignee.config" options="newIssue.assignee.options" ng-model="newIssue.data.assignee" id="issue_assignee" name="issue_assignee" selectize />
+            </div>
+            <div class="uk-margin-medium-bottom">
+                <label class="uk-form-label">Priority</label>
+                <div>
+                    <span class="icheck-inline">
+                        <input type="radio" name="issue_priority" id="issue_priority_minor" ng-model="newIssue.data.priority" value="minor" icheck />
+                        <label for="issue_priority_minor" class="inline-label uk-badge uk-badge-success">MINOR</label>
+                    </span>
+                    <span class="icheck-inline">
+                        <input type="radio" name="issue_priority" id="issue_priority_major" ng-model="newIssue.data.priority" value="minor" icheck />
+                        <label for="issue_priority_major" class="inline-label uk-badge uk-badge-info">MINOR</label>
+                    </span>
+                    <span class="icheck-inline">
+                        <input type="radio" name="issue_priority" id="issue_priority_critical" ng-model="newIssue.data.priority" value="critical" icheck />
+                        <label for="issue_priority_critical" class="inline-label uk-badge uk-badge-warning">CRITICAL</label>
+                    </span>
+                    <span class="icheck-inline">
+                        <input type="radio" name="issue_priority" id="issue_priority_blocker" ng-model="newIssue.data.priority" value="blocker" icheck />
+                        <label for="issue_priority_blocker" class="inline-label uk-badge uk-badge-danger">BLOCKER</label>
+                    </span>
+                </div>
+            </div>
+            <div class="uk-modal-footer uk-text-right">
+                <button type="button" class="md-btn md-btn-flat uk-modal-close">Close</button><button type="button" class="md-btn md-btn-flat md-btn-flat-primary" id="snippet_new_save">Add Issue</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+    <div id="page_content">
+        <div id="page_content_inner">
+
+            <div class="md-card">
+                <div class="md-card-content">
+                    <form class="uk-form-stacked">
+
+                        <div class="uk-grid uk-grid-width-large-1-2 uk-grid-width-xlarge-1-4" data-uk-grid-margin>
+                            <div>
+                                <label class="uk-form-label" for="kUI_masked_phone">Phone number</label>
+                                <input kendo-masked-text-box id="kUI_masked_phone" ng-model="phone" k-mask="'(999) 000-0000'"/>
+                                <span class="uk-form-help-block">(999) 000-0000<br>Value: {{phone}}</span>
+                            </div>
+                            <div>
+                                <label class="uk-form-label" for="kUI_masked_credit_card">Credit Card</label>
+                                <input kendo-masked-text-box id="kUI_masked_credit_card" ng-model="cc" k-mask="'0000 0000 0000 0000'"/>
+                                <span class="uk-form-help-block">0000 0000 0000 0000<br>Value: {{cc}}</span>
+                            </div>
+                            <div>
+                                <label class="uk-form-label" for="kUI_masked_ssn">SSN</label>
+                                <input kendo-masked-text-box id="kUI_masked_ssn" ng-model="ssn" k-mask="'000-00-0000'"/>
+                                <span class="uk-form-help-block">000-00-0000<br>Value: {{ssn}}</span>
+                            </div>
+                            <div>
+                                <label class="uk-form-label" for="kUI_masked_postcode">Post Code</label>
+                                <input kendo-masked-text-box id="kUI_masked_postcode" ng-model="post" k-mask="'L0L 0LL'"/>
+                                <span class="uk-form-help-block">L0L 0LL<br>Value: {{post}}</span>
+                            </div>
+                        </div>
+
+                        <div class="uk-grid" data-uk-grid-margin="">
+                            <div class="uk-width-1-1">
+<pre class="line-numbers"><code class="language-markup" prism-highlight>// phone number
+&lt;input kendo-masked-text-box id=&quot;kUI_masked_phone&quot; ng-model=&quot;phone&quot; k-mask=&quot;'(999) 000-0000'&quot;/&gt;
+// credit card
+&lt;input kendo-masked-text-box id=&quot;kUI_masked_credit_card&quot; ng-model=&quot;cc&quot; k-mask=&quot;'0000 0000 0000 0000'&quot;/&gt;
+// ssn
+&lt;input kendo-masked-text-box id=&quot;kUI_masked_ssn&quot; ng-model=&quot;ssn&quot; k-mask=&quot;'000-00-0000'&quot;/&gt;
+// post code
+&lt;input kendo-masked-text-box id=&quot;kUI_masked_postcode&quot; ng-model=&quot;post&quot; k-mask=&quot;'L0L 0LL'&quot;/&gt;</code></pre>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>

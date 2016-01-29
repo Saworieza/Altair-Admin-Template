@@ -1,0 +1,109 @@
+    <div id="top_bar" top-bar>
+        <div class="md-top-bar">
+            <div class="uk-width-large-8-10 uk-container-center">
+                <div class="uk-clearfix">
+                    <div class="md-top-bar-actions-left">
+                        <div class="md-top-bar-checkbox">
+                            <input type="checkbox" id="mailbox_select_all" ng-model="select_all_messages" icheck />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="page_content">
+        <div id="page_content_inner">
+
+            <div class="md-card-list-wrapper" id="mailbox">
+                <div class="uk-width-large-8-10 uk-container-center">
+
+                    <div class="md-card-list">
+                        <div class="md-card-list-header heading_list">All messages</div>
+                        <div class="md-card-list-header md-card-list-header-combined heading_list" style="display: none">All Messages</div>
+                        <ul class="hierarchical_slide" hierarchical-slide>
+                            <li ng-repeat="message in messages" on-last-repeat>
+                                <div class="md-card-list-item-menu" data-uk-dropdown="{mode:'click',pos:'bottom-right'}">
+                                    <a href="#" class="md-icon material-icons">&#xE5D4;</a>
+                                    <div class="uk-dropdown uk-dropdown-small">
+                                        <ul class="uk-nav">
+                                            <li><a href="#"><i class="material-icons">&#xE15E;</i> Reply</a></li>
+                                            <li><a href="#"><i class="material-icons">&#xE149;</i> Archive</a></li>
+                                            <li><a href="#"><i class="material-icons">&#xE872;</i> Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <span class="md-card-list-item-date">{{message.date | jsonDate | date: 'dd MMM' }}</span>
+                                <div class="md-card-list-item-select">
+                                    <input type="checkbox" class="select_message" icheck ng-model="messsage_select" />
+                                </div>
+                                <div class="md-card-list-item-avatar-wrapper">
+                                    <img ng-src="{{message.sender_avatar}}" class="md-card-list-item-avatar" alt="" ng-if="message.sender_avatar"/>
+                                    <span class="md-card-list-item-avatar md-bg-{{message.sender_color}}-600" ng-if="!message.sender_avatar">{{message.sender | initials}}</span>
+                                </div>
+                                <div class="md-card-list-item-sender">
+                                    <span ng-if="message.verified">{{message.sender}}</span>
+                                    <span ng-if="!message.verified">{{message.email}}</span>
+                                </div>
+                                <div class="md-card-list-item-subject">
+                                    <div class="md-card-list-item-sender-small">
+                                        <span ng-if="message.verified">{{message.sender}}</span>
+                                        <span ng-if="!message.verified">{{message.email}}</span>
+                                    </div>
+                                    <span>{{message.title}}</span>
+                                </div>
+                                <div class="md-card-list-item-content-wrapper">
+                                    <div class="md-card-list-item-content">
+                                        {{message.content}}
+                                    </div>
+                                    <form class="md-card-list-item-reply">
+                                        <label for="mailbox_reply_{{$index}}">Reply to <span>{{message.sender}}</span></label>
+                                        <textarea class="md-input md-input-full" id="mailbox_reply_{{$index}}" cols="30" rows="4" md-input ng-model="message_reply"></textarea>
+                                        <button class="md-btn md-btn-flat md-btn-flat-primary">Send</button>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="md-fab-wrapper">
+        <a class="md-fab md-fab-accent" href="#mailbox_new_message" data-uk-modal="{center:true}">
+            <i class="material-icons">&#xE150;</i>
+        </a>
+    </div>
+
+    <div class="uk-modal" id="mailbox_new_message">
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close uk-close" type="button"></button>
+            <form>
+                <div class="uk-modal-header">
+                    <h3 class="uk-modal-title">Compose Message</h3>
+                </div>
+                <div class="uk-margin-medium-bottom">
+                    <label for="mail_new_to">To</label>
+                    <input type="text" class="md-input" id="mail_new_to" md-input ng-model="message_compose.recipient" />
+                </div>
+                <div class="uk-margin-large-bottom">
+                    <label for="mail_new_message">Message</label>
+                    <textarea name="mail_new_message" id="mail_new_message" cols="30" rows="6" class="md-input" md-input ng-model="message_compose.message"></textarea>
+                </div>
+                <div id="mail_upload-drop" class="uk-file-upload">
+                    <p class="uk-text">Drop file to upload</p>
+                    <p class="uk-text-muted uk-text-small uk-margin-small-bottom">or</p>
+                    <span class="uk-form-file md-btn">choose file<input id="mail_upload-select" type="file" ng-model="message_compose.attachments"></span>
+                </div>
+                <div id="mail_progressbar" class="uk-progress uk-hidden">
+                    <div class="uk-progress-bar" style="width:0">0%</div>
+                </div>
+                <div class="uk-modal-footer">
+                    <a href="#" class="md-icon-btn"><i class="md-icon material-icons">&#xE226;</i></a>
+                    <button type="button" class="uk-float-right md-btn md-btn-flat md-btn-flat-primary">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>

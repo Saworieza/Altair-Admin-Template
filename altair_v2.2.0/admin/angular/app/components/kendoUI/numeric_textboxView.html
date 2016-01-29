@@ -1,0 +1,33 @@
+    <div id="page_content">
+        <div id="page_content_inner">
+
+            <div class="md-card">
+                <div class="md-card-content">
+                    <div class="uk-grid uk-margin-large-bottom">
+                        <div class="uk-width-large-1-2">
+                            <form class="uk-form-stacked">
+                                <div class="uk-form-row">
+                                    <label class="uk-form-label" for="kUI_numeric_value_a">Set value</label>
+                                    <input id="kUI_numeric_value_a" kendo-numeric-text-box k-min="0" k-max="100" k-ng-model="value" style="width: 50%;" />
+                                </div>
+                                <div class="uk-form-row">
+                                    <label class="uk-form-label">Set value</label>
+                                    <div kendo-slider k-min="0" k-max="100" k-ng-model="value"></div>
+                                </div>
+                                <div class="uk-form-row">
+                                    <label class="uk-form-label">Result</label>
+                                    Value: {{value}}
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+<pre class="line-numbers"><code class="language-markup" prism-highlight>// set value input
+&lt;input id=&quot;kUI_numeric_value_a&quot; kendo-numeric-text-box k-min=&quot;0&quot; k-max=&quot;100&quot; k-ng-model=&quot;value&quot; style=&quot;width: 100%;&quot; /&gt;
+
+// set value slider
+&lt;div kendo-slider k-min=&quot;0&quot; k-max=&quot;100&quot; k-ng-model=&quot;value&quot;&gt;&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+
+        </div>
+    </div>

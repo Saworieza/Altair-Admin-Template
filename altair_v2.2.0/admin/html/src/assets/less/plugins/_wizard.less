@@ -1,0 +1,303 @@
+/* wizard */
+.wizard,
+.tabcontrol {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    a {
+        outline: 0;
+    }
+    ul {
+        list-style: none !important;
+        padding: 0;
+        margin: 0;
+        > li {
+            display: block;
+            padding: 0;
+        }
+    }
+    > .steps {
+        .current-info {
+            position: absolute;
+            left: -999em;
+        }
+    }
+    .content {
+        > .title {
+            position: absolute;
+            left: -999em;
+
+        }
+    }
+}
+
+.wizard {
+    > .steps {
+        position: relative;
+        display: block;
+        width: 100%;
+        background: @theme_primary_color;
+        .number{
+            font-size: 14px;
+            border: 2px solid @white;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            border-radius: 50%;
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            margin-top: -14px;
+            @media @screen_large {
+                font-size: 16px;
+                width: 32px;
+                height: 32px;
+                line-height: 32px;
+                margin-top: -18px;
+            }
+        }
+        .title {
+            .truncate_line;
+            padding-left: 46px;
+            box-sizing: border-box;
+        }
+        > ul {
+            > li {
+                display: block;
+                @media @screen_large {
+                    float: left;
+                    width: 25%;
+                }
+                + li {
+                    a {
+                        border-top: 1px solid rgba(0,0,0,0.15);
+                        @media @screen_large {
+                            border-top: none;
+                            border-right: 1px solid rgba(0,0,0,0.15);
+                        }
+                    }
+                }
+                a {
+                    position: relative;
+                    &,
+                    &:hover,
+                    &:active {
+                        display: block;
+                        width: auto;
+                        padding: 12px 8px;
+                        text-decoration: none;
+                        color: @white;
+                        @media @screen_large {
+                            padding: 16px;
+                        }
+                    }
+                }
+                &.disabled {
+                    a {
+                        &,
+                        &:hover,
+                        &:active {
+                            color: @white;
+                            cursor: default;
+                        }
+                    }
+                }
+                &.current {
+                    a {
+                        &,
+                        &:hover,
+                        &:active {
+                            background: lighten(@theme_primary_color,10%);
+                            color: @white;
+                            cursor: default;
+                        }
+                    }
+                }
+                &.done {
+                    a {
+                        &,
+                        &:hover,
+                        &:active {
+                            background: @theme_dark_color;
+                            color: @white;
+                        }
+                    }
+                }
+                &.error {
+                    a {
+                        &,
+                        &:hover,
+                        &:active {
+                            background: @md-color-red-800;
+                            color: @white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & > .content {
+        display: block;
+        min-height: 360px;
+        overflow: hidden;
+        position: relative;
+        box-sizing: border-box;
+        & > .body {
+            padding: 48px 24px 64px;
+            width: 100%;
+            position: absolute;
+            box-sizing: border-box;
+            ul {
+                .reset_list;
+            }
+            .uk-form-label {
+                display: block;
+                font-weight: 500;
+                font-size: 13px;
+                margin: -4px 0 ;
+            }
+            .icheck-inline {
+                margin: 4px 16px 0 0;
+                + .parsley-errors-list {
+                    margin-top: 2px;
+                }
+            }
+            & > iframe {
+                border: 0 none;
+                width: 100%;
+                height: 100%;
+            }
+            pre[class*="language-"] {
+                max-height: inherit;
+            }
+
+        }
+    }
+    & > .actions {
+        display: block;
+        background: @background_color_default;
+        padding: 8px 24px;
+        & > ul {
+            > li {
+                &.button_previous {
+                    float: left;
+                }
+                &.button_next,
+                &.button_finish {
+                    float: right;
+                }
+            }
+            @media @screen_small_max {
+                > li {
+                    + li {
+                        margin-top: 8px;
+                    }
+                    &.button_previous {
+                        float: none;
+                    }
+                    &.button_next,
+                    &.button_finish {
+                        float: none;
+                    }
+                }
+            }
+        }
+        a {
+            &,
+            &:hover,
+            &:active {
+                color: @text_primary_color;
+                display: block;
+                padding: 0 16px;
+                min-width: 80px;
+                text-align: center;
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 31px;
+                text-transform: uppercase;
+            }
+            .material-icons {
+                color: @text_primary_color
+            }
+        }
+        .disabled {
+            a {
+                &,
+                &:hover,
+                &:active {
+                    color: @text_muted;
+                }
+            }
+            .material-icons {
+                color: @text_muted
+            }
+        }
+    }
+    & > .loading {
+        & .spinner {
+
+        }
+    }
+    &.vertical {
+        > .steps {
+            @media @screen_large {
+                width: 25%;
+                float: left;
+                box-sizing: border-box;
+                padding: 8px;
+            }
+            @media @screen_xlarge {
+                width: 20%;
+            }
+            @media @screen_large {
+                > ul {
+                    > li {
+                        float: none;
+                        width: 100%;
+                        + li {
+                            margin-top: 8px;
+                        }
+                        a {
+                            padding: 12px;
+                            border: none;
+                            border-radius: 4px;
+                        }
+                    }
+                }
+                .number {
+                    font-size: 12px;
+                    border: 2px solid @white;
+                    width: 24px;
+                    height: 24px;
+                    line-height: 24px;
+                    text-align: center;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 12px;
+                    top: 50%;
+                    margin-top: -14px;
+                }
+            }
+        }
+        & > .content {
+            display: block;
+            background: @white;
+            @media @screen_large {
+                width: 75%;
+                float: left;
+                .body {
+                    padding: 16px 32px;
+                }
+            }
+            @media @screen_xlarge {
+                width: 80%;
+            }
+        }
+        & > .actions {
+            display: block;
+            clear: both;
+        }
+    }
+}

@@ -1,0 +1,100 @@
+    <div id="page_content">
+        <div id="page_content_inner">
+            <div class="md-card">
+                <div class="md-card-content">
+                    <div class="uk-grid" data-uk-grid-margin>
+                        <div class="uk-width-large-1-2">
+                            <form class="uk-form-stacked">
+                                <label for="kUI_combobox_input" class="uk-form-label">Static data</label>
+                                <select id="kUI_combobox_input" style="width:100%" kendo-combo-box>
+                                    <option>Albania</option>
+                                    <option>Andorra</option>
+                                    <option>Armenia</option>
+                                    <option>Austria</option>
+                                    <option>Azerbaijan</option>
+                                    <option>Belarus</option>
+                                    <option>Belgium</option>
+                                    <option>Bosnia & Herzegovina</option>
+                                    <option>Bulgaria</option>
+                                    <option>Croatia</option>
+                                    <option>Cyprus</option>
+                                    <option>Czech Republic</option>
+                                    <option>Denmark</option>
+                                    <option>Estonia</option>
+                                    <option>Finland</option>
+                                    <option>France</option>
+                                    <option>Georgia</option>
+                                    <option>Germany</option>
+                                    <option>Greece</option>
+                                    <option>Hungary</option>
+                                    <option>Iceland</option>
+                                    <option>Ireland</option>
+                                    <option>Italy</option>
+                                    <option>Kosovo</option>
+                                    <option>Latvia</option>
+                                    <option>Liechtenstein</option>
+                                    <option>Lithuania</option>
+                                    <option>Luxembourg</option>
+                                    <option>Macedonia</option>
+                                    <option>Malta</option>
+                                    <option>Moldova</option>
+                                    <option>Monaco</option>
+                                    <option>Montenegro</option>
+                                    <option>Netherlands</option>
+                                    <option>Norway</option>
+                                    <option>Poland</option>
+                                    <option>Portugal</option>
+                                    <option>Romania</option>
+                                    <option>Russia</option>
+                                    <option>San Marino</option>
+                                    <option>Serbia</option>
+                                    <option>Slovakia</option>
+                                    <option>Slovenia</option>
+                                    <option>Spain</option>
+                                    <option>Sweden</option>
+                                    <option>Switzerland</option>
+                                    <option>Turkey</option>
+                                    <option>Ukraine</option>
+                                    <option>United Kingdom</option>
+                                    <option>Vatican City</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="uk-width-large-1-2">
+<pre class="line-numbers"><code class="language-markup" prism-highlight>// static data
+&lt;select id=&quot;kUI_combobox_input&quot; class=&quot;uk-form-width-medium&quot; kendo-combo-box&gt;
+  ...
+&lt;/select&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md-card">
+                <div class="md-card-content">
+                    <div class="uk-grid" data-uk-grid-margin>
+                        <div class="uk-width-large-1-2">
+                            <form class="uk-form-stacked">
+                                <label for="kUI_combobox_select" class="uk-form-label">Remote data</label>
+                                <select kendo-combo-box
+                                        k-placeholder="'Users'"
+                                        k-data-text-field="'ContactName'"
+                                        k-data-value-field="'CustomerID'"
+                                        k-filter="'contains'"
+                                        k-auto-bind="false"
+                                        k-min-length="3"
+                                        k-data-source="usersDataSource"
+                                        style="width:100%"
+                                        id="kUI_combobox_select">
+                                </select>
+                            </form>
+                        </div>
+                        <div class="uk-width-large-1-2">
+<pre class="line-numbers"><code class="language-markup" prism-highlight>// remote data
+&lt;select kendo-combo-box k-placeholder=&quot;'Select product'&quot; k-data-text-field=&quot;'ProductName'&quot; k-data-value-field=&quot;'ProductID'&quot; k-filter=&quot;'contains'&quot; k-auto-bind=&quot;false&quot; k-min-length=&quot;3&quot; k-data-source=&quot;productsDataSource&quot; class=&quot;uk-form-width-medium&quot; id=&quot;kUI_combobox_select&quot;&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>

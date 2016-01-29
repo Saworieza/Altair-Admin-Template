@@ -1,0 +1,77 @@
+<div id="page_content">
+    <div id="page_content_inner">
+
+        <div class="md-card">
+            <div class="md-card-content">
+                <div class="uk-grid" data-uk-grid-margin="">
+                    <div class="uk-width-medium-3-10">
+                        <label for="product_search_name">Product Name</label>
+                        <input type="text" class="md-input" id="product_search_name" ng-model="filter.name" md-input>
+                    </div>
+                    <div class="uk-width-medium-2-10">
+                        <label for="product_search_price">Price</label>
+                        <input type="text" class="md-input" id="product_search_price" ng-model="filter.price" md-input>
+                    </div>
+                    <div class="uk-width-medium-3-10">
+                        <div class="uk-margin-small-top">
+                            <selectize config="filter_status_config" options="filter_status_options" ng-model="multiSelectData.status" position="bottom"></selectize>
+                        </div>
+                    </div>
+                    <div class="uk-width-medium-2-10">
+                        <div class="uk-margin-small-top">
+                            <input type="text" class="md-input" config="{ create:false, maxItems: 1 }" options="filter_pageSize" ng-model="pageSize" selectize>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="md-card">
+            <div class="md-card-content">
+                <div class="uk-grid" data-uk-grid-margin>
+                    <div class="uk-width-1-1">
+                        {{ filter_status }}
+                        <div class="uk-overflow-container">
+                            <table class="uk-table uk-table-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Product Name</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Status</th>
+                                        <th>Active</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr dir-paginate="product in products_data | filter: filter | multiSelectFilter: multiSelectData | itemsPerPage: pageSize">
+                                        <td class="uk-width-1-10"><img class="img_thumb" ng-src="{{ product.image }}" alt=""></td>
+                                        <td class="uk-width-3-10 uk-text-large"><a ui-sref="restricted.ecommerce.product_details">{{ product.name }}</a></td>
+                                        <td class="uk-width-1-10 uk-text-nowrap">{{ product.price | currency : "$" : 2}}</td>
+                                        <td class="uk-width-1-10">{{ product.quantity }}</td>
+                                        <td class="uk-width-2-10 uk-text-nowrap">
+                                            <span class="uk-badge uk-badge-success" ng-if="product.status == 'in_stock'">In stock</span>
+                                            <span class="uk-badge uk-badge-danger" ng-if="product.status == 'out_of_stock'">Out of stock</span>
+                                            <span class="uk-badge uk-badge-muted" ng-if="product.status == 'ships_3_5_days'">Ships in 3-5 days</span>
+                                        </td>
+                                        <td>
+                                            <i class="material-icons uk-text-success md-24" ng-if="product.active">&#xE834;</i>
+                                            <i class="material-icons md-24" ng-if="!product.active">&#xE835;</i>
+                                        </td>
+                                        <td class="uk-text-nowrap">
+                                            <a ui-sref="restricted.ecommerce.product_details"><i class="md-icon material-icons md-24">&#xE8F4;</i></a>
+                                            <a href="#"><i class="md-icon material-icons md-24">&#xE872;</i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <dir-pagination-controls boundary-links="true" template-url="app/templates/dirPagination.tpl.html"></dir-pagination-controls>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

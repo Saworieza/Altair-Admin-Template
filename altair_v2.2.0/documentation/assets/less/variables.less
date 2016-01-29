@@ -1,0 +1,51 @@
+/* altair documentation variables/mixins */
+
+@text_primary_color:			#212121;
+@text_secondary_color:			#727272;
+
+
+@body_bg:                       #f5f5f5;
+
+@white:                         #fff;
+@background_color_default:      rgba(0,0,0,0.085);
+@border_color:                  rgba(0,0,0,0.12);
+
+@sidebar_width:                 240px;
+
+@danger_color:                  #e53935;
+@primary_color:                 #1e88e5;
+@primary_color_dark:            #1976d2;
+@success_color:                 #7cb342;
+@warning_color:                 #ffb300;
+
+
+/* fonts */
+.md_font(@weight: 400, @size: 14px, @height: 20px) {
+    font: @weight @size e('/') @height "Roboto", sans-serif;
+}
+
+/* shadows */
+.boxShadowHelper(@level: 1){
+    & when (@level = 0) {
+        box-shadow: none !important;
+    }
+    & when (@level = 1) {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
+    & when (@level = 2) {
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+    & when (@level = 3) {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+    & when (@level = 4) {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+    & when (@level = 5) {
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    }
+}
+
+.md-box-shadow-left() {
+    box-shadow: -2px 2px 5px rgba(0,0,0,.26);
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html ng-app="myapp">
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<script src="script-tags-for-development.js"></script>
+<script>
+var app = app || angular.module('myapp', ['ngMap']);
+app.controller('MyCtrl', function(NgMap) {
+  var vm = this;
+  NgMap.getMap().then(function(map) {
+    vm.map;
+  });
+  vm.clicked = function() {
+    alert('Clicked a link inside infoWindow');
+  };
+});
+</script>
+</head>
+<body>
+  <div ng-controller="MyCtrl as vm">
+    <ng-map default-style="true" center="41,-87" zoom="3">
+      <marker position="41,-87" on-click="vm.map.showInfoWindow('foo')">
+      </marker>
+      <info-window id="foo">
+        <div ng-non-bindable="">
+          Lat/Lng: {{this.getPosition()}}<br/>
+          <a href="#" ng-click="vm.clicked()">Click Here</a>
+        </div>
+      </info-window>
+      <info-window id="bar">
+        <div ng-non-bindable="">
+          Lat/Lng: {{vm.map.markers[0].getPosition()}}<br/>
+          <a href="#" ng-click="vm.clicked()">Click Here</a>
+        </div>
+      </info-window>
+    </ng-map>
+    <button ng-click="vm.map.showInfoWindow('bar', map.markers[0])">
+      Show InfoWindow
+    </button>
+    <button ng-click="vm.map.hideInfoWindow('bar')">
+      Hide InfoWindow
+    </button>
+  </div>
+</body>
+</html>

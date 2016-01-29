@@ -1,0 +1,32 @@
+/* login page */
+
+.login_page {
+    font-size: 15px;
+    padding: 64px 24px;
+    overflow-y: auto;
+    height: auto;
+    min-height: 100%;
+    @media @screen_medium_max {
+        padding: 24px;
+    }
+    &_wrapper {
+        width: 360px;
+        max-width: 100%;
+        margin: 0 auto;
+        transition: all 280ms @md_easing;
+    }
+    .user_avatar {
+        width: 64px;
+        height: 64px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+        .retina_image('../img/avatars/user.png','../img/avatars/user@2x.png',64px,64px);
+        background-color: @background_color_default;
+        background-position: 50% 1px;
+    }
+    .login_heading {
+        text-align: center;
+        margin-bottom: 32px;
+    }
+}

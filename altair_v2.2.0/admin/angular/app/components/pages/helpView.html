@@ -1,0 +1,43 @@
+<div id="page_content">
+    <div id="page_content_inner">
+
+        <div class="uk-width-medium-8-10 uk-container-center">
+
+            <div class="md-card md-card-single" single-card>
+                <div class="md-card-toolbar">
+                    <div class="md-card-toolbar-actions">
+                        <i class="md-icon material-icons" id="toggleAll" ng-click="toggleAll($event)">&#xe8f2;</i>
+                    </div>
+                    <h3 class="md-card-toolbar-heading-text large">
+                        Help Center
+                    </h3>
+                </div>
+                <div class="md-card-content padding-reset" id="help_content">
+                    <h4 class="heading_c full_width_in_card">First Section</h4>
+                    <div class="uk-accordion uk-accordion-alt help_accordion hierarchical_slide" hierarchical-slide slide-children="h3" slide-context=".md-card-content">
+                        <h3 class="uk-accordion-title" ng-repeat-start="item in help_data | filter: { section: 'a' }" on-last-repeat>{{item.title}}</h3>
+                        <div class="uk-accordion-content" ng-repeat-end>
+                            <p>{{item.content}}</p>
+                        </div>
+                    </div>
+                    <h4 class="heading_c full_width_in_card">Other Section</h4>
+                    <div class="uk-accordion uk-accordion-alt help_accordion hierarchical_slide" hierarchical-slide slide-children="h3" slide-context=".md-card-content">
+                        <h3 class="uk-accordion-title" ng-repeat-start="item in help_data | filter: { section: 'b' }" on-last-repeat>{{item.title}}</h3>
+                        <div class="uk-accordion-content" ng-repeat-end>
+                            <p>{{item.content}}</p>
+                        </div>
+                    </div>
+                    <h4 class="heading_c full_width_in_card">Other Section</h4>
+                    <div class="uk-accordion uk-accordion-alt help_accordion hierarchical_slide" hierarchical-slide slide-children="h3" slide-context=".md-card-content">
+                        <h3 class="uk-accordion-title" ng-repeat-start="item in help_data | filter: { section: 'c' }" on-last-repeat>{{item.title}}</h3>
+                        <div class="uk-accordion-content" ng-repeat-end>
+                            <p>{{item.content}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

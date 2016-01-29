@@ -1,0 +1,141 @@
+/**
+ * Google Material Design Preloader
+ *
+ * CSS animated SVG implementation of the Google Material Design preloader
+ *
+ * Reference: http://goo.gl/ZfulRH
+ * License: MIT
+ * Author: Rudi Theunissen (rudolf.theunissen@gmail.com)
+ * Version: 1.1.1
+ */
+.md-preloader {
+
+    @mdpreloader_speed:      1200ms;       // animation time for each loop
+    @mdpreloader_color:      @md-color-blue-A200;   // Blue A200 in the Material Design color palette
+    @mdpreloader_linecap:    round;        // could be 'round', but the official one is square
+    @mdpreloader_loops:      5;            // number of points where the arc meets
+    @mdpreloader_arc:        0.82;         // fraction of the circumference that the arc grows to
+    @mdpreloader_perimeter:  67px * pi();  // circumference of the raw svg inner cricle
+
+    // measure to prevent inline block spacing from affecting the outer rotation
+    font-size: 0;
+
+    display: inline-block;
+    animation: outer @mdpreloader_speed * @mdpreloader_loops linear infinite;
+
+    svg {
+        animation: inner @mdpreloader_speed linear infinite;
+
+        circle {
+            fill: none;
+            stroke: @mdpreloader_color;
+            stroke-linecap: @mdpreloader_linecap;
+            animation: arc @mdpreloader_speed @md_easing infinite;
+        }
+    }
+
+    @keyframes outer {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes inner {
+        0% {
+            transform: rotate(-360deg * (1 - @mdpreloader_arc));
+        }
+        100% {
+            transform: rotate(0);
+        }
+    }
+
+    @keyframes arc {
+        0% {
+            stroke-dasharray: 1 @mdpreloader_perimeter;
+            stroke-dashoffset: 0;
+        }
+        40% {
+            stroke-dasharray: @mdpreloader_arc * @mdpreloader_perimeter, @mdpreloader_perimeter;
+            stroke-dashoffset: 0;
+        }
+        100% {
+            stroke-dasharray: 1 @mdpreloader_perimeter;
+            stroke-dashoffset: -@mdpreloader_arc * @mdpreloader_perimeter;
+        }
+    }
+    &-success {
+        svg {
+            circle {
+                stroke: @success_color;
+            }
+        }
+    }
+    &-danger {
+        svg {
+            circle {
+                stroke: @danger_color;
+            }
+        }
+    }
+    &-warning {
+        svg {
+            circle {
+                stroke: @warning_color;
+            }
+        }
+    }
+}
+
+/* content preloader */
+.content-preloader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: @white;
+    left: 50%;
+    overflow: hidden;
+    margin-left: -24px;
+    .boxShadowHelper(3);
+    padding: 8px;
+    box-sizing: border-box;
+    transform: scale(0);
+    transition: top 400ms @md_easing 50ms,transform 400ms @md_easing;
+    .regular-preloader {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        & > div {
+            width: 26px;
+            height: 26px;
+        }
+    }
+    &.preloader-active {
+        transform: scale(1);
+        transition: top 280ms @md_easing,transform 400ms @md_easing 50ms;
+    }
+}
+
+body > .content-preloader {
+    position: fixed;
+    z-index: @header_main_zIndex - 5;
+    top: -48px;
+    &.preloader-active {
+        top: @header_main_height + 8;
+    }
+    .sidebar_main_active &,
+    .sidebar_main_open & {
+        margin-left: -24px + @sidebar_main_width/2;
+    }
+}
+
+.md-card > .content-preloader {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    &.preloader-active {
+        top: @header_main_height + 16;
+    }
+}

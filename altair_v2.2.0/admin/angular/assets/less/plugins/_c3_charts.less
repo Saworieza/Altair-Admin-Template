@@ -1,0 +1,42 @@
+/* c3 charts */
+.c3chart {
+    min-height: 240px;
+    width: 100%;
+    .c3-tooltip {
+        border-collapse: collapse;
+        border-spacing: 0;
+        empty-cells: show;
+        box-shadow: none;
+        opacity: 1;
+        background: @white;
+        border: none;
+        .boxShadowHelper(3);
+        th {
+            border: none;
+            background: @white;
+            color: @text_primary_color;
+        }
+        td {
+            border: none;
+            color: @text_primary_color;
+            font-weight: 400;
+            font-size: 12px;
+            + td {
+                border-left: 1px solid @border_color;
+            }
+        }
+        tr {
+            border: none;
+        }
+        tr {
+            + tr {
+                td {
+                    border-top: 1px solid @border_color;
+                }
+            }
+        }
+    }
+}
+.c3-area {
+    opacity: 0.25;
+}

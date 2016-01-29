@@ -1,0 +1,82 @@
+    <div id="top_bar">
+        <div class="md-top-bar">
+            <div class="uk-width-large-8-10 uk-container-center">
+                <ul class="top_bar_nav" id="snippets_grid_filter">
+                    <li class="uk-active" data-uk-filter="">
+                        <a href="#">All</a>
+                    </li>
+                    <li  ng-repeat="language in languages" data-uk-filter="snippets-lang-{{ language.id }}">
+                        <a href="#">{{ language.name }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="page_content">
+        <div id="page_content_inner">
+
+            <div class="uk-width-large-8-10 uk-container-center">
+                <div id="snippets">
+                    <div class="uk-grid uk-grid-small uk-grid-width-1 uk-grid-width-medium-1-2 uk-grid-width-large-1-2 uk-grid-width-xlarge-1-3 hierarchical_show" data-uk-grid="{ gutter: 16, controls: '#snippets_grid_filter' }" hierarchical-show>
+
+                        <div ng-repeat="snippet in snippets" data-uk-filter="snippets-lang-{{ snippet.language }}">
+                            <div class="md-card md-card-hover md-card-overlay" data-snippet-title="{{ snippet.title }}">
+                                <div class="md-card-content" style="cursor: pointer" ng-click="showSnippet($event,snippet)">
+<pre class="line-numbers"><code class="language-{{ snippet.language }}" prism-highlight ng-bind-html="snippet.content"></code></pre>
+                                </div>
+                                <div class="md-card-overlay-content">
+                                    <div class="uk-clearfix md-card-overlay-header">
+                                        <card-overlay-toggle></card-overlay-toggle>
+                                        <h4>{{ snippet.title }}</h4>
+                                    </div>
+                                    <div class="md-card-overlay-content-inner">
+                                        <p class="uk-margin-bottom truncate-text" style="height: 88px">
+                                            {{ snippet.description }}
+                                        </p>
+                                        <p>
+                                            <span class="uk-badge uk-badge-danger" ng-if="snippet.language == 'css'">CSS</span>
+                                            <span class="uk-badge uk-badge-primary" ng-if="snippet.language == 'php'">PHP</span>
+                                            <span class="uk-badge uk-badge-success" ng-if="snippet.language == 'javascript'">jQuery</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="md-fab-wrapper">
+        <a class="md-fab md-fab-accent" href="#snippet_new" data-uk-modal="{ center:true, bgclose:false, modal:false }">
+            <i class="material-icons">&#xE150;</i>
+        </a>
+    </div>
+
+    <div class="uk-modal" id="snippet_new" >
+        <div class="uk-modal-dialog">
+            <div class="uk-modal-header">
+                <h3 class="uk-modal-title">New Snippet</h3>
+            </div>
+            <form class="uk-form-stacked">
+                <div class="uk-margin-medium-bottom">
+                    <label for="snippet_title">Title</label>
+                    <input type="text" class="md-input" id="snippet_title" name="snippet_title" md-input ng-model="newSnippet.title" />
+                </div>
+                <div class="uk-margin-medium-bottom">
+                    <label class="uk-form-label">Language</label>
+                    <selectize config="newTask_languages_config" options="newTask_languages_options" ng-model="newSnippets.language" style="width:50%"></selectize>
+                </div>
+                <label class="uk-form-label">Snippet code</label>
+                <textarea class="md-input" id="snippet_content" name="snippet_content" cols="10" rows="8" md-input></textarea>
+                <span class="uk-form-help-block">Don't wrap your snippets in &lt;pre&gt;&lt;/pre&gt; or &lt;code&gt;&lt;/code&gt; tags.</span>
+                <div class="uk-modal-footer uk-text-right">
+                    <button type="button" class="md-btn md-btn-flat uk-modal-close">Close</button><button type="button" class="md-btn md-btn-flat md-btn-flat-primary" id="snippet_new_save">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>

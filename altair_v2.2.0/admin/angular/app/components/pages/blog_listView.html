@@ -1,0 +1,35 @@
+<div id="page_content">
+    <div id="page_content_inner">
+
+        <h3 class="heading_b uk-margin-bottom">Articles</h3>
+
+        <div class="blog_list uk-grid-width-medium-1-3 uk-grid-width-large-1-4" data-uk-grid="{gutter: 24}">
+            <div ng-repeat="teaser in blog_articles">
+                <div class="md-card">
+                    <div class="md-card-content small-padding">
+                        <img ng-if="teaser.teaser_image" ng-src="{{teaser.teaser_image}}" alt="" class="blog_list_teaser_image">
+                        <div class="uk-cover blog_list_teaser_video" ng-if="teaser.teaser_yt">
+                            <iframe height="150" width="300" data-uk-cover ng-src="{{getYTSrc(teaser.teaser_yt)}}" frameborder="0" allowfullscreen style="max-width: 100%"></iframe>
+                        </div>
+                        <div class="uk-margin-bottom" ng-if="teaser.teaser_soundcloud">
+                            <iframe width="100%" height="300" scrolling="no" frameborder="no" ng-src="{{getSoundCloudSrc(teaser.teaser_soundcloud)}}"></iframe>
+                        </div>
+                        <div class="blog_list_teaser">
+                            <h2 class="blog_list_teaser_title uk-text-truncate">{{teaser.title}}</h2>
+                            <p>{{teaser.teaser}}</p>
+                            <span class="uk-text-muted uk-text-small">{{teaser.date}}</span>
+                        </div>
+                        <div class="blog_list_footer">
+                            <div class="blog_list_footer_info">
+                                <span class="uk-margin-right"><i class="material-icons">&#xE87D;</i> <small>{{teaser.fav}}</small></span>
+                                <span><i class="material-icons">&#xE0B9;</i> <small>{{teaser.comments}}</small></span>
+                            </div>
+                            <a ui-sref="restricted.pages.blog.article({ articleId: 1 })" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

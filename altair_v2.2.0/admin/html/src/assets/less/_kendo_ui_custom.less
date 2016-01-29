@@ -1,0 +1,68 @@
+// kendo-ui custom styles
+
+.k-button,
+.k-header {
+    font-weight: 400;
+}
+
+.k-list {
+    &-wrapper {
+        padding: 8px 0;
+        &-addon {
+            margin-right: 16px;
+            float: left;
+            > img {
+                .md-user-image;
+            }
+        }
+        &-content {
+            overflow: hidden;
+            display: block;
+            > p {
+                margin: 0;
+                font-weight: 500;
+                line-height: 18px;
+            }
+            > span {
+                display: block;
+            }
+        }
+    }
+}
+
+.k-tag-image {
+    width: auto;
+    height: 17px;
+    margin: 4px 5px 0 0;
+    vertical-align: top;
+    border-radius: 50%;
+}
+
+.k-multiselect {
+    .k-delete,
+    .k-button:not(.k-state-disabled):hover .k-delete{
+        background-position: -162px -80px;
+    }
+}
+
+.k-multiselect {
+    .k-delete {
+        opacity: 0.5;
+    }
+    .k-button:not(.k-state-disabled):hover .k-delete{
+        opacity: 1;
+    }
+}
+
+.k-window-title {
+    font-size: 14px;
+}
+
+.k-panelbar {
+    li.k-item {
+        background: @white;
+    }
+    li.k-state-default>.k-link.k-state-selected {
+        box-shadow: none;
+    }
+}

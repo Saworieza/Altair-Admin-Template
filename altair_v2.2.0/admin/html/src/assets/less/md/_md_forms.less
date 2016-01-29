@@ -1,0 +1,199 @@
+/* forms */
+select,
+textarea,
+input:not([type]),
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+    outline: none;
+    &.md-input {
+        border-radius: 0;
+        border-width: 0 0 1px;
+        border-style: solid;
+        border-color: @border_color;
+        .md_font(400,15px,18px);
+        box-shadow: inset 0 -1px 0 rgba(0,0,0,0);
+        box-sizing: border-box;
+        padding: 12px 4px;
+        background: transparent;
+        width: 100%;
+        display: block;
+        &.md-input-danger {
+            border-color: @danger_color;
+            &:focus {
+                border-bottom-color: @danger_color;
+            }
+        }
+        &.md-input-success {
+            border-color: @success_color;
+            &:focus {
+                border-bottom-color: @success_color;
+            }
+        }
+        &:focus {
+            background: transparent;
+            border-color: @border_color;
+        }
+        &-small {
+            padding: 4px;
+        }
+    }
+}
+
+.md-input {
+    &-width-small {
+        min-width: 80px !important;
+    }
+    &-width-medium {
+        min-width: 160px !important;
+    }
+    &-width-large {
+        min-width: 320px !important;
+    }
+}
+
+textarea {
+    &.md-input {
+        min-height: 80px;
+        resize: none;
+        overflow: hidden;
+        transition: height 200ms ease-out;
+        line-height: 24px;
+    }
+}
+
+.md-input-wrapper {
+    position: relative;
+    padding-top: 4px;
+    width: 100%;
+    display: block;
+    .md-input-bar {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: @primary_color_dark;
+            transition: width 400ms @md_easing;
+        }
+        &:before {
+            left: 50%
+        }
+        &:after {
+            right: 50%
+        }
+    }
+    > label {
+        color: @text_secondary_color;
+        position: absolute;
+        top: 16px;
+        left: 4px;
+        right: 0;
+        pointer-events: none;
+        transition: all 150ms ease-out;
+    }
+    + * {
+        margin-top: 10px;
+    }
+    &.md-input-wrapper-disabled {
+        > label {
+            color: @input_disabled_color;
+        }
+    }
+    &-count {
+        padding-bottom: 24px;
+        .md-input-bar {
+            bottom: 24px;
+        }
+        .text-count-wrapper {
+            font-size: 12px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            transition: opacity 200ms ease-in;
+            .md-input-wrapper-count > & {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+
+    }
+}
+
+.md-input-filled,
+.md-input-focus {
+    > label {
+        top: -6px;
+        font-size: 12px;
+    }
+    &.md-input-wrapper-count {
+        .text-count-wrapper {
+            opacity: 1;
+        }
+    }
+}
+.md-input-focus {
+    .md-input-bar:before,
+    .md-input-bar:after {
+        width: 50%;
+    }
+}
+
+.md-input-wrapper-danger {
+    .md-input-bar {
+        &:before,
+        &:after {
+            background: @danger_color;
+        }
+    }
+    &.md-input-wrapper-count {
+        .text-count-wrapper {
+            color: @danger_color;
+        }
+    }
+}
+
+.md-input-wrapper-success {
+    .md-input-bar {
+        &:before,
+        &:after {
+            background: @success_color;
+        }
+    }
+    &.md-input-wrapper-count {
+        .text-count-wrapper {
+            color: @success_color;
+        }
+    }
+}
+
+.md-form-group {
+    position: relative;
+}
+
+label.md-label {
+    color: #999;
+    padding: 0 6px;
+    font-size: 11px;
+}

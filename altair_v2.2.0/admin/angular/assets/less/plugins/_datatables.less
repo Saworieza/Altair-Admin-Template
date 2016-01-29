@@ -1,0 +1,302 @@
+/* datatables */
+
+.dataTables_wrapper {
+    .uk-table {
+        margin: 0 auto;
+        border-spacing: 0;
+        thead {
+            .sorting,
+            .sorting_asc,
+            .sorting_desc {
+                cursor: pointer;
+                padding-right: 24px;
+            }
+            .sorting,
+            .sorting_asc,
+            .sorting_desc,
+            .sorting_asc_disabled,
+            .sorting_desc_disabled {
+                position: relative;
+                &:after {
+                    position: absolute;
+                    right: 4px;
+                    bottom: 13px;
+                    content: '';
+                    display: block;
+                    width: 18px;
+                    height: 18px;
+                    font-size: 18px;
+                    font-family: "Material Icons";
+                    color: @text_primary_color;
+                }
+            }
+            .sorting {
+                &:after {
+                    content: '\e164';
+                    color: @text_muted;
+                }
+            }
+            .sorting_asc {
+                &:after {
+                    content: '\e313';
+                }
+            }
+            .sorting_desc {
+                &:after {
+                    content: '\e316';
+                }
+            }
+            .sorting_asc_disabled {
+                &:after {
+                    content: '\e313';
+                    color: @text_muted;
+                }
+            }
+            .sorting_desc_disabled {
+                &:after {
+                    content: '\e316';
+                    color: @text_muted;
+                }
+            }
+        }
+        &,
+        & th,
+        & td {
+            box-sizing: content-box;
+            &:active {
+                outline: none;
+            }
+        }
+        tbody tr.selected {
+            background-color: lighten(@background_color_default,40%);
+        }
+        &.order-column tbody tr > .sorting_1,
+        &.order-column tbody tr > .sorting_2,
+        &.order-column tbody tr > .sorting_3,
+        & tbody tr > .sorting_1,
+        & tbody tr > .sorting_2,
+        & tbody tr > .sorting_3 {
+            background-color: lighten(@background_color_default,40%);
+        }
+        &.nowrap th,
+        &.nowrap td {
+            white-space: nowrap;
+        }
+        &.compact {
+            thead {
+                th,
+                td {
+                    padding: 4px 17px 4px 4px;
+                }
+            }
+            tfoot {
+                th,
+                td {
+                    padding: 4px;
+                }
+            }
+            tbody {
+                th,
+                td {
+                    padding: 4px;
+                }
+            }
+
+        }
+        th.dt-left,
+        td.dt-left {
+            text-align: left;
+        }
+        th.dt-center,
+        td.dt-center,
+        td.dataTables_empty {
+            text-align: center;
+        }
+        th.dt-right,
+        td.dt-right {
+            text-align: right;
+        }
+        th.dt-justify,
+        td.dt-justify {
+            text-align: justify;
+        }
+        th.dt-nowrap,
+        td.dt-nowrap {
+            white-space: nowrap;
+        }
+        thead th.dt-head-left,
+        thead td.dt-head-left,
+        tfoot th.dt-head-left,
+        tfoot td.dt-head-left {
+            text-align: left;
+        }
+        thead th.dt-head-center,
+        thead td.dt-head-center,
+        tfoot th.dt-head-center,
+        tfoot td.dt-head-center {
+            text-align: center;
+        }
+        thead th.dt-head-right,
+        thead td.dt-head-right,
+        tfoot th.dt-head-right,
+        tfoot td.dt-head-right {
+            text-align: right;
+        }
+        thead th.dt-head-justify,
+        thead td.dt-head-justify,
+        tfoot th.dt-head-justify,
+        tfoot td.dt-head-justify {
+            text-align: justify;
+        }
+        thead th.dt-head-nowrap,
+        thead td.dt-head-nowrap,
+        tfoot th.dt-head-nowrap,
+        tfoot td.dt-head-nowrap {
+            white-space: nowrap;
+        }
+        tbody th.dt-body-left,
+        tbody td.dt-body-left {
+            text-align: left;
+        }
+        tbody th.dt-body-center,
+        tbody td.dt-body-center {
+            text-align: center;
+        }
+        tbody th.dt-body-right,
+        tbody td.dt-body-right {
+            text-align: right;
+        }
+        tbody th.dt-body-justify,
+        tbody td.dt-body-justify {
+            text-align: justify;
+        }
+        tbody th.dt-body-nowrap,
+        tbody td.dt-body-nowrap {
+            white-space: nowrap;
+        }
+        tfoot {
+            .md-input-wrapper {
+                padding-top: 0;
+                .md-input {
+                    padding: 8px 4px;
+                }
+            }
+        }
+    }
+    .dataTables_length {
+        margin-top: -1px;
+    }
+    .dataTables_filter {
+        .md-input-wrapper {
+            padding-top: 3px;
+            .md-input {
+                padding: 6px 4px;
+                -webkit-appearance: none;
+                border-radius: 0;
+            }
+        }
+    }
+    .selectize-control.dt-selectize {
+        min-width: 64px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 8px;
+        height: 40px;
+        .selectize-input {
+            border-color: transparent;
+            background: transparent;
+        }
+        &:hover {
+            .selectize-input {
+                border-color: @border_color;
+                background: @white;
+            }
+        }
+    }
+    .dt-uikit-header {
+        padding: 4px 8px;
+        margin-bottom: 16px;
+    }
+    .dt-uikit-footer {
+        padding: 4px 8px;
+        margin-top: 16px;
+        .dataTables_info {
+            padding-top: 8px;
+            color: @text_secondary_color;
+            font-size: 12px;
+            @media @screen_medium_max {
+                text-align: center;
+            }
+        }
+        .uk-pagination {
+            text-align: right;
+            @media @screen_medium_max {
+                margin-top: 16px;
+                text-align: center;
+            }
+        }
+    }
+    .uk-overflow-container {
+        th,
+        td {
+            white-space: nowrap !important;
+        }
+    }
+}
+
+/* plugins */
+.md-colVis {
+    li.ColVis_Special {
+        cursor: pointer;
+    }
+}
+
+.DTTT {
+    margin-bottom: 8px;
+    &_btn {
+        position: relative;
+        margin-bottom: 8px;
+    }
+}
+.DTTT_Print {
+    overflow-y: auto !important;
+    height: auto;
+    padding-top: 0;
+    #page_content {
+        display: block !important;
+        height: auto;
+        overflow-y: hidden;
+        margin-left: 0 !important;
+    }
+    #page_content_inner {
+        padding: 24px;
+    }
+}
+
+.DTTT_print_info {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 150px;
+    margin-left: -200px;
+    margin-top: -75px;
+    text-align: center;
+    color: @text_primary_color;
+    padding: 24px 32px;
+    background: @white;
+    border-radius: 4px;
+    .boxShadowHelper(3);
+    box-sizing: border-box;
+    h6 {
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 28px;
+        color: @accent_color;
+    }
+    p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+

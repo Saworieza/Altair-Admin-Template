@@ -1,0 +1,82 @@
+[
+    {
+        "language": "javascript",
+        "title": "Smooth scrolling to top of page",
+        "content": "$(\"a[href='#top']\").click(function() {\n  $(\"html, body\").animate({ scrollTop: 0 }, \"slow\");\n  return false;\n});"
+    },
+    {
+        "language": "php",
+        "title": "Get Image Information",
+        "content": "function getImageinfo($file, $query) {\n  if (!realpath($file)) {\n    $file = $_SERVER[&quot;DOCUMENT_ROOT&quot;].$file;\n  }\n  $image = getimagesize($file);\n  return $image[$query];\n}"
+    },
+    {
+        "language": "javascript",
+        "title": "Equal height columns",
+        "content": "var maxheight = 0;\n$(\"div.col\").each(function(){\n  if($(this).height() > maxheight) { maxheight = $(this).height(); }\n});\n\n$(\"div.col\").height(maxheight);"
+    },
+    {
+        "language": "css",
+        "title": "Border radius",
+        "content": ".border-radius {\n  -webkit-border-radius: 4px;\n  border-radius: 4px;\n}"
+    },
+    {
+        "language": "javascript",
+        "title": "Check if an image is loaded",
+        "content": "var imgsrc = 'img\/image1.png';\n$('<img\/>').load(function () {\n    alert('image loaded');\n}).error(function () {\n    alert('error loading image');\n}).attr('src', imgsrc);"
+    },
+    {
+        "language": "javascript",
+        "title": "Broken Image Handling",
+        "content": "\/\/ Replace source\n$('img').error(function(){\n  $(this).attr('src', 'missing.png');\n});\n\n\/\/ Or, hide them\n$(\"img\").error(function(){\n  $(this).hide();\n});"
+    },
+    {
+        "language": "php",
+        "title": "Applying Even\/Odd Classes",
+        "content": "&lt;?php for($i=0;$i&lt;10;$i++) { ?&gt;\n  &lt;div class=&quot;class_&lt;?php if($i%2){ echo &quot;odd&quot;; } else { echo &quot;even&quot;; } ?&gt;&quot;&gt;123&lt;\/div&gt;\n&lt;?php }; ?&gt;"
+    },
+    {
+        "language": "css",
+        "title": "Border Box",
+        "content": ".border-box {\n  -moz-box-sizing: border-box;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n}"
+    },
+    {
+        "language": "css",
+        "title": "Rotate -90deg",
+        "content": ".rotate90_ccw {\n  -moz-transform: rotate(-90deg);\n  -webkit-transform: rotate(-90deg);\n  -o-transform: rotate(-90deg);\n  -ms-transform: rotate(-90deg);\n  transform: rotate(-90deg);\n}"
+    },
+    {
+        "language": "php",
+        "title": "Anti-SQL Injection Function",
+        "content": "function cleanuserinput($dirty){\n  if (get_magic_quotes_gpc()) {\n    $clean = mysql_real_escape_string(stripslashes($dirty));\t \n  }else{\n    $clean = mysql_real_escape_string($dirty);\t\n  } \n  return $clean;\n}"
+    },
+    {
+        "language": "javascript",
+        "title": "Serialize Form to JSON",
+        "content": "$.fn.serializeObject = function() {\n  var o = {};\n  var a = this.serializeArray();\n  $.each(a, function() {\n    if (o[this.name]) {\n      if (!o[this.name].push) {\n        o[this.name] = [o[this.name]];\n      }\n        o[this.name].push(this.value || '');\n      } else {\n        o[this.name] = this.value || '';\n      }\n    });\n    return o;\n};"
+    },
+    {
+        "language": "php",
+        "title": "SEO-friendly title for URL",
+        "content": "function make_seo_name($title) {\n  return preg_replace('\/[^a-z0-9_-]\/i', '', strtolower(str_replace(' ', '-', trim($title))));\n}"
+    },
+    {
+        "language": "css",
+        "title": "Retina Display Media Query",
+        "content": "@media\nonly screen and (-webkit-min-device-pixel-ratio: 2),\nonly screen and (   min--moz-device-pixel-ratio: 2),\nonly screen and (     -o-min-device-pixel-ratio: 2\/1),\nonly screen and (        min-device-pixel-ratio: 2),\nonly screen and (                min-resolution: 192dpi),\nonly screen and (                min-resolution: 2dppx) { \n  \/* Retina-specific stuff here *\/\n}"
+    },
+    {
+        "language": "javascript",
+        "title": "Done Resizing Event",
+        "content": "var resizeTimer;\n$(window).on('resize', function(e) {\n  clearTimeout(resizeTimer);\n  resizeTimer = setTimeout(function() {\n    \/\/ Run code here, resizing has &quot;stopped&quot;\n  }, 250);\n});"
+    },
+    {
+        "language": "css",
+        "title": "A new micro clearfix hack",
+        "content": ".cf:before,\n.cf:after {\n    content: &quot; &quot;;\n    display: table;\n}\n\n.cf:after {\n    clear: both;\n}\n\n\/**\n * For IE 6\/7 only\n * Include this rule to trigger hasLayout and contain floats.\n *\/\n.cf {\n    *zoom: 1;\n}"
+    },
+    {
+        "language": "css",
+        "title": "Custom Text Selection",
+        "content": "::selection { background: #e2eae2; }\n::-moz-selection { background: #e2eae2; }\n::-webkit-selection { background: #e2eae2; }"
+    }
+]

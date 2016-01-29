@@ -1,0 +1,32 @@
+/* easy pie chart */
+.epc_chart {
+    display: block;
+    position: relative;
+    &_text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        .md_font(400,20px,110px);
+    }
+    &_icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        line-height: 104px;
+        display: block;
+        > i {
+            color: @text_secondary_color;
+            font-size: 48px;
+            vertical-align: middle;
+        }
+    }
+    + .heading_a {
+        margin-top: 10px;
+    }
+}

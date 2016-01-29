@@ -1,0 +1,55 @@
+<div id="top_bar">
+    <div class="md-top-bar">
+        <div class="uk-clearfix">
+            <div class="md-top-bar-actions-left">
+                <div class="md-top-bar-checkbox">
+                    <span class="icheck-inline">
+                        <input type="radio" name="diff_type" class="diff_radio" id="diff_chars" icheck ng-checked="true" value="diffChars" ng-model="diff_type"/>
+                        <label for="diff_chars" class="inline-label">Chars</label>
+                    </span>
+                    <span class="icheck-inline">
+                        <input type="radio" name="diff_type" class="diff_radio" id="diff_words" icheck value="diffWords"  ng-model="diff_type"/>
+                        <label for="diff_words" class="inline-label">Words</label>
+                    </span>
+                    <span class="icheck-inline">
+                        <input type="radio" name="diff_type" class="diff_radio" id="diff_lines" icheck value="diffLines"  ng-model="diff_type"/>
+                        <label for="diff_lines" class="inline-label">Lines</label>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="page_content">
+    <div id="page_content_inner">
+
+        <div class="uk-grid" data-uk-grid-margin data-uk-grid-match="{target: '.md-card'}">
+            <div class="uk-width-medium-1-2">
+                <div class="md-card">
+                    <div class="md-card-content">
+                        <p class="uk-text-upper uk-margin-small-bottom">Panel A Content</p>
+<textarea name="diff_panel_a" id="diff_panel_a" class="md-input" cols="30" rows="4" md-input ng-bind-html="panel_a"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-width-medium-1-2">
+                <div class="md-card">
+                    <div class="md-card-content">
+                        <p class="uk-text-upper uk-margin-small-bottom">Panel B Content</p>
+<textarea name="diff_panel_b" id="diff_panel_b" class="md-input" cols="30" rows="4" md-input ng-bind-html="panel_b"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="uk-grid">
+            <div class="uk-width-1-1">
+                <div class="md-card">
+                    <div class="md-card-content">
+                        <p class="uk-text-upper uk-margin-small-bottom">Result</p>
+<pre><code id="diff_result" class="large_code"></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>

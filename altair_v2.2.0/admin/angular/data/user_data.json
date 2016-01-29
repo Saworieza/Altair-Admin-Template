@@ -1,0 +1,459 @@
+[
+    {
+        "active": true,
+        "name": "Lue Feest",
+        "position": "Land acquisition specialist",
+        "avatar": "assets/img/avatars/avatar_11.png",
+        "about": "Reiciendis laboriosam rerum maiores eveniet voluptate iusto perferendis ut quis doloremque quia eligendi perspiciatis quibusdam ut aspernatur dicta temporibus corporis dolor sequi eum et et a minima sapiente quam quia cum libero soluta et aut ad quia non doloremque quo pariatur neque nihil magni incidunt necessitatibus facere porro dicta est reprehenderit eos quos distinctio consectetur sit sint commodi voluptatem et vel eum optio nulla est aut consectetur dolores omnis incidunt rerum autem sed a sit qui deserunt maxime incidunt voluptatem et consequatur qui magni est deserunt est necessitatibus velit ut in fugiat blanditiis nostrum officiis nesciunt deserunt odio id adipisci rem nam non quia illum sed similique vel perspiciatis.",
+        "contact": {
+            "email": "klangworth@schroeder.com",
+            "phone": "477-410-6578x19594",
+            "fb": "facebook.com/envato",
+            "twitter": "twitter.com/envato",
+            "linkdin": "linkedin.com/company/envato",
+            "g_plus": "plus.google.com/+envato/about"
+        },
+        "role": "admin",
+        "stat_posts": "2391",
+        "stat_photos": "120",
+        "stat_following": "284",
+        "languages": [ "gb","pl","fr" ],
+        "groups": [
+            {
+                "name": "Cloud Computing",
+                "members": "172"
+            },
+            {
+                "name": "Account Manager Group",
+                "members": "113"
+            },
+            {
+                "name": "Digital Marketing",
+                "members": "176"
+            },
+            {
+                "name": "HR Professionals Association - Human Resources",
+                "members": "104"
+            }
+        ],
+        "alerts": [
+            {
+                "title": "Hic expedita eaque.",
+                "content": "Nemo nemo voluptatem officia voluptatum minus.",
+                "type": "warning"
+            },
+            {
+                "title": "Voluptatibus sed eveniet.",
+                "content": "Tempora magnam aut ea.",
+                "type": "success"
+            },
+            {
+                "title": "Perferendis voluptatem explicabo.",
+                "content": "Enim et voluptatem maiores ab fugiat commodi aut repellendus.",
+                "type": "danger"
+            }
+        ],
+        "friends": [
+            {
+                "name": "Jarred Johnson",
+                "status": "Odio quidem consequatur iste ad dolorem.",
+                "avatar": "assets/img/avatars/avatar_05_tn.png"
+            },
+            {
+                "name": "Horace Gislason",
+                "status": "Ea ipsum reiciendis.",
+                "avatar": "assets/img/avatars/avatar_03_tn.png"
+            },
+            {
+                "name": "Verda Mann",
+                "status": "Impedit cum dicta vel ipsa.",
+                "avatar": "assets/img/avatars/avatar_08_tn.png"
+            }
+        ],
+        "timeline": [
+            {
+                "icon": "&#xE85D;",
+                "status": "success",
+                "date": "08-09-2015",
+                "description": "Created ticket",
+                "link_text": "#3289"
+            },
+            {
+                "icon": "&#xE5CD;",
+                "status": "danger",
+                "date": "08-08-2015",
+                "description": "Deleted post",
+                "link_text": "Reiciendis eligendi ullam earum in labore labore sit."
+            },
+            {
+                "icon": "&#xE410;",
+                "status": "",
+                "date": "08-07-2015",
+                "description": "Added photo",
+                "image": "assets/img/gallery/Image16.jpg"
+            },
+            {
+                "icon": "&#xE0B9;",
+                "status": "primary",
+                "date": "08-06-2015",
+                "description": "New comment on post",
+                "link_text": "Magnam eos nesciunt.",
+                "post_excerpt": "Quo eos quis aut molestiae dolorem et sed quas iste voluptatibus ea ut voluptas distinctio"
+            },
+            {
+                "icon": "&#xE7FE;",
+                "status": "warning",
+                "date": "08-05-2015",
+                "description": "Added to Friends",
+                "user_avatar": "assets/img/avatars/avatar_02_tn.png",
+                "user_name": "Tia Rutherford",
+                "user_status": "Repudiandae asperiores numquam et molestiae."
+            }
+        ],
+        "images": [
+            "assets/img/gallery/Image01.jpg",
+            "assets/img/gallery/Image02.jpg",
+            "assets/img/gallery/Image03.jpg",
+            "assets/img/gallery/Image04.jpg",
+            "assets/img/gallery/Image05.jpg",
+            "assets/img/gallery/Image06.jpg",
+            "assets/img/gallery/Image07.jpg",
+            "assets/img/gallery/Image08.jpg",
+            "assets/img/gallery/Image09.jpg",
+            "assets/img/gallery/Image10.jpg",
+            "assets/img/gallery/Image11.jpg",
+            "assets/img/gallery/Image12.jpg",
+            "assets/img/gallery/Image13.jpg",
+            "assets/img/gallery/Image14.jpg",
+            "assets/img/gallery/Image15.jpg",
+            "assets/img/gallery/Image16.jpg",
+            "assets/img/gallery/Image17.jpg",
+            "assets/img/gallery/Image18.jpg",
+            "assets/img/gallery/Image19.jpg",
+            "assets/img/gallery/Image20.jpg",
+            "assets/img/gallery/Image21.jpg",
+            "assets/img/gallery/Image22.jpg",
+            "assets/img/gallery/Image23.jpg",
+            "assets/img/gallery/Image24.jpg"
+        ],
+        "posts": [
+            {
+                "id": 0,
+                "title": "Nesciunt voluptatibus ea reprehenderit aperiam aliquid esse.",
+                "date": "Thu 01.10.2015",
+                "comments": 24,
+                "views": 296
+            },
+            {
+                "id": 1,
+                "title": "Architecto consequatur nam ut.",
+                "date": "Wed 30.09.2015",
+                "comments": 11,
+                "views": 831
+            },
+            {
+                "id": 2,
+                "title": "Reprehenderit a assumenda aperiam doloremque id animi.",
+                "date": "Tue 29.09.2015",
+                "comments": 29,
+                "views": 182
+            },
+            {
+                "id": 3,
+                "title": "Maxime officiis dignissimos ipsam dolores ipsum veritatis.",
+                "date": "Mon 28.09.2015",
+                "comments": 21,
+                "views": 333
+            },
+            {
+                "id": 4,
+                "title": "Temporibus officiis incidunt quo hic.",
+                "date": "Sun 27.09.2015",
+                "comments": 8,
+                "views": 306
+            },
+            {
+                "id": 5,
+                "title": "Et quis officiis aspernatur facere nesciunt vel.",
+                "date": "Sat 26.09.2015",
+                "comments": 22,
+                "views": 452
+            },
+            {
+                "id": 6,
+                "title": "Nihil ut quaerat repellendus quaerat.",
+                "date": "Fri 25.09.2015",
+                "comments": 9,
+                "views": 414
+            },
+            {
+                "id": 7,
+                "title": "Vel similique sed ipsa eius.",
+                "date": "Thu 24.09.2015",
+                "comments": 27,
+                "views": 711
+            },
+            {
+                "id": 8,
+                "title": "Est id doloremque assumenda.",
+                "date": "Wed 23.09.2015",
+                "comments": 4,
+                "views": 704
+            },
+            {
+                "id": 9,
+                "title": "Nihil laboriosam mollitia nobis et optio.",
+                "date": "Tue 22.09.2015",
+                "comments": 29,
+                "views": 179
+            },
+            {
+                "id": 10,
+                "title": "Cum suscipit praesentium dolor sunt dolore officiis.",
+                "date": "Mon 21.09.2015",
+                "comments": 12,
+                "views": 921
+            },
+            {
+                "id": 11,
+                "title": "Qui nostrum quas veniam reiciendis.",
+                "date": "Sun 20.09.2015",
+                "comments": 9,
+                "views": 181
+            },
+            {
+                "id": 12,
+                "title": "Aliquam in minima non ut odio.",
+                "date": "Sat 19.09.2015",
+                "comments": 5,
+                "views": 362
+            },
+            {
+                "id": 13,
+                "title": "Sit animi quia quia quam.",
+                "date": "Fri 18.09.2015",
+                "comments": 23,
+                "views": 688
+            },
+            {
+                "id": 14,
+                "title": "Quas necessitatibus mollitia error quis nam ipsa.",
+                "date": "Thu 17.09.2015",
+                "comments": 30,
+                "views": 576
+            },
+            {
+                "id": 15,
+                "title": "Laudantium quas atque error ut optio repellendus.",
+                "date": "Wed 16.09.2015",
+                "comments": 20,
+                "views": 320
+            },
+            {
+                "id": 16,
+                "title": "Quis et accusantium omnis est quaerat.",
+                "date": "Tue 15.09.2015",
+                "comments": 2,
+                "views": 858
+            },
+            {
+                "id": 17,
+                "title": "Repellendus aut esse unde et atque.",
+                "date": "Mon 14.09.2015",
+                "comments": 27,
+                "views": 851
+            },
+            {
+                "id": 18,
+                "title": "Rerum ad et natus veritatis omnis.",
+                "date": "Sun 13.09.2015",
+                "comments": 27,
+                "views": 956
+            },
+            {
+                "id": 19,
+                "title": "Sapiente velit autem eum.",
+                "date": "Sat 12.09.2015",
+                "comments": 23,
+                "views": 902
+            },
+            {
+                "id": 20,
+                "title": "Quam molestiae a itaque eos aut odio.",
+                "date": "Fri 11.09.2015",
+                "comments": 19,
+                "views": 165
+            },
+            {
+                "id": 21,
+                "title": "Non rerum a repudiandae.",
+                "date": "Thu 10.09.2015",
+                "comments": 3,
+                "views": 444
+            },
+            {
+                "id": 22,
+                "title": "Voluptatem et qui reprehenderit voluptatibus.",
+                "date": "Wed 09.09.2015",
+                "comments": 25,
+                "views": 934
+            },
+            {
+                "id": 23,
+                "title": "Rerum voluptatibus modi saepe.",
+                "date": "Tue 08.09.2015",
+                "comments": 9,
+                "views": 801
+            },
+            {
+                "id": 24,
+                "title": "Facere nihil perferendis ipsum et voluptate quibusdam.",
+                "date": "Mon 07.09.2015",
+                "comments": 18,
+                "views": 759
+            }
+        ],
+        "todo": [
+            {
+                "id": 1,
+                "title": "Ad magni quia eum iure delectus molestias.",
+                "description": "Repellat ipsam atque voluptate repellat optio eius ea iure.",
+                "closed": false,
+                "important": true
+            },
+            {
+                "id": 2,
+                "title": "Quod sit occaecati quidem voluptatum culpa error.",
+                "description": "Quaerat est deserunt molestiae officiis vero rerum aut.",
+                "closed": true,
+                "important": true
+            },
+            {
+                "id": 3,
+                "title": "Animi sunt delectus quisquam cumque in saepe nostrum.",
+                "description": "Illum dolor ut amet distinctio occaecati natus sed.",
+                "closed": true,
+                "important": false
+            },
+            {
+                "id": 4,
+                "title": "Sapiente aperiam iure earum labore nobis.",
+                "description": "Autem distinctio neque molestiae aut qui et reprehenderit maiores molestias.",
+                "closed": true,
+                "important": true
+            },
+            {
+                "id": 5,
+                "title": "Quia voluptates deleniti eius facilis.",
+                "description": "Ab et sapiente est ipsa omnis atque voluptas sapiente dolor praesentium.",
+                "closed": true,
+                "important": false
+            },
+            {
+                "id": 6,
+                "title": "Qui ipsa sit saepe quod vitae eveniet.",
+                "description": "Similique reprehenderit blanditiis qui necessitatibus dicta sint.",
+                "closed": true,
+                "important": true
+            },
+            {
+                "id": 7,
+                "title": "Consequatur minus delectus numquam expedita.",
+                "description": "Sunt nemo recusandae sunt tempore aliquam et doloribus vel illo ea molestiae.",
+                "closed": false,
+                "important": false
+            },
+            {
+                "id": 8,
+                "title": "Fugiat ipsa quae ut iste.",
+                "description": "Explicabo tempora quis et itaque pariatur eum maiores in.",
+                "closed": false,
+                "important": true
+            },
+            {
+                "id": 9,
+                "title": "Labore soluta laborum facere odio beatae facere.",
+                "description": "Sequi rem ut excepturi quia dolorem quaerat.",
+                "closed": false,
+                "important": true
+            },
+            {
+                "id": 10,
+                "title": "Harum quis voluptatibus ut mollitia saepe illo.",
+                "description": "Ipsum sint ducimus aut quidem harum tempora occaecati debitis possimus et.",
+                "closed": true,
+                "important": false
+            },
+            {
+                "id": 11,
+                "title": "Vel facere quia inventore sapiente.",
+                "description": "Esse id et voluptatem architecto omnis id repellendus saepe voluptatibus aut quia assumenda odio.",
+                "closed": true,
+                "important": false
+            },
+            {
+                "id": 12,
+                "title": "Magnam et et architecto placeat ex.",
+                "description": "Sequi aut sed ut dolor eligendi voluptas nihil dolore eaque rem.",
+                "closed": false,
+                "important": false
+            },
+            {
+                "id": 13,
+                "title": "Debitis id omnis veritatis.",
+                "description": "Quia laboriosam dolor et reprehenderit voluptas expedita mollitia suscipit ut culpa.",
+                "closed": false,
+                "important": true
+            },
+            {
+                "id": 14,
+                "title": "Nihil iure provident esse non nulla.",
+                "description": "Ea autem quo sequi beatae ut at itaque.",
+                "closed": true,
+                "important": true
+            },
+            {
+                "id": 15,
+                "title": "Enim et sit omnis.",
+                "description": "Dolores omnis et nihil qui voluptas ipsum eos aperiam.",
+                "closed": true,
+                "important": false
+            },
+            {
+                "id": 16,
+                "title": "Nihil ut quia aut.",
+                "description": "Alias aut quia dolores et sed fuga quo qui temporibus nihil ipsum.",
+                "closed": false,
+                "important": false
+            },
+            {
+                "id": 17,
+                "title": "Et consequatur dicta mollitia est omnis at.",
+                "description": "Excepturi quasi sequi molestiae repudiandae omnis dolores labore ut hic esse quam sed explicabo dolorem.",
+                "closed": false,
+                "important": false
+            },
+            {
+                "id": 18,
+                "title": "Illum suscipit qui reprehenderit.",
+                "description": "Enim aliquam aperiam porro adipisci unde sequi earum ipsam eligendi et sunt labore praesentium.",
+                "closed": true,
+                "important": true
+            },
+            {
+                "id": 19,
+                "title": "Rerum et necessitatibus impedit praesentium labore.",
+                "description": "Id praesentium sunt sint sunt quia reprehenderit.",
+                "closed": true,
+                "important": true
+            },
+            {
+                "id": 20,
+                "title": "Quis itaque ea dicta dolorum reiciendis.",
+                "description": "Illo voluptatem eum fugit esse impedit dolor.",
+                "closed": true,
+                "important": false
+            }
+        ]
+    }
+]

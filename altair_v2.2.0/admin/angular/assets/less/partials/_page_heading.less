@@ -1,0 +1,34 @@
+/* page heading */
+#page_heading {
+    background: @white;
+    padding: 16px 24px;
+    border-bottom: 1px solid @border_color;
+    box-sizing: border-box;
+    min-height: 81px;
+    h1 {
+        .md_font(500,22px,28px);
+        margin: 0;
+    }
+    .heading_actions {
+        float: right;
+        margin-top: 8px;
+        padding-right: 15px;
+        > * {
+            display: inline-block;
+            margin-left: 8px;
+            position: relative;
+        }
+        .material-icons {
+            font-size: 24px;
+        }
+    }
+    &.uk-active {
+        .boxShadowHelper(2);
+        z-index: 100;
+    }
+}
+.page_heading_active & {
+    #header_main {
+        box-shadow: none;
+    }
+}

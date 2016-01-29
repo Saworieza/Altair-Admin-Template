@@ -1,0 +1,104 @@
+
+    <div id="page_content" class="uk-height-1-1">
+
+        <div class="scrum_board_overflow">
+            <div id="scrum_board" class="uk-clearfix">
+
+                <div ng-repeat="group in task_groups">
+                    <div class="scrum_column_heading">{{ group.name }}</div>
+                    <div class="scrum_column">
+                        <div class="dragula dragula-vertical" dragula-scope="$parent" dragula='"tasks"' dragula-model='dragula_tasks'>
+                            <div ng-repeat="task in tasks_list | filter: { group: group.id }">
+                                <div class="scrum_task {{ task.status }}">
+                                    <h3 class="scrum_task_title"><a href="#task_info" data-uk-modal="{ center:true }" ng-click="taskInfo(task)">{{ task.name }}</a></h3>
+                                    <p class="scrum_task_description">{{ task.description }}</p>
+                                    <p class="scrum_task_info"><span class="uk-text-muted">Assignee:</span> <a href="#">{{ task.assignee }}</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="md-fab-wrapper">
+        <a class="md-fab md-fab-accent" href="#new_task" data-uk-modal="{ center:true, bgclose:false }">
+            <i class="material-icons">&#xE145;</i>
+        </a>
+    </div>
+
+    <div class="uk-modal" id="new_task">
+        <div class="uk-modal-dialog">
+            <div class="uk-modal-header">
+                <h3 class="uk-modal-title">{{ newTask.name }}</h3>
+            </div>
+            <form class="uk-form-stacked">
+                <div class="uk-margin-medium-bottom">
+                    <label for="task_title">Title</label>
+                    <input type="text" class="md-input" id="Task_title" name="snippet_title" ng-model="newTask.title" md-input/>
+                </div>
+                <div class="uk-margin-medium-bottom">
+                    <label for="task_description">Description</label>
+                    <textarea class="md-input" id="task_description" name="task_description" ng-model="newTask.description" md-input></textarea>
+                </div>
+                <div class="uk-margin-medium-bottom">
+                    <label for="task_assignee" class="uk-form-label">Assignee</label>
+                    <input config="newTask_assignee_config" options="newTask_assignee" ng-model="newTask.assignee" id="task_assignee" name="task_assignee" selectize />
+                </div>
+                <div class="uk-margin-medium-bottom">
+                    <label for="task_group" class="uk-form-label">Group</label>
+                    <input config="newTask_group_config" options="newTask_group" ng-model="newTask.group" id="task_group" name="task_group" selectize />
+                </div>
+                <div class="uk-margin-medium-bottom">
+                    <label class="uk-form-label">Priority</label>
+                    <div>
+                        <span class="icheck-inline">
+                            <input type="radio" name="task_priority" id="task_priority_minor" ng-model="newTask.priority" value="minor" icheck />
+                            <label for="task_priority_minor" class="inline-label uk-badge uk-badge-success">MINOR</label>
+                        </span>
+                        <span class="icheck-inline">
+                            <input type="radio" name="task_priority" id="task_priority_critical" ng-model="newTask.priority" value="critical" icheck />
+                            <label for="task_priority_critical" class="inline-label uk-badge uk-badge-warning">CRITICAL</label>
+                        </span>
+                        <span class="icheck-inline">
+                            <input type="radio" name="task_priority" id="task_priority_blocker" ng-model="newTask.priority" value="blocker" icheck />
+                            <label for="task_priority_blocker" class="inline-label uk-badge uk-badge-danger">BLOCKER</label>
+                        </span>
+                    </div>
+                </div>
+                <div class="uk-modal-footer uk-text-right">
+                    <button type="button" class="md-btn md-btn-flat uk-modal-close">Close</button><button type="button" class="md-btn md-btn-flat md-btn-flat-primary" id="snippet_new_save">Add Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="uk-modal" id="task_info">
+        <div class="uk-modal-dialog">
+            <div class="uk-modal-header">
+                <span class="uk-badge uk-badge-danger uk-float-right" ng-if="info.status == 'blocker'">BLOCKER</span>
+                <span class="uk-badge uk-badge-success uk-float-right" ng-if="info.status == 'minor'">MINOR</span>
+                <span class="uk-badge uk-badge-warning uk-float-right" ng-if="info.status == 'critical'">CRITICAL</span>
+                <h3 class="uk-modal-title">{{ info.name }}</h3>
+            </div>
+            <form class="uk-form-stacked">
+                <div class="uk-margin-medium-bottom">
+                    <p class="uk-margin-small-bottom uk-text-muted">Title</p>
+                    <p class="uk-margin-remove uk-text-large">{{ info.title }}</p>
+                </div>
+                <div class="uk-margin-medium-bottom">
+                    <p class="uk-margin-small-bottom uk-text-muted">Description</p>
+                    <p class="uk-margin-remove">{{ info.description }}</p>
+                </div>
+                <div class="uk-margin-medium-bottom">
+                    <p class="uk-margin-small-bottom uk-text-muted">Assignee</p>
+                    <p class="uk-margin-remove">{{ info.assignee }}</p>
+                </div>
+                <div class="uk-modal-footer uk-text-right">
+                    <button type="button" class="md-btn md-btn-flat uk-modal-close">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>

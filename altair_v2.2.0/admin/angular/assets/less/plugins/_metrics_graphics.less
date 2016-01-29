@@ -1,0 +1,196 @@
+/* metrics graphics */
+
+@main1_color:               #1976d2;
+@main2_color:               #689f38;
+@main3_color:               #d32f2f;
+@main4_color:               #ffa000;
+@main5_color:               #455a64;
+
+@line1_color:               @main1_color;
+@line2_color:               @main2_color;
+@line3_color:               @main3_color;
+@line4_color:               @main4_color;
+@line5_color:               @main5_color;
+
+@line1_legend_color:        @main1_color;
+@line2_legend_color:        @main2_color;
+@line3_legend_color:        @main3_color;
+@line4_legend_color:        @main4_color;
+@line5_legend_color:        @main5_color;
+
+.mGraph {
+    &-wrapper {
+        position: relative;
+        .md-toggle-group {
+            position: absolute;
+            top: 4px;
+            left: 12px;
+        }
+    }
+    & {
+        min-height: 240px;
+        width: 100%;
+    }
+
+    .mg-active-datapoint {
+        font-size: 13px;
+    }
+    .mg-area1-color {
+        fill: @main1_color;
+    }
+    .mg-area2-color {
+        fill: @main2_color;
+    }
+    .mg-area3-color {
+        fill: @main3_color;
+    }
+    .mg-area4-color {
+        fill: @main4_color;
+    }
+    .mg-area5-color {
+        fill: @main5_color;
+    }
+    .mg-baselines {
+        line {
+            stroke: #909090;
+            stroke-width: 0.5;
+        }
+        text {
+            font-size: 9px;
+            opacity: 0.5;
+        }
+    }
+    .mg-chart-title {
+        font-size: 22px;
+        .fa {
+            font-size: 16px;
+        }
+    }
+    .mg-line1-color {
+        stroke: @line1_color;
+    }
+    .mg-hover-line1-color {
+        fill: @line1_color;
+    }
+
+    .mg-line2-color {
+        stroke: @line2_color;
+    }
+    .mg-hover-line2-color {
+        fill: @line2_color;
+    }
+
+    .mg-line3-color {
+        stroke: @line3_color;
+    }
+    .mg-hover-line3-color {
+        fill: @line3_color;
+    }
+
+    .mg-line4-color {
+        stroke: @line4_color;
+    }
+    .mg-hover-line4-color {
+        fill: @line4_color;
+    }
+
+    .mg-line5-color {
+        stroke: @line5_color;
+    }
+    .mg-hover-line5-color {
+        fill: @line5_color;
+    }
+
+    .mg-line1-legend-color {
+        color: @line1_legend_color;
+    }
+
+    .mg-line2-legend-color {
+        color: @line2_legend_color;
+    }
+
+    .mg-line3-legend-color {
+        color: @line3_legend_color;
+    }
+
+    .mg-line4-legend-color {
+        color: @line4_legend_color;
+    }
+
+    .mg-line5-legend-color {
+        color: @line5_legend_color;
+    }
+    .mg-markers {
+        line {
+            stroke-width: 0.8;
+        }
+        text {
+            font-size: 9px;
+        }
+    }
+    path {
+        &.mg-main-line {
+            stroke-width: 1.1;
+        }
+    }
+    .mg-x-axis,
+    .mg-y-axis {
+        line {
+            stroke: #ccc;
+            stroke-width: 0.8;
+        }
+    }
+    .mg-x-axis,
+    .mg-y-axis,
+    .mg-histogram .axis {
+        text {
+            font-size: 11px;
+        }
+    }
+    .mg-x-axis,
+    .mg-y-axis,
+    .mg-axis {
+        .label {
+            font-size: 10px;
+        }
+    }
+    .mg-x-axis-small text,
+    .mg-y-axis-small text,
+    .mg-active-datapoint-small {
+        font-size: 8px;
+    }
+    .mg-x-axis-small,
+    .mg-y-axis-small {
+        .label {
+            font-size: 9px;
+        }
+    }
+    .mg-year-marker {
+        text {
+            font-size: 9px;
+        }
+        line {
+            stroke: #ccc;
+            stroke-width: 0.8;
+        }
+    }
+    .mg-year-marker-small text {
+        font-size: 8px;
+    }
+    .mg-chart-title {
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+        .popover {
+            z-index: 1060;
+            position: absolute !important;
+            background: @md-color-grey-700;
+            color: @white;
+            font-size: 13px;
+            padding: 8px 16px;
+            line-height: 16px;
+            max-width: 290px;
+            margin-top: -10px;
+        }
+    }
+}

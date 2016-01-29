@@ -1,0 +1,54 @@
+<div id="page_content">
+    <div id="page_content_inner">
+
+        <div class="uk-width-medium-8-10 uk-container-center">
+            <div class="md-card md-card-single" single-card>
+                <div class="md-card-toolbar">
+                    <div class="md-card-toolbar-actions">
+                        <i class="md-icon material-icons">&#xE149;</i>
+                    </div>
+                    <h3 class="md-card-toolbar-heading-text large">
+                        Todo List
+                    </h3>
+                </div>
+                <div class="md-card-content" id="todo_list">
+                    <div ng-repeat="list in todo_data" ng-class="{ 'uk-margin-large-bottom': ($index+1) != todo_length }">
+                        <h2 class="heading_list uk-text-upper">{{list.list_name}}</h2>
+                        <ul class="md-list md-list-addon uk-margin-small-bottom uk-nestable" data-uk-nestable="{ maxDepth: 2, handleClass: 'md-list-content' }">
+                            <li class="uk-nestable-item" ng-class="{'md-list-item-disabled': task.closed}" ng-repeat="task in list.tasks">
+                                <div class="md-list-addon-element">
+                                    <input type="checkbox" icheck ng-model="task.closed" />
+                                </div>
+                                <div class="md-list-content">
+                                    <a href="#" class="md-list-action"><i class="md-icon material-icons">&#xE872;</i></a>
+                                    <span class="md-list-heading" ng-class="{'uk-text-danger': task.important}">{{task.title}}</span>
+                                    <span class="uk-text-small" ng-class="{'uk-text-danger': task.important, 'uk-text-muted': !task.important}">{{task.description}}</span>
+                                </div>
+                                <ul class="uk-nestable" ng-if="task.subtasks">
+                                    <li class="uk-nestable-item" ng-class="{'md-list-item-disabled': subtask.closed}" ng-repeat="subtask in task.subtasks">
+                                        <div class="md-list-addon-element">
+                                            <input type="checkbox" icheck ng-model="subtask.closed" />
+                                        </div>
+                                        <div class="md-list-content">
+                                            <a href="#" class="md-list-action"><i class="md-icon material-icons">&#xE872;</i></a>
+                                            <span class="md-list-heading" ng-class="{'uk-text-danger': subtask.important}">{{subtask.title}}</span>
+                                            <span class="uk-text-small" ng-class="{'uk-text-danger': subtask.important, 'uk-text-muted': !subtask.important}">{{subtask.description}}</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <a href="#" class="md-btn md-btn-flat md-btn-flat-primary">Add new task</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="md-fab-wrapper">
+    <a class="md-fab md-fab-accent" href="#new_todo">
+        <i class="material-icons">&#xE03B;</i>
+    </a>
+</div>
